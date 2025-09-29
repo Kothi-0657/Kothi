@@ -260,20 +260,23 @@ function Hero1() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                         initial: {
-                            opacity: 0,
+                            opacity: 1,
                             x: 50
                         },
                         animate: {
                             opacity: 1,
-                            x: 0
+                            x: 20
                         },
                         transition: {
-                            duration: 0.8
+                            duration: 0.6
                         },
-                        className: "mt-12 lg:mt-0 w-full max-w-md bg-white rounded-lg shadow-xl p-6 z-10",
+                        className: "mt-12 lg:mt-0 w-full max-w-md bg-white/30 backdrop-blur-lg rounded-2xl p-6 text-black shadow-md border border-white/20 hover:bg-white/40 transition",
+                        style: {
+                            boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)"
+                        },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$component$2f$Form$2f$Cxform$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/component/Hero/hero1.tsx",
-                            lineNumber: 87,
+                            lineNumber: 90,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {

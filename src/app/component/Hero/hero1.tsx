@@ -79,10 +79,13 @@ function Hero1() {
 
         {/* ✅ Right Side: Contact Form (No Duplicate Heading) */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mt-12 lg:mt-0 w-full max-w-md bg-white rounded-lg shadow-xl p-6 z-10"
+          initial={{ opacity: 1, x: 50 }}
+          animate={{ opacity: 1, x: 20 }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 lg:mt-0 w-full max-w-md bg-white/30 backdrop-blur-lg rounded-2xl p-6 text-black shadow-md border border-white/20 hover:bg-white/40 transition"
+          style={{ boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)" }}
+        
+
         >
           <ContactForm />
         </motion.div>

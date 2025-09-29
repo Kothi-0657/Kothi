@@ -77,7 +77,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
   return (
     <div className="space-y-4">
       <h2 className="text-2xl font-bold text-center textcolor2dark">
-        Request a Callback
+        Connect With Us
       </h2>
       <form className="space-y-3" onSubmit={handleSubmit}>
         <input
@@ -119,7 +119,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-all"
+          className="w-40 py-2 m1-auto block rounded-lg bg-gradient-to-r from-[#ff7b54] to-[#ffb347] text-white font-semibold shadow-md hover:opacity-90 transition"
           disabled={loading}
         >
           {loading ? "Submitting..." : "Submit"}

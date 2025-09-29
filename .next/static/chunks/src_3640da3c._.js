@@ -136,7 +136,7 @@ function ContactForm(param) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "text-2xl font-bold text-center textcolor2dark",
-                children: "Request a Callback"
+                children: "Connect With Us"
             }, void 0, false, {
                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
                 lineNumber: 79,
@@ -204,7 +204,7 @@ function ContactForm(param) {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "submit",
-                        className: "w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-all",
+                        className: "w-40 py-2 m1-auto block rounded-lg bg-gradient-to-r from-[#ff7b54] to-[#ffb347] text-white font-semibold shadow-md hover:opacity-90 transition",
                         disabled: loading,
                         children: loading ? "Submitting..." : "Submit"
                     }, void 0, false, {

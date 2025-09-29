@@ -12,8 +12,8 @@ import "@/app/globals.css";
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-200 py-8">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+    <footer className="bg-gray-900 text-gray-200 py-11">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-35">
         {/* Company Info */}
         <div className="flex flex-col items-start">
           <div className="flex items-end mb-4">
@@ -22,13 +22,13 @@ function Footer() {
               Kothi India
             </span>
           </div>
-          <p className="text-gray-400 mb-4">
+          <p className="text-gray-400 mb-6 mt-4">
             With a skilled and experienced team and a strong client-first
             mindset, Kothi India is setting new standards in home improvement
             and aims to become a trusted name in the Indian renovation
             landscape.
           </p>
-          <div className="flex space-x-4 mt-2 text-[1.5em]">
+          <div className="flex space-x-4 mt-4 text-[1.5em]">
             <a href="#" className="hover:text-white">
               <FaLinkedin />
             </a>
@@ -59,7 +59,7 @@ function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+          <h3 className="text-white font-semibold mb-4 mt-22">Quick Links</h3>
           <ul className="space-y-2">
             <li>
               <Link href="/refund-policy" className="hover:text-white">
@@ -81,7 +81,7 @@ function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+          <h3 className="text-white font-semibold mb-4 mt-22">Contact Us</h3>
           <p>Electronic City, Bangalore</p>
           <p>
             Phone:{" "}
@@ -99,7 +99,7 @@ function Footer() {
             </Link>
           </p>
           <div className="flex items-center mt-4 bg-white text-gray-900 rounded-lg px-4 py-2 w-max hover:bg-gray-100 transition cursor-pointer">
-            <FaWhatsapp size={24} className="mr-2 text-green-500" />
+            <FaWhatsapp size={32} className="mr-2 text-green-500" />
             <Link
               href="https://wa.me/919972225551"
               target="_blank"

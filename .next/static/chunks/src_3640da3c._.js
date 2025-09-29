@@ -306,7 +306,7 @@ function Navbar() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed top-0 left-0 w-full z-50 backgroundcolor",
+                className: "fixed top-0 left-0 w-full z-40 backgroundcolor",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center justify-between px-6 md:px-16 lg:py-2 py-5",
@@ -317,8 +317,8 @@ function Navbar() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         src: "/logo.png",
-                                        width: 60,
-                                        height: 50,
+                                        width: 110,
+                                        height: 90,
                                         alt: "brandlogo"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Navbar/navbar.tsx",
@@ -326,7 +326,7 @@ function Navbar() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "ml-2 lg:text-[30px] text-[28px] textcolor uppercase leading-none navbar-logo",
+                                        className: "ml-3 lg:text-[50px] text-[54px] textcolor uppercase leading-none navbar-logo",
                                         children: "Kothi INDIA"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Navbar/navbar.tsx",
@@ -340,28 +340,28 @@ function Navbar() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                className: "hidden lg:flex items-center gap-4 md:gap-10 font-medium text-white",
+                                className: "hidden lg:flex items-center gap-6 font-medium",
                                 children: [
                                     navItems.map((navItem, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 onClick: ()=>handleNavClick(navItem.destination),
                                                 href: navItem.destination,
-                                                className: "px-2 py-2 backgroundcolorhover hover:rounded transition-all duration-200",
+                                                className: "px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 text-white hover:bg-[#FE904E] transition",
                                                 children: navItem.tab
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/component/Navbar/navbar.tsx",
                                                 lineNumber: 50,
-                                                columnNumber: 17
+                                                columnNumber: 7
                                             }, this)
                                         }, index, false, {
                                             fileName: "[project]/src/app/component/Navbar/navbar.tsx",
                                             lineNumber: 49,
-                                            columnNumber: 15
+                                            columnNumber: 5
                                         }, this)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>setShowPopup(true),
-                                            className: "px-2 py-2 backgroundcolorhover hover:rounded transition-all duration-200",
+                                            className: "px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 text-white hover:bg-[#FE904E] transition",
                                             children: "Contact"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/component/Navbar/navbar.tsx",

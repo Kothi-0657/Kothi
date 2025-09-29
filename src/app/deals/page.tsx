@@ -45,8 +45,8 @@ export default function DealsPage() {
           {/* Left: Construction Plans */}
           <div className="w-full lg:w-1/2">
             <div className="flex items-center gap-4 mb-8">
-              <h2 className="text-3xl font-bold text-orange-500 flex items-center gap-2">
-                🏗 Constructions Plans
+              <h2 className="text-4xl font-bold text-orange-500 flex items-center gap-2">
+                Constructions Plans
               </h2>
               <Image
                 src="/Kothi1.png"
@@ -61,9 +61,9 @@ export default function DealsPage() {
               {constructionPlans.map((plan) => (
                 <div
                   key={plan.name}
-                  className="flex justify-between items-center bg-gradient-to-r from-white/80 to-gray-100/80 text-black p-4 rounded-lg shadow-md"
+                  className="flex justify-between items-center bg-gradient-to-r from-white/80 to-gray-100/70 text-black p-2 rounded-lg shadow-md"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-5">
                     <FaChevronCircleDown className="text-red-500 text-xl" />
                     <span className="font-semibold">{plan.name}</span>
                   </div>
@@ -73,16 +73,16 @@ export default function DealsPage() {
                 </div>
               ))}
             </div>
-            <p className="italic text-sm mt-5 text-gray-200">
-              All India Service Available
+            <p className="italic text-sm mt-5 text-gray-200 mt-20">
+              * All India Service Available
             </p>
           </div>
 
           {/* Right: Painting Plans */}
-          <div className="w-full lg:w-1/2">
-            <div className="flex items-center gap-4 mb-8">
-              <h2 className="text-3xl font-bold text-orange-500 flex items-center gap-2">
-                🎨 Painting Plans
+          <div className="w-full lg:w-1/4">
+            <div className="flex items-center gap-8 mb-22 mt-23">
+              <h2 className="text-4xl font-bold text-orange-500 flex items-center gap-2">
+                Painting Plans
               </h2>
               <Image
                 src="/Kothi9.png"
@@ -95,20 +95,20 @@ export default function DealsPage() {
 
             <div className="rounded-lg overflow-hidden shadow-lg">
               <div className="grid grid-cols-3 text-center font-semibold bg-orange-500 text-white">
-                <div className="p-3">Sale</div>
-                <div className="p-3">Re-Painting</div>
-                <div className="p-3">Cleaning</div>
+                <div className="p-3 mb-1 mt-1">Sale</div>
+                <div className="p-3 mb-1 mt-1">Painting</div>
+                <div className="p-3 mb-1 mt-1">Cleaning</div>
               </div>
 
               {paintingPlans.map((plan) => (
                 <div
                   key={plan.type}
-                  className="grid grid-cols-3 text-center border-t border-gray-300 bg-black/70 text-white"
+                  className="grid grid-cols-3 text-center border-t border-gray-300 bg-black/70 text-white mb-2 mt-2"
                 >
-                  <div className="p-3">{plan.type}</div>
-                  <div className="p-3">{plan.price}</div>
-                  <div className="p-3">
-                    <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="p-3.5 mb-1 mt-1">{plan.type}</div>
+                  <div className="p-3.5 mb-1 mt-1">{plan.price}</div>
+                  <div className="p-3.5 mb-1 mt-1">
+                    <span className="bg-red-500 text-white px-3 py-0.5 rounded-full text-sm font-semibold">
                       {plan.cleaning}
                     </span>
                   </div>

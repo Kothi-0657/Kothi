@@ -2,18 +2,19 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Construction } from "lucide-react";
 
 const services = [
-  { title: "Construction", type: "construction", icon: "/icons/iconcons.png" },
-  { title: "Renovation", type: "renovation", icon: "/icons/iconinterior.png"},
-  { title: "Home Inspection", type: "inspection", icon: "/icons/iconinspections.png"},
-  { title: "Packers & Movers", type: "packersAndMovers", icon: "/icons/iconpnm.png"},
-  { title: "Home Services", type: "homeServices", icon: "/icons/iconhm.png"},
+  { title: "Construction", type: "construction", icon: "/icons/iconcons.png", description: "Expert construction solutions tailored for your needs." },
+  { title: "Renovation", type: "renovation", icon: "/icons/iconinterior.png", description: "Transform your space with our renovation services." },
+  { title: "Home Inspection", type: "inspection", icon: "/icons/iconinspections.png", description: "Comprehensive home inspection for peace of mind." },
+  { title: "Packers & Movers", type: "packersAndMovers", icon: "/icons/iconpnm.png", description: "Reliable packers and movers for hassle-free relocation." },
+  { title: "Home Services", type: "homeServices", icon: "/icons/iconhm.png", description: "Wide range of home services to maintain your property." },
 ];
 
 export default function ServicePage() {
   return (
-    <div className="relative min-h-screen p-10">
+    <div className="relative min-h-screen p-12">
       {/* 🔹 Background video */}
       <video
         autoPlay
@@ -30,8 +31,8 @@ export default function ServicePage() {
       <div className="absolute inset-0 bg-white/50 -z-10"></div>
 
       {/* 🔹 Foreground Content */}
-      <div className="relative z-10">
-        <h1 className="text-6xl font-extrabold text-center text-[#b04400] mb-12">
+      <div className="relative z-1">
+        <h1 className="text-6xl font-extrabold text-center text-[#b04400] mb-20 mt-20">
           Our Services
         </h1>
 
@@ -48,8 +49,8 @@ export default function ServicePage() {
                 <Image
                   src={s.icon}
                   alt={s.title}
-                  width={320}
-                  height={400}
+                  width={420}
+                  height={500}
                   className="object-contain"
                 />
               </div>
@@ -58,7 +59,7 @@ export default function ServicePage() {
               <div className="text-center flex-1 flex flex-col">
                 <h2 className="text-2xl font-semibold mb-4">{s.title}</h2>
                 <p className="text-gray-700 mb-6 flex-grow">
-                  {s.title} solutions tailored for your needs.
+                  {s.description}
                 </p>
 
                 {/* Buttons */}

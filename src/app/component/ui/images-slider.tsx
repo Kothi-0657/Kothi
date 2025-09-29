@@ -1,8 +1,7 @@
-"use client";
+ "use client";
 import { cn } from "@/app/utility/utils";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { Variants } from "motion/react";
 
 export const ImagesSlider = ({
   images,

@@ -30,7 +30,7 @@ function Hero1() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full min-h-screen overflow-hidden pb-24">
       {/* ✅ Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -82,7 +82,7 @@ function Hero1() {
           initial={{ opacity: 1, x: 50 }}
           animate={{ opacity: 1, x: 20 }}
           transition={{ duration: 0.6 }}
-          className="mt-12 lg:mt-0 w-full max-w-md bg-white/30 backdrop-blur-lg rounded-2xl p-6 text-black shadow-md border border-white/20 hover:bg-white/40 transition"
+          className="mt-15 mb-49 lg:mt-0 w-full max-w-md bg-white/30 backdrop-blur-lg rounded-2xl p-6 text-black shadow-md border border-white/20 hover:bg-white/40 transition"
           style={{ boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)" }}
         
 

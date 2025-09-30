@@ -191,7 +191,7 @@ function Hero1() {
         }
     }["Hero1.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "relative w-full h-screen overflow-hidden",
+        className: "relative w-full min-h-screen overflow-hidden pb-24",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
                 className: "absolute top-0 left-0 w-full h-full object-cover",
@@ -304,7 +304,7 @@ function Hero1() {
                         transition: {
                             duration: 0.6
                         },
-                        className: "mt-12 lg:mt-0 w-full max-w-md bg-white/30 backdrop-blur-lg rounded-2xl p-6 text-black shadow-md border border-white/20 hover:bg-white/40 transition",
+                        className: "mt-15 mb-49 lg:mt-0 w-full max-w-md bg-white/30 backdrop-blur-lg rounded-2xl p-6 text-black shadow-md border border-white/20 hover:bg-white/40 transition",
                         style: {
                             boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)"
                         },

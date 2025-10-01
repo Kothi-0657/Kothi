@@ -47,7 +47,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbx5Uw8mDsg0pnRoxnuOY_xQ5mr2zAPfdzMcMSm8QIdrzSqb3yjDFuQPF83WsNxlQhP95A/exec",
+        "https://script.google.com/macros/s/AKfycbx5m2A2DjI5SgDvhHr9P4HFyvjK6bVHqrqY9Jl88ZW3IfEZSDYsElWb6n6qYyye3SdVdg/exec",
         {
           method: "POST",
           body: formData,
@@ -85,6 +85,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
           name="name"
           placeholder="Your Name"
           className="w-full p-3 border rounded-lg"
+          minLength={3}
           required
         />
         <input
@@ -92,7 +93,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
           name="phone"
           placeholder="Your Phone Number (10 digits)"
           className="w-full p-3 border rounded-lg"
-          pattern="\d{10}"
+          pattern="[0-9]{10}"
           title="Phone number must be 10 digits"
           required
         />
@@ -110,12 +111,29 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
           rows={3}
           required
         />
-        <input
-          type="datetime-local"
-          name="visitSchedule"
-          className="w-full p-3 border rounded-lg"
-          required
-        />
+      
+  <div className="grid grid-cols-2 gap-4">
+  <div className="relative">
+    <input
+      type="date"
+      name="visitDate"
+      className="w-full p-2 rounded-xl border border-black/30 bg-white/20 backdrop-blur-md text-black placeholder-gray/70 focus:ring-2 focus:ring-orange-400 mt-6"
+      required
+    />
+    <span className="absolute left-3 top-1 text-xs text-orange-300">Date</span>
+  </div>
+  <div className="relative">
+    <input
+      type="time"
+      name="visitTime"
+      className="w-full p-2 rounded-xl border border-black/30 bg-white/20 backdrop-blur-md text-black placeholder-gray/70 focus:ring-2 focus:ring-orange-400 mt-6"
+      required
+    />
+    <span className="absolute left-3 top-1 text-xs text-orange-300">Time</span>
+  </div>
+</div>
+
+
 
         <button
           type="submit"

@@ -300,108 +300,170 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function About() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-20 bg-gradient-to-r from-gray-50 via-white to-gray-100 relative overflow-hidden",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "space-y-9",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-3xl md:text-5xl font-bold text-gray-900 leading-tight",
-                                children: [
-                                    "About",
-                                    "   ",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-[#b04400] font-extrabold navbar-logo",
-                                        children: "Kothi India"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/About/About.tsx",
-                                        lineNumber: 10,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/About/About.tsx",
-                                lineNumber: 8,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-gray-700 text-lg leading-relaxed",
-                                children: "Kothi India has quickly become a trusted name in home renovation and construction. Our modern design approach, attention to detail, and commitment to quality set us apart. We provide personalized solutions including expert home renovations, reliable construction work, creative interior and exterior planning, and detailed home inspection reports."
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/About/About.tsx",
-                                lineNumber: 14,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-gray-700 text-lg leading-relaxed",
-                                children: "With a growing team of skilled professionals and a client-first mindset, we strive to redefine home improvement in India. Our goal is to deliver innovative, reliable, and stylish solutions that exceed expectations and create lasting value for every homeowner."
+        className: "relative py-28 bg-gray-50",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-6xl mx-auto px-6 space-y-20",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "text-center space-y-6",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-5xl font-extrabold text-orange-700",
+                            children: "Our Story"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 8,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "max-w-2xl mx-auto text-gray-700 text-lg leading-relaxed",
+                            children: "Kothi India has grown from a small team of passionate builders to a trusted brand in home improvement, transforming spaces with design, trust, and innovation."
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 11,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/About/About.tsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "grid md:grid-cols-2 gap-16 items-center",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: "/kothi4.png",
+                                className: "rounded-2xl shadow-xl object-cover",
+                                alt: "Foundation"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/About/About.tsx",
                                 lineNumber: 22,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: "mt-6 px-8 py-3 bg-[#b04400] text-white font-semibold rounded-xl shadow-md hover:bg-[#8c3500] transition-all duration-300",
-                                children: "Book Visit Now"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/About/About.tsx",
-                                lineNumber: 28,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/app/About/About.tsx",
-                        lineNumber: 7,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden lg:flex justify-center md:justify-end",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-offwhite p-0.1 rounded-3xl shadow-xl",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                src: "/kothi.png",
-                                alt: "Company Building",
-                                className: "rounded-2xl w-full max-w-md hover:scale-165 transition-transform duration-200"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/About/About.tsx",
-                                lineNumber: 35,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/About/About.tsx",
-                            lineNumber: 34,
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "text-2xl font-bold text-[#b04400]",
+                                    children: "Our Foundation"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/About/About.tsx",
+                                    lineNumber: 29,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-gray-700 mt-4",
+                                    children: "Established with the vision of redefining renovation in India, Kothi India started with small but impactful projects."
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/About/About.tsx",
+                                    lineNumber: 30,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 28,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "order-2 md:order-1",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "text-2xl font-bold text-[#b04400]",
+                                    children: "Growth & Innovation"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/About/About.tsx",
+                                    lineNumber: 38,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-gray-700 mt-4",
+                                    children: "Our growing team embraced modern design, modular solutions, and cutting-edge tools to deliver excellence."
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/About/About.tsx",
+                                    lineNumber: 39,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 37,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "order-1 md:order-2",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: "/kothi11.png",
+                                className: "rounded-2xl shadow-xl object-cover",
+                                alt: "Growth"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/About/About.tsx",
+                                lineNumber: 45,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 44,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: "/kothi12.png",
+                                className: "rounded-2xl shadow-xl object-cover",
+                                alt: "Vision"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/About/About.tsx",
+                                lineNumber: 54,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 53,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "text-2xl font-bold text-[#b04400]",
+                                    children: "The Future"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/About/About.tsx",
+                                    lineNumber: 61,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-gray-700 mt-4",
+                                    children: "With a client-first mindset, our goal is to become the most trusted name in Indian home improvement."
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/About/About.tsx",
+                                    lineNumber: 62,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 60,
                             columnNumber: 11
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/About/About.tsx",
-                        lineNumber: 33,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/app/About/About.tsx",
-                lineNumber: 6,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-0 left-0 w-80 h-80 bg-[#b04400]/30 rounded-full blur-3xl"
-            }, void 0, false, {
-                fileName: "[project]/src/app/About/About.tsx",
-                lineNumber: 44,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-0 right-0 w-72 h-72 bg-[#b04400]/30 rounded-full blur-3xl"
-            }, void 0, false, {
-                fileName: "[project]/src/app/About/About.tsx",
-                lineNumber: 45,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/About/About.tsx",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/app/About/About.tsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/src/app/About/About.tsx",
         lineNumber: 5,
         columnNumber: 5

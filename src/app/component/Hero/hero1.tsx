@@ -69,7 +69,7 @@ function Hero1() {
 
           {/* ✅ Only Explore Services Button (keep old design) */}
           <div className="mt-8 flex justify-center lg:justify-start">
-            <Link href="/services">
+            <Link href="/service">
               <HoverBorderGradient>
                 <span className="font-semibold">Explore Services</span>
               </HoverBorderGradient>

@@ -110,7 +110,7 @@ function ContactForm(param) {
             return;
         }
         try {
-            const res = await fetch("https://script.google.com/macros/s/AKfycbx5Uw8mDsg0pnRoxnuOY_xQ5mr2zAPfdzMcMSm8QIdrzSqb3yjDFuQPF83WsNxlQhP95A/exec", {
+            const res = await fetch("https://script.google.com/macros/s/AKfycbx5m2A2DjI5SgDvhHr9P4HFyvjK6bVHqrqY9Jl88ZW3IfEZSDYsElWb6n6qYyye3SdVdg/exec", {
                 method: "POST",
                 body: formData
             });
@@ -151,6 +151,7 @@ function ContactForm(param) {
                         name: "name",
                         placeholder: "Your Name",
                         className: "w-full p-3 border rounded-lg",
+                        minLength: 3,
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
@@ -162,12 +163,12 @@ function ContactForm(param) {
                         name: "phone",
                         placeholder: "Your Phone Number (10 digits)",
                         className: "w-full p-3 border rounded-lg",
-                        pattern: "\\d{10}",
+                        pattern: "[0-9]{10}",
                         title: "Phone number must be 10 digits",
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 90,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -178,7 +179,7 @@ function ContactForm(param) {
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 99,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -189,18 +190,71 @@ function ContactForm(param) {
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 106,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        type: "datetime-local",
-                        name: "visitSchedule",
-                        className: "w-full p-3 border rounded-lg",
-                        required: true
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-2 gap-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "date",
+                                        name: "visitDate",
+                                        className: "w-full p-2 rounded-xl border border-black/30 bg-white/20 backdrop-blur-md text-black placeholder-gray/70 focus:ring-2 focus:ring-orange-400 mt-6",
+                                        required: true
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                        lineNumber: 117,
+                                        columnNumber: 5
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "absolute left-3 top-1 text-xs text-orange-300",
+                                        children: "Date"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                        lineNumber: 123,
+                                        columnNumber: 5
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 116,
+                                columnNumber: 3
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "time",
+                                        name: "visitTime",
+                                        className: "w-full p-2 rounded-xl border border-black/30 bg-white/20 backdrop-blur-md text-black placeholder-gray/70 focus:ring-2 focus:ring-orange-400 mt-6",
+                                        required: true
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                        lineNumber: 126,
+                                        columnNumber: 5
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "absolute left-3 top-1 text-xs text-orange-300",
+                                        children: "Time"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                        lineNumber: 132,
+                                        columnNumber: 5
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 125,
+                                columnNumber: 3
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 113,
-                        columnNumber: 9
+                        lineNumber: 115,
+                        columnNumber: 3
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "submit",
@@ -209,7 +263,7 @@ function ContactForm(param) {
                         children: loading ? "Submitting..." : "Submit"
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 120,
+                        lineNumber: 138,
                         columnNumber: 9
                     }, this)
                 ]
@@ -223,7 +277,7 @@ function ContactForm(param) {
                 children: "✅ Submitted successfully! Closing..."
             }, void 0, false, {
                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                lineNumber: 130,
+                lineNumber: 148,
                 columnNumber: 9
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -234,7 +288,7 @@ function ContactForm(param) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                lineNumber: 134,
+                lineNumber: 152,
                 columnNumber: 17
             }, this)
         ]

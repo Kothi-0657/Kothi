@@ -79,144 +79,135 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function Footer() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-        className: "bg-gray-900 text-gray-200 py-11",
+        className: "bg-gray-900 text-gray-200 pt-14 pb-8 relative overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-35",
+                className: "absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black opacity-95"
+            }, void 0, false, {
+                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col items-start",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-end mb-4",
+                                className: "flex items-center mb-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                         src: "/logo.png",
                                         alt: "Logo",
-                                        className: "w-18 h-18 mr-2"
+                                        className: "w-14 h-14 mr-3"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 20,
+                                        lineNumber: 29,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-xl textcolor navbar-logo uppercase",
+                                        className: "text-2xl font-bold text-white uppercase tracking-wide",
                                         children: "Kothi India"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 21,
+                                        lineNumber: 30,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 19,
+                                lineNumber: 28,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-gray-400 mb-6 mt-4",
+                                className: "text-gray-400 leading-relaxed",
                                 children: "With a skilled and experienced team and a strong client-first mindset, Kothi India is setting new standards in home improvement and aims to become a trusted name in the Indian renovation landscape."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 25,
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex space-x-4 mt-4 text-[1.5em]",
+                                className: "flex space-x-4 mt-6 text-lg",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                         href: "#",
-                                        className: "hover:text-white",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaLinkedin"], {}, void 0, false, {
-                                            fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                            lineNumber: 33,
-                                            columnNumber: 15
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 32,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        href: "https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec",
-                                        target: "_blank",
-                                        rel: "noopener noreferrer",
-                                        className: "hover:text-white",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaFacebookF"], {}, void 0, false, {
-                                            fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                            lineNumber: 41,
-                                            columnNumber: 15
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 35,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        href: "#",
-                                        className: "hover:text-white",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTwitter"], {}, void 0, false, {
-                                            fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                            lineNumber: 44,
-                                            columnNumber: 15
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 43,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        href: "#",
-                                        className: "hover:text-white",
+                                        className: "hover:text-white transition",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaLinkedinIn"], {}, void 0, false, {
                                             fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                            lineNumber: 47,
+                                            lineNumber: 42,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 46,
+                                        lineNumber: 41,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "#",
+                                        className: "hover:text-white transition",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaFacebookF"], {}, void 0, false, {
+                                            fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                            lineNumber: 45,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                        lineNumber: 44,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "#",
+                                        className: "hover:text-white transition",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTwitter"], {}, void 0, false, {
+                                            fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                            lineNumber: 48,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                        lineNumber: 47,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                         href: "https://www.instagram.com/kothiindia/",
                                         target: "_blank",
-                                        rel: "noopener noreferrer",
-                                        className: "hover:text-white",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaInstagram"], {}, void 0, false, {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaInstagram"], {
+                                            className: "hover:text-white transition"
+                                        }, void 0, false, {
                                             fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                            lineNumber: 55,
+                                            lineNumber: 51,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 49,
+                                        lineNumber: 50,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 31,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                        lineNumber: 18,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-white font-semibold mb-4 mt-22",
+                                className: "text-white font-semibold mb-4 text-lg",
                                 children: "Quick Links"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 62,
+                                lineNumber: 58,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                className: "space-y-2",
+                                className: "space-y-3 text-gray-400",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -225,12 +216,12 @@ function Footer() {
                                             children: "Refund Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                            lineNumber: 65,
+                                            lineNumber: 61,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 60,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -240,12 +231,12 @@ function Footer() {
                                             children: "Privacy Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 66,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 65,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -255,90 +246,214 @@ function Footer() {
                                             children: "Terms & Conditions"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                            lineNumber: 75,
+                                            lineNumber: 71,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 74,
+                                        lineNumber: 70,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 63,
+                                lineNumber: 59,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                        lineNumber: 61,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-white font-semibold mb-4 mt-22",
-                                children: "Contact Us"
+                                className: "text-white font-semibold mb-4 text-lg",
+                                children: "Services"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 84,
+                                lineNumber: 80,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: "Electronic City, Bangalore"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 85,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                className: "space-y-3 text-gray-400",
                                 children: [
-                                    "Phone:",
-                                    " ",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                        href: "tel:+919972225551",
-                                        className: "hover:text-white",
-                                        children: "+91 9972225551"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        className: "flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTools"], {
+                                                className: "text-[#b04400]"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 83,
+                                                columnNumber: 15
+                                            }, this),
+                                            " Renovation"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                        lineNumber: 82,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        className: "flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTruckMoving"], {
+                                                className: "text-[#b04400]"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 86,
+                                                columnNumber: 15
+                                            }, this),
+                                            " Packers & Movers"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                        lineNumber: 85,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        className: "flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaPaintRoller"], {
+                                                className: "text-[#b04400]"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 89,
+                                                columnNumber: 15
+                                            }, this),
+                                            " Painting Services"
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
                                         lineNumber: 88,
                                         columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 86,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: [
-                                    "Email:",
-                                    " ",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                        href: "mailto:service@kothiindia.com",
-                                        className: "hover:text-white",
-                                        children: "service@kothiindia.com"
-                                    }, void 0, false, {
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        className: "flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaCouch"], {
+                                                className: "text-[#b04400]"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 92,
+                                                columnNumber: 15
+                                            }, this),
+                                            " Interior Design"
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 91,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 92,
+                                lineNumber: 81,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                        lineNumber: 79,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                className: "text-white font-semibold mb-4 text-lg",
+                                children: "Contact Us"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                lineNumber: 99,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                className: "space-y-3 text-gray-400",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaMapMarkerAlt"], {
+                                                className: "text-[#b04400]"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 102,
+                                                columnNumber: 15
+                                            }, this),
+                                            "Electronic City, Bangalore"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                        lineNumber: 101,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaPhoneAlt"], {
+                                                className: "text-[#b04400]"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 106,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "tel:+919972225551",
+                                                className: "hover:text-white",
+                                                children: "+91 9972225551"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 107,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                        lineNumber: 105,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaEnvelope"], {
+                                                className: "text-[#b04400]"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 112,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "mailto:service@kothiindia.com",
+                                                className: "hover:text-white",
+                                                children: "service@kothiindia.com"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                                lineNumber: 113,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                        lineNumber: 111,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/component/Footer/Footer.tsx",
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center mt-4 bg-white text-gray-900 rounded-lg px-4 py-2 w-max hover:bg-gray-100 transition cursor-pointer",
+                                className: "flex items-center mt-6 bg-white text-gray-900 rounded-lg px-4 py-2 w-max hover:bg-gray-100 transition cursor-pointer shadow-md",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaWhatsapp"], {
-                                        size: 32,
+                                        size: 28,
                                         className: "mr-2 text-green-500"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 124,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -348,52 +463,52 @@ function Footer() {
                                         children: "Chat on WhatsApp"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 125,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                                lineNumber: 101,
+                                lineNumber: 123,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                        lineNumber: 83,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                lineNumber: 16,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm",
+                className: "relative z-10 mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm",
                 children: [
                     "© ",
                     new Date().getFullYear(),
                     " ",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-[#b04400]",
+                        className: "text-[#b04400] font-semibold",
                         children: "Kothi India"
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                        lineNumber: 117,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, this),
                     ". All rights reserved."
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/component/Footer/Footer.tsx",
-                lineNumber: 115,
+                lineNumber: 137,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/component/Footer/Footer.tsx",
-        lineNumber: 15,
+        lineNumber: 21,
         columnNumber: 5
     }, this);
 }

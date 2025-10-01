@@ -2,47 +2,70 @@ import React from "react";
 
 function About() {
   return (
-    <section className="py-20 bg-gradient-to-r from-gray-50 via-white to-gray-100 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
-        <div className="space-y-9">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            About{"   "}
-            <span className="text-[#b04400] font-extrabold navbar-logo">
-              Kothi India
-            </span>
+    <section className="relative py-28 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6 space-y-20">
+        <div className="text-center space-y-6">
+          <h2 className="text-5xl font-extrabold text-orange-700">
+            Our Story
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Kothi India has quickly become a trusted name in home renovation and
-            construction. Our modern design approach, attention to detail, and
-            commitment to quality set us apart. We provide personalized
-            solutions including expert home renovations, reliable construction
-            work, creative interior and exterior planning, and detailed home
-            inspection reports.
+          <p className="max-w-2xl mx-auto text-gray-700 text-lg leading-relaxed">
+            Kothi India has grown from a small team of passionate builders to a
+            trusted brand in home improvement, transforming spaces with design,
+            trust, and innovation.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            With a growing team of skilled professionals and a client-first
-            mindset, we strive to redefine home improvement in India. Our goal
-            is to deliver innovative, reliable, and stylish solutions that
-            exceed expectations and create lasting value for every homeowner.
-          </p>
-          <button className="mt-6 px-8 py-3 bg-[#b04400] text-white font-semibold rounded-xl shadow-md hover:bg-[#8c3500] transition-all duration-300">
-            Book Visit Now
-          </button>
         </div>
 
-        <div className="hidden lg:flex justify-center md:justify-end">
-          <div className="bg-offwhite p-0.1 rounded-3xl shadow-xl">
+        {/* Timeline Grid */}
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          {/* Block 1 */}
+          <div>
             <img
-              src="/kothi.png"
-              alt="Company Building"
-              className="rounded-2xl w-full max-w-md hover:scale-165 transition-transform duration-200"
+              src="/kothi4.png"
+              className="rounded-2xl shadow-xl object-cover"
+              alt="Foundation"
             />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-[#b04400]">Our Foundation</h3>
+            <p className="text-gray-700 mt-4">
+              Established with the vision of redefining renovation in India,
+              Kothi India started with small but impactful projects.
+            </p>
+          </div>
+
+          {/* Block 2 */}
+          <div className="order-2 md:order-1">
+            <h3 className="text-2xl font-bold text-[#b04400]">Growth & Innovation</h3>
+            <p className="text-gray-700 mt-4">
+              Our growing team embraced modern design, modular solutions, and
+              cutting-edge tools to deliver excellence.
+            </p>
+          </div>
+          <div className="order-1 md:order-2">
+            <img
+              src="/kothi11.png"
+              className="rounded-2xl shadow-xl object-cover"
+              alt="Growth"
+            />
+          </div>
+
+          {/* Block 3 */}
+          <div>
+            <img
+              src="/kothi12.png"
+              className="rounded-2xl shadow-xl object-cover"
+              alt="Vision"
+            />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-[#b04400]">The Future</h3>
+            <p className="text-gray-700 mt-4">
+              With a client-first mindset, our goal is to become the most trusted
+              name in Indian home improvement.
+            </p>
           </div>
         </div>
       </div>
-
-      <div className="absolute top-0 left-0 w-80 h-80 bg-[#b04400]/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#b04400]/30 rounded-full blur-3xl"></div>
     </section>
   );
 }

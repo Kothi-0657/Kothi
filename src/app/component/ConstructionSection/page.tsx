@@ -1,6 +1,8 @@
 "use client";
 
-import ConstructionPage from "@/app/services/construction/page";
+// Update the import path below to the correct location of ConstructionPage
+// Update the import path below to the correct location of ConstructionPage
+import ConstructionPage from "../../services/construction/page";
 
 export default function ConstructionSection() {
   return (

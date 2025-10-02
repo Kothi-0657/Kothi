@@ -1,12 +1,6 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/booking/page": "app/booking/page.js",
-  "/deals/page": "app/deals/page.js",
   "/page": "app/page.js",
   "/service/page": "app/service/page.js",
-  "/services/construction/page": "app/services/construction/page.js",
-  "/services/homeServices/page": "app/services/homeServices/page.js",
-  "/services/inspection/page": "app/services/inspection/page.js",
-  "/services/packersAndMovers/page": "app/services/packersAndMovers/page.js",
-  "/services/renovation/page": "app/services/renovation/page.js"
+  "/services/construction/page": "app/services/construction/page.js"
 }

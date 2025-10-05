@@ -767,6 +767,391 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/src/app/component/Whychooseus/Whychooseus.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)");
+"use client";
+;
+;
+;
+const reasons = [
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaRocket"], {
+            className: "text-[#b04400] w-10 h-10"
+        }, void 0, false, {
+            fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+            lineNumber: 9,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: "Fast & Efficient",
+        description: "We deliver results quickly without compromising on quality, helping your business grow faster."
+    },
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaUsers"], {
+            className: "text-[#b04400] w-10 h-10"
+        }, void 0, false, {
+            fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+            lineNumber: 15,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: "Expert Team",
+        description: "Our skilled professionals understand your needs and provide customized solutions every time."
+    },
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaShieldAlt"], {
+            className: "text-[#b04400] w-10 h-10"
+        }, void 0, false, {
+            fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+            lineNumber: 21,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: "Trusted & Reliable",
+        description: "We prioritize trust and transparency, ensuring your projects are handled with the utmost care."
+    },
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaStar"], {
+            className: "text-[#b04400] w-10 h-10"
+        }, void 0, false, {
+            fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+            lineNumber: 27,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: "Proven Results",
+        description: "Our clients consistently see improved performance and satisfaction from our services."
+    }
+];
+function WhyChooseUs() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "relative bg-gray-50 py-24",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 overflow-hidden",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].img, {
+                        src: "/building.png",
+                        alt: "Background",
+                        className: "w-full h-full object-cover",
+                        initial: {
+                            scale: 1.1
+                        },
+                        animate: {
+                            scale: 1
+                        },
+                        transition: {
+                            duration: 2,
+                            ease: "easeInOut"
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-black opacity-80"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                        lineNumber: 47,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                lineNumber: 38,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-20 max-w-7xl mx-auto px-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h2, {
+                        className: "text-4xl md:text-5xl font-bold text-center text-white mb-16",
+                        initial: {
+                            opacity: 0,
+                            y: 50
+                        },
+                        animate: {
+                            opacity: 1,
+                            y: 0
+                        },
+                        transition: {
+                            duration: 0.8
+                        },
+                        children: "Why Choose Us"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                        lineNumber: 52,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid md:grid-cols-2 lg:grid-cols-4 gap-10",
+                        children: reasons.map((reason, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                className: "bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-xl transition-shadow duration-300",
+                                initial: {
+                                    opacity: 0,
+                                    y: 40
+                                },
+                                whileInView: {
+                                    opacity: 1,
+                                    y: 0
+                                },
+                                viewport: {
+                                    once: true
+                                },
+                                transition: {
+                                    delay: idx * 0.2,
+                                    duration: 0.6,
+                                    ease: "easeOut"
+                                },
+                                whileHover: {
+                                    scale: 1.05,
+                                    y: -5
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-4",
+                                        children: reason.icon
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                                        lineNumber: 72,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-xl md:text-2xl font-semibold mb-3 text-gray-900",
+                                        children: reason.title
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                                        lineNumber: 73,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-gray-600 text-sm md:text-base leading-relaxed",
+                                        children: reason.description
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                                        lineNumber: 76,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, idx, true, {
+                                fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                                lineNumber: 63,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                        lineNumber: 61,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                lineNumber: 51,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+        lineNumber: 36,
+        columnNumber: 5
+    }, this);
+}
+_c = WhyChooseUs;
+const __TURBOPACK__default__export__ = WhyChooseUs;
+var _c;
+__turbopack_context__.k.register(_c, "WhyChooseUs");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/app/About/About.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+"use client";
+;
+;
+;
+function About() {
+    const blocks = [
+        {
+            img: "/Kothi4.png",
+            title: "Our Foundation",
+            description: "Established with the vision of redefining renovation in India, Kothi India started with small but impactful projects."
+        },
+        {
+            img: "/kothi11.png",
+            title: "Growth & Innovation",
+            description: "Our growing team embraced modern design, modular solutions, and cutting-edge tools to deliver excellence."
+        },
+        {
+            img: "/kothi.png",
+            title: "The Future",
+            description: "With a client-first mindset, our goal is to become the most trusted name in Indian home improvement."
+        }
+    ];
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "relative py-28 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-6xl mx-auto px-6 space-y-20 text-white",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                    className: "text-center space-y-6",
+                    initial: {
+                        opacity: 0,
+                        y: 50
+                    },
+                    animate: {
+                        opacity: 1,
+                        y: 0
+                    },
+                    transition: {
+                        duration: 0.8
+                    },
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-5xl font-extrabold text-orange-500",
+                            children: "Our Story"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 38,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "max-w-2xl mx-auto text-lg leading-relaxed text-gray-300",
+                            children: "Kothi India has grown from a small team of passionate builders to a trusted brand in home improvement, transforming spaces with design, trust, and innovation."
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 39,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/About/About.tsx",
+                    lineNumber: 32,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "grid md:grid-cols-2 gap-16 items-center",
+                    children: blocks.map((block, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Fragment, {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                    className: "rounded-2xl shadow-2xl overflow-hidden",
+                                    initial: {
+                                        opacity: 0,
+                                        x: idx % 2 === 0 ? -50 : 50
+                                    },
+                                    whileInView: {
+                                        opacity: 1,
+                                        x: 0
+                                    },
+                                    viewport: {
+                                        once: true
+                                    },
+                                    transition: {
+                                        duration: 0.8,
+                                        delay: idx * 0.2
+                                    },
+                                    whileHover: {
+                                        scale: 1.03
+                                    },
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: block.img,
+                                        className: "w-full h-full object-cover",
+                                        alt: block.title,
+                                        loading: "lazy"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/About/About.tsx",
+                                        lineNumber: 59,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/About/About.tsx",
+                                    lineNumber: 51,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                    className: "space-y-4",
+                                    initial: {
+                                        opacity: 0,
+                                        y: 50
+                                    },
+                                    whileInView: {
+                                        opacity: 1,
+                                        y: 0
+                                    },
+                                    viewport: {
+                                        once: true
+                                    },
+                                    transition: {
+                                        duration: 0.8,
+                                        delay: idx * 0.3
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "text-2xl font-bold text-orange-500",
+                                            children: block.title
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/About/About.tsx",
+                                            lineNumber: 75,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-gray-300",
+                                            children: block.description
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/About/About.tsx",
+                                            lineNumber: 76,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/About/About.tsx",
+                                    lineNumber: 68,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, idx, true, {
+                            fileName: "[project]/src/app/About/About.tsx",
+                            lineNumber: 49,
+                            columnNumber: 13
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/src/app/About/About.tsx",
+                    lineNumber: 47,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/app/About/About.tsx",
+            lineNumber: 30,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/app/About/About.tsx",
+        lineNumber: 29,
+        columnNumber: 5
+    }, this);
+}
+_c = About;
+const __TURBOPACK__default__export__ = About;
+var _c;
+__turbopack_context__.k.register(_c, "About");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/src/app/services/construction/Construction.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -1274,7 +1659,7 @@ function ConstructionPage() {
         className: "relative min-h-screen overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-gradient-to-br from-[#ffecd2] via-[#fcb69f] to-[#ff6f3c]"
+                className: "absolute inset-0 bg-gradient-to-br from-[#0b1e3d] via-[#0c2a5a] to-[#122d4a]"
             }, void 0, false, {
                 fileName: "[project]/src/app/services/construction/Construction.tsx",
                 lineNumber: 510,
@@ -1291,7 +1676,7 @@ function ConstructionPage() {
                 className: "relative z-10",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-white text-center py-16 px-4 bg-gradient-to-r from-[#b04400] via-[#e46b25] to-[#b04400] shadow-lg",
+                        className: "text-white text-center py-16 px-4 bg-gradient-to-br from-[#0b1e3d] to-[#122d4a] shadow-lg",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaHardHat"], {
                                 className: "mx-auto text-6xl mb-6 drop-shadow-lg animate-bounce"
@@ -1357,7 +1742,7 @@ function ConstructionPage() {
                         className: "max-w-6xl mx-auto px-6 py-16",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-4xl font-bold text-center text-[#b04400] mb-12",
+                                className: "text-4xl font-bold text-center text-white/50 mb-12",
                                 children: "Why Choose Our Services?"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
@@ -1381,10 +1766,10 @@ function ConstructionPage() {
                                         viewport: {
                                             once: true
                                         },
-                                        className: "bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-6 flex items-start gap-4 hover:scale-105 transition-transform",
+                                        className: "bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-6 flex items-start gap-4 hover:scale-105 transition-transform border border-white/20",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "bg-[#b04400] text-white p-3 rounded-full shadow-md",
+                                                className: "bg-[#0b1e3d] text-white p-3 rounded-full shadow-md",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaCheck"], {
                                                     size: 16
                                                 }, void 0, false, {
@@ -1398,7 +1783,7 @@ function ConstructionPage() {
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-gray-800 font-medium",
+                                                className: "text-white font-medium",
                                                 children: f
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
@@ -1417,7 +1802,7 @@ function ConstructionPage() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-4xl font-bold text-center text-[#b04400] mb-12",
+                                className: "text-4xl font-bold text-center text-white/50 mb-12",
                                 children: "Home Construction Packages"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
@@ -1426,28 +1811,26 @@ function ConstructionPage() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
-                                children: packages.map((pkg, pkgIndex)=>{
-                                    var _sections_map, _sections;
-                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                children: packages.map((pkg, pkgIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                         initial: {
                                             opacity: 0,
-                                            y: 50
+                                            scale: 0.95
                                         },
                                         whileInView: {
                                             opacity: 1,
-                                            y: 0
+                                            scale: 1
                                         },
                                         transition: {
-                                            duration: 0.5,
+                                            duration: 0.6,
                                             delay: pkgIndex * 0.15
                                         },
                                         viewport: {
                                             once: true
                                         },
-                                        className: "bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden",
+                                        className: "bg-white/5 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 overflow-hidden hover:shadow-3xl hover:scale-105 transition-all",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-yellow-600 text-white text-center py-6",
+                                                className: "bg-[#0b1e3d] text-white text-center py-6",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                         className: "text-lg font-bold uppercase",
@@ -1480,50 +1863,49 @@ function ConstructionPage() {
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "divide-y divide-gray-200",
+                                                className: "divide-y divide-white/20",
                                                 children: [
-                                                    pkg.sections.length ? pkg.sections.map((section, secIndex)=>{
+                                                    pkg.sections.map((section, secIndex)=>{
                                                         const open = isSectionOpen(pkgIndex, secIndex);
                                                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                     type: "button",
                                                                     onClick: ()=>toggleSection(pkgIndex, secIndex),
-                                                                    className: "w-full flex justify-between items-center px-4 py-3 text-left hover:bg-gray-50",
+                                                                    className: "w-full flex justify-between items-center px-4 py-3 text-left hover:bg-white/10 text-white",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "text-gray-900 font-medium",
+                                                                            className: "font-medium",
                                                                             children: section.title
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                            lineNumber: 583,
-                                                                            columnNumber: 29
+                                                                            lineNumber: 582,
+                                                                            columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "text-gray-600",
                                                                             children: open ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaMinus"], {
                                                                                 size: 14
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                                lineNumber: 584,
-                                                                                columnNumber: 69
+                                                                                lineNumber: 583,
+                                                                                columnNumber: 41
                                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaPlus"], {
                                                                                 size: 14
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                                lineNumber: 584,
-                                                                                columnNumber: 93
+                                                                                lineNumber: 583,
+                                                                                columnNumber: 65
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                            lineNumber: 584,
-                                                                            columnNumber: 29
+                                                                            lineNumber: 583,
+                                                                            columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                    lineNumber: 578,
-                                                                    columnNumber: 27
+                                                                    lineNumber: 577,
+                                                                    columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                                                                     initial: false,
@@ -1541,128 +1923,113 @@ function ConstructionPage() {
                                                                             height: 0
                                                                         },
                                                                         transition: {
-                                                                            duration: 0.25
+                                                                            duration: 0.3
                                                                         },
-                                                                        className: "px-6 py-3 text-sm text-gray-600 bg-gray-50",
+                                                                        className: "px-6 py-3 text-sm text-white/80 bg-white/5",
                                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                                                             className: "list-disc pl-5 space-y-1",
                                                                             children: section.items.map((it, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                                     children: it
                                                                                 }, i, false, {
                                                                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                                    lineNumber: 599,
-                                                                                    columnNumber: 37
+                                                                                    lineNumber: 598,
+                                                                                    columnNumber: 35
                                                                                 }, this))
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                            lineNumber: 597,
-                                                                            columnNumber: 33
+                                                                            lineNumber: 596,
+                                                                            columnNumber: 31
                                                                         }, this)
                                                                     }, "".concat(pkgIndex, "-").concat(secIndex, "-panel"), false, {
                                                                         fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                        lineNumber: 589,
-                                                                        columnNumber: 31
+                                                                        lineNumber: 588,
+                                                                        columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                    lineNumber: 587,
-                                                                    columnNumber: 27
+                                                                    lineNumber: 586,
+                                                                    columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, secIndex, true, {
                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                            lineNumber: 577,
-                                                            columnNumber: 25
-                                                        }, this);
-                                                    }) : // If no sections defined, show a basic features fallback
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "px-4 py-3",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                            className: "text-gray-700 space-y-1",
-                                                            children: (_sections_map = (_sections = pkg.sections).map) === null || _sections_map === void 0 ? void 0 : _sections_map.call(_sections, ()=>null)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                            lineNumber: 611,
+                                                            lineNumber: 576,
                                                             columnNumber: 23
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                        lineNumber: 610,
-                                                        columnNumber: 21
-                                                    }, this),
+                                                        }, this);
+                                                    }),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "px-4 py-3",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("details", {
                                                             className: "group",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("summary", {
-                                                                    className: "flex justify-between items-center cursor-pointer",
+                                                                    className: "flex justify-between items-center cursor-pointer text-white",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "text-gray-900 font-medium",
+                                                                            className: "font-medium",
                                                                             children: "What’s Not Included"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                            lineNumber: 621,
+                                                                            lineNumber: 612,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "ml-2 text-gray-600 group-open:hidden",
+                                                                            className: "ml-2 text-white group-open:hidden",
                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaPlus"], {
                                                                                 size: 14
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                                lineNumber: 623,
+                                                                                lineNumber: 614,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                            lineNumber: 622,
+                                                                            lineNumber: 613,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "ml-2 text-gray-600 hidden group-open:block",
+                                                                            className: "ml-2 text-white hidden group-open:block",
                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaMinus"], {
                                                                                 size: 14
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                                lineNumber: 626,
+                                                                                lineNumber: 617,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                            lineNumber: 625,
+                                                                            lineNumber: 616,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                    lineNumber: 620,
+                                                                    lineNumber: 611,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                                    className: "mt-3 pl-5 list-disc text-sm text-gray-600 space-y-1",
+                                                                    className: "mt-3 pl-5 list-disc text-sm text-white/80 space-y-1",
                                                                     children: pkg.exclusions.map((exc, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                             children: exc
                                                                         }, i, false, {
                                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                            lineNumber: 631,
+                                                                            lineNumber: 622,
                                                                             columnNumber: 27
                                                                         }, this))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                                    lineNumber: 629,
+                                                                    lineNumber: 620,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                            lineNumber: 619,
+                                                            lineNumber: 610,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                                        lineNumber: 618,
+                                                        lineNumber: 609,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
@@ -1676,8 +2043,7 @@ function ConstructionPage() {
                                         fileName: "[project]/src/app/services/construction/Construction.tsx",
                                         lineNumber: 558,
                                         columnNumber: 15
-                                    }, this);
-                                })
+                                    }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
                                 lineNumber: 556,
@@ -1693,16 +2059,16 @@ function ConstructionPage() {
                                         scale: 0.98
                                     },
                                     onClick: ()=>setShowForm(true),
-                                    className: "px-8 py-4 rounded-full bg-gradient-to-r from-[#b04400] to-[#ff6f3c] text-white font-semibold shadow-xl hover:shadow-2xl transition",
+                                    className: "px-8 py-4 rounded-full bg-gradient-to-r from-[#0b1e3d] to-[#122d4a] text-white font-semibold shadow-xl hover:shadow-2xl transition",
                                     children: "Book Now"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                    lineNumber: 643,
+                                    lineNumber: 634,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                lineNumber: 642,
+                                lineNumber: 633,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -1734,31 +2100,31 @@ function ConstructionPage() {
                                     children: "✖"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                    lineNumber: 663,
+                                    lineNumber: 654,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-2xl font-bold mb-6 text-[#b04400] text-center",
+                                    className: "text-2xl font-bold mb-6 text-[#0b1e3d] text-center",
                                     children: "Book Construction Service"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                    lineNumber: 669,
+                                    lineNumber: 660,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$component$2f$Form$2f$Cxform$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/app/services/construction/Construction.tsx",
-                                    lineNumber: 672,
+                                    lineNumber: 663,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/services/construction/Construction.tsx",
-                            lineNumber: 657,
+                            lineNumber: 648,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/services/construction/Construction.tsx",
-                        lineNumber: 656,
+                        lineNumber: 647,
                         columnNumber: 11
                     }, this)
                 ]
@@ -1820,4 +2186,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=src_app_8499d1c9._.js.map
+//# sourceMappingURL=src_app_8965e3a3._.js.map

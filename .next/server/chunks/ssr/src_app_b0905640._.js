@@ -696,6 +696,202 @@ const InfiniteMovingTestimonials = ({ interval = 4000 })=>{
     }, ("TURBOPACK compile-time value", void 0));
 };
 }),
+"[project]/src/app/component/Whychooseus/Whychooseus.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fa/index.mjs [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+const reasons = [
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaRocket"], {
+            className: "text-[#b04400] w-10 h-10"
+        }, void 0, false, {
+            fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+            lineNumber: 9,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: "Fast & Efficient",
+        description: "We deliver results quickly without compromising on quality, helping your business grow faster."
+    },
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaUsers"], {
+            className: "text-[#b04400] w-10 h-10"
+        }, void 0, false, {
+            fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+            lineNumber: 15,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: "Expert Team",
+        description: "Our skilled professionals understand your needs and provide customized solutions every time."
+    },
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaShieldAlt"], {
+            className: "text-[#b04400] w-10 h-10"
+        }, void 0, false, {
+            fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+            lineNumber: 21,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: "Trusted & Reliable",
+        description: "We prioritize trust and transparency, ensuring your projects are handled with the utmost care."
+    },
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaStar"], {
+            className: "text-[#b04400] w-10 h-10"
+        }, void 0, false, {
+            fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+            lineNumber: 27,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: "Proven Results",
+        description: "Our clients consistently see improved performance and satisfaction from our services."
+    }
+];
+function WhyChooseUs() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "relative bg-gray-50 py-24",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 overflow-hidden",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].img, {
+                        src: "/building.png",
+                        alt: "Background",
+                        className: "w-full h-full object-cover",
+                        initial: {
+                            scale: 1.1
+                        },
+                        animate: {
+                            scale: 1
+                        },
+                        transition: {
+                            duration: 2,
+                            ease: "easeInOut"
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-black opacity-80"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                        lineNumber: 47,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                lineNumber: 38,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-20 max-w-7xl mx-auto px-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h2, {
+                        className: "text-4xl md:text-5xl font-bold text-center text-white mb-16",
+                        initial: {
+                            opacity: 0,
+                            y: 50
+                        },
+                        animate: {
+                            opacity: 1,
+                            y: 0
+                        },
+                        transition: {
+                            duration: 0.8
+                        },
+                        children: "Why Choose Us"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                        lineNumber: 52,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid md:grid-cols-2 lg:grid-cols-4 gap-10",
+                        children: reasons.map((reason, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                                className: "bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-xl transition-shadow duration-300",
+                                initial: {
+                                    opacity: 0,
+                                    y: 40
+                                },
+                                whileInView: {
+                                    opacity: 1,
+                                    y: 0
+                                },
+                                viewport: {
+                                    once: true
+                                },
+                                transition: {
+                                    delay: idx * 0.2,
+                                    duration: 0.6,
+                                    ease: "easeOut"
+                                },
+                                whileHover: {
+                                    scale: 1.05,
+                                    y: -5
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-4",
+                                        children: reason.icon
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                                        lineNumber: 72,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-xl md:text-2xl font-semibold mb-3 text-gray-900",
+                                        children: reason.title
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                                        lineNumber: 73,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-gray-600 text-sm md:text-base leading-relaxed",
+                                        children: reason.description
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                                        lineNumber: 76,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, idx, true, {
+                                fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                                lineNumber: 63,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                        lineNumber: 61,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+                lineNumber: 51,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/app/component/Whychooseus/Whychooseus.tsx",
+        lineNumber: 36,
+        columnNumber: 5
+    }, this);
+}
+const __TURBOPACK__default__export__ = WhyChooseUs;
+}),
 "[project]/src/app/services/construction/Construction.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -1731,4 +1927,4 @@ function ConstructionSection() {
 }),
 ];
 
-//# sourceMappingURL=src_app_22d3d101._.js.map
+//# sourceMappingURL=src_app_b0905640._.js.map

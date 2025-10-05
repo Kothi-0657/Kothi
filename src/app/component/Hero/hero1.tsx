@@ -34,14 +34,14 @@ function Hero1() {
     <section className="relative w-full min-h-screen overflow-hidden pb-24">
       {/* ✅ Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
         src="/herovideo.mp4"
         autoPlay
         loop
         muted
         playsInline
       ></video>
-        <div className="absolute top-0 left-0 w-full h-full bg-black/60"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/10"></div>
 
         <div className="relative container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12 py-20 h-full">
         {/* left + right content ... */}

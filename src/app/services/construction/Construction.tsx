@@ -507,12 +507,12 @@ export default function ConstructionPage(): JSX.Element {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#ffecd2] via-[#fcb69f] to-[#ff6f3c]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0b1e3d] via-[#0c2a5a] to-[#122d4a]" />
       <div className="absolute inset-0 bg-[url('/patterns/geometry.svg')] opacity-10" />
 
       <div className="relative z-10">
         {/* Header */}
-        <div className="text-white text-center py-16 px-4 bg-gradient-to-r from-[#b04400] via-[#e46b25] to-[#b04400] shadow-lg">
+        <div className="text-white text-center py-16 px-4 bg-gradient-to-br from-[#0b1e3d] to-[#122d4a] shadow-lg">
           <FaHardHat className="mx-auto text-6xl mb-6 drop-shadow-lg animate-bounce" />
           <h1 className="text-5xl font-extrabold tracking-wide drop-shadow-md">
             Home Construction Services
@@ -526,7 +526,7 @@ export default function ConstructionPage(): JSX.Element {
 
         {/* Why Choose Section */}
         <div className="max-w-6xl mx-auto px-6 py-16">
-          <h2 className="text-4xl font-bold text-center text-[#b04400] mb-12">
+          <h2 className="text-4xl font-bold text-center text-white/50 mb-12">
             Why Choose Our Services?
           </h2>
 
@@ -538,18 +538,18 @@ export default function ConstructionPage(): JSX.Element {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.12 }}
                 viewport={{ once: true }}
-                className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-6 flex items-start gap-4 hover:scale-105 transition-transform"
+                className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-6 flex items-start gap-4 hover:scale-105 transition-transform border border-white/20"
               >
-                <span className="bg-[#b04400] text-white p-3 rounded-full shadow-md">
+                <span className="bg-[#0b1e3d] text-white p-3 rounded-full shadow-md">
                   <FaCheck size={16} />
                 </span>
-                <span className="text-gray-800 font-medium">{f}</span>
+                <span className="text-white font-medium">{f}</span>
               </motion.div>
             ))}
           </div>
 
           {/* Pricing Packages Section */}
-          <h2 className="text-4xl font-bold text-center text-[#b04400] mb-12">
+          <h2 className="text-4xl font-bold text-center text-white/50 mb-12">
             Home Construction Packages
           </h2>
 
@@ -557,76 +557,67 @@ export default function ConstructionPage(): JSX.Element {
             {packages.map((pkg, pkgIndex) => (
               <motion.div
                 key={pkg.name}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: pkgIndex * 0.15 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: pkgIndex * 0.15 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden"
+                className="bg-white/5 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 overflow-hidden hover:shadow-3xl hover:scale-105 transition-all"
               >
-                <div className="bg-yellow-600 text-white text-center py-6">
+                <div className="bg-[#0b1e3d] text-white text-center py-6">
                   <h3 className="text-lg font-bold uppercase">{pkg.name}</h3>
                   <p className="text-3xl font-extrabold mt-2">{pkg.price}</p>
                   <p className="text-sm font-medium">{pkg.per}</p>
                 </div>
 
-                <div className="divide-y divide-gray-200">
-                  {pkg.sections.length ? (
-                    pkg.sections.map((section, secIndex) => {
-                      const open = isSectionOpen(pkgIndex, secIndex);
-                      return (
-                        <div key={secIndex}>
-                          <button
-                            type="button"
-                            onClick={() => toggleSection(pkgIndex, secIndex)}
-                            className="w-full flex justify-between items-center px-4 py-3 text-left hover:bg-gray-50"
-                          >
-                            <span className="text-gray-900 font-medium">{section.title}</span>
-                            <span className="text-gray-600">{open ? <FaMinus size={14} /> : <FaPlus size={14} />}</span>
-                          </button>
+                <div className="divide-y divide-white/20">
+                  {pkg.sections.map((section, secIndex) => {
+                    const open = isSectionOpen(pkgIndex, secIndex);
+                    return (
+                      <div key={secIndex}>
+                        <button
+                          type="button"
+                          onClick={() => toggleSection(pkgIndex, secIndex)}
+                          className="w-full flex justify-between items-center px-4 py-3 text-left hover:bg-white/10 text-white"
+                        >
+                          <span className="font-medium">{section.title}</span>
+                          <span>{open ? <FaMinus size={14} /> : <FaPlus size={14} />}</span>
+                        </button>
 
-                          <AnimatePresence initial={false}>
-                            {open && (
-                              <motion.div
-                                key={`${pkgIndex}-${secIndex}-panel`}
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
-                                exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.25 }}
-                                className="px-6 py-3 text-sm text-gray-600 bg-gray-50"
-                              >
-                                <ul className="list-disc pl-5 space-y-1">
-                                  {section.items.map((it, i) => (
-                                    <li key={i}>{it}</li>
-                                  ))}
-                                </ul>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </div>
-                      );
-                    })
-                  ) : (
-                    // If no sections defined, show a basic features fallback
-                    <div className="px-4 py-3">
-                      <ul className="text-gray-700 space-y-1">
-                        {(pkg as PackageItem).sections.map?.(() => null)}
-                      </ul>
-                    </div>
-                  )}
+                        <AnimatePresence initial={false}>
+                          {open && (
+                            <motion.div
+                              key={`${pkgIndex}-${secIndex}-panel`}
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="px-6 py-3 text-sm text-white/80 bg-white/5"
+                            >
+                              <ul className="list-disc pl-5 space-y-1">
+                                {section.items.map((it, i) => (
+                                  <li key={i}>{it}</li>
+                                ))}
+                              </ul>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
 
                   {/* Exclusions */}
                   <div className="px-4 py-3">
                     <details className="group">
-                      <summary className="flex justify-between items-center cursor-pointer">
-                        <span className="text-gray-900 font-medium">What’s Not Included</span>
-                        <span className="ml-2 text-gray-600 group-open:hidden">
+                      <summary className="flex justify-between items-center cursor-pointer text-white">
+                        <span className="font-medium">What’s Not Included</span>
+                        <span className="ml-2 text-white group-open:hidden">
                           <FaPlus size={14} />
                         </span>
-                        <span className="ml-2 text-gray-600 hidden group-open:block">
+                        <span className="ml-2 text-white hidden group-open:block">
                           <FaMinus size={14} />
                         </span>
                       </summary>
-                      <ul className="mt-3 pl-5 list-disc text-sm text-gray-600 space-y-1">
+                      <ul className="mt-3 pl-5 list-disc text-sm text-white/80 space-y-1">
                         {pkg.exclusions.map((exc, i) => (
                           <li key={i}>{exc}</li>
                         ))}
@@ -644,7 +635,7 @@ export default function ConstructionPage(): JSX.Element {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setShowForm(true)}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#b04400] to-[#ff6f3c] text-white font-semibold shadow-xl hover:shadow-2xl transition"
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#0b1e3d] to-[#122d4a] text-white font-semibold shadow-xl hover:shadow-2xl transition"
             >
               Book Now
             </motion.button>
@@ -666,7 +657,7 @@ export default function ConstructionPage(): JSX.Element {
               >
                 ✖
               </button>
-              <h2 className="text-2xl font-bold mb-6 text-[#b04400] text-center">
+              <h2 className="text-2xl font-bold mb-6 text-[#0b1e3d] text-center">
                 Book Construction Service
               </h2>
               <ContactForm />

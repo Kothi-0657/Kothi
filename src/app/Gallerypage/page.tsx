@@ -11,7 +11,7 @@ const projects = Array.from({ length: 12 }, (_, i) => ({
   id: i + 1,
   title: `Project ${i + 1}`,
   description: `Short description for project ${i + 1}`,
-  image: `/Gallerypage/project ${i + 1}.jpeg`,
+  image: `/gallery/project ${i + 1}.jpeg`,
 }));
 
 // -----------------------------

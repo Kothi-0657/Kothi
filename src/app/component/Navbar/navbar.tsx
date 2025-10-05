@@ -21,6 +21,7 @@ function Navbar() {
     { tab: "Home", destination: "/" },
     { tab: "Services", destination: "/service" },
     { tab: "Deals", destination: "/deals" },
+    { tab: "Gallery", destination: "/Gallerypage" },
   ];
 
   const handleNavClick = (destination: string) => {
@@ -34,7 +35,7 @@ function Navbar() {
     <>
       {/* Navbar */}
       <div className="fixed top-0 left-0 w-full z-40 backgroundcolor">
-        <div className="flex items-center justify-between px-6 md:px-16 lg:py-2 py-5">
+        <div className="flex items-center justify-between px-6 md:px-11 lg:py-2 py-5 mt-0.5">
           {/* Logo */}
           <Link href="/" className="flex items-end">
             <Image src="/logo.png" width={110} height={90} alt="brandlogo" />
@@ -44,13 +45,13 @@ function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden lg:flex items-center gap-6 font-medium">
+          <ul className="hidden lg:flex items-center gap-11 font-medium mb-1 mt-12">
   {navItems.map((navItem, index) => (
     <li key={index}>
       <Link
         onClick={() => handleNavClick(navItem.destination)}
         href={navItem.destination}
-        className="px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 text-white hover:bg-[#FE904E] transition"
+        className="px-4 py-2 rounded-lg backdrop-blur-md bg-white/20 text-white hover:bg-[#FE904E] transition"
       >
         {navItem.tab}
                 </Link>

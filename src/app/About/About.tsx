@@ -20,7 +20,7 @@ function About() {
           {/* Block 1 */}
           <div>
             <img
-              src="/kothi4.png"
+              src="/Kothi4.png"
               className="rounded-2xl shadow-xl object-cover"
               alt="Foundation"
             />

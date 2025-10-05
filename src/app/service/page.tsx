@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Construction } from "lucide-react";
+
 
 const services = [
   { title: "Construction", type: "construction", icon: "/icons/iconcons.png", description: "Expert construction solutions tailored for your needs." },

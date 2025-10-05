@@ -230,17 +230,17 @@ items: [
         title: "Electrical",
         items: [
           "Wires – Orbit (FRLS)",
-"Switches – Legrand",
-"Bedroom : 3 Switch Box(8-Module)", 
-"Bathroom : 1 Switch Box(Inner) 4-Module, 1 Switch Box(Outer) 3-Module. Point for Heater & Exhaust",
-"Living Room : Upto 4 Switch Box (8 Module)",
-"Dining : 1 Switch (8-Module)",
-"Pooja : 1 Switch (3-Module)",
-"Kitchen : 3 Switch Box (6 Module). Point for HOB, Chimney, RO",
-"Utility : 1 Switch Box (4-Module)",
-"AC Points : 1 for Each Bedroom. 1 for Living Room",
-"Entrance : 1 Switch Box (6-Module)",
-"Balconies : 1 Switch Box (3-Module)"
+          "Switches – Legrand",
+          "Bedroom : 3 Switch Box(8-Module)", 
+          "Bathroom : 1 Switch Box(Inner) 4-Module, 1 Switch Box(Outer) 3-Module. Point for Heater & Exhaust",
+          "Living Room : Upto 4 Switch Box (8 Module)",
+          "Dining : 1 Switch (8-Module)",
+          "Pooja : 1 Switch (3-Module)",
+          "Kitchen : 3 Switch Box (6 Module). Point for HOB, Chimney, RO",
+          "Utility : 1 Switch Box (4-Module)",
+          "AC Points : 1 for Each Bedroom. 1 for Living Room",
+          "Entrance : 1 Switch Box (6-Module)",
+          "Balconies : 1 Switch Box (3-Module)"
         ],
       },
     ], // <-- copy the Basic sections here or customize
@@ -260,15 +260,15 @@ items: [
         title: "Design",
         items: [
           "SCHEME DRAWING : ALL FLOORS (2D)",
-"ELEVATION DESIGN : (3D)",
-"HALF LAYOUT : ALL FLOORS (3D)",
-"ELECTRICAL DRAWINGS : ALL FLOORS (2D)",
-"PLUMBING DRAWING : ALL FLOORS (2D)",
-"WORKING DRAWING : ALL FLOORS (2D)",
-"SOIL TEST REPORT",
-"STRUCTURAL DRAWINGS",
-"FURNITURE LAYOUT : ALL FLOORS (2D)",
-"ELEVATION DETAIL DRAWING : (2D)"
+          "ELEVATION DESIGN : (3D)",
+          "HALF LAYOUT : ALL FLOORS (3D)",
+          "ELECTRICAL DRAWINGS : ALL FLOORS (2D)",
+          "PLUMBING DRAWING : ALL FLOORS (2D)",
+          "WORKING DRAWING : ALL FLOORS (2D)",
+          "SOIL TEST REPORT",
+          "STRUCTURAL DRAWINGS",
+          "FURNITURE LAYOUT : ALL FLOORS (2D)",
+          "ELEVATION DETAIL DRAWING : (2D)"
         ],
       },
       {

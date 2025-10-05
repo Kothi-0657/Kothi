@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import ContactForm from "@/app/component/Form/Cxform";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import CityBand from "../CityBand/cityband";
 
 function Hero1() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -40,6 +41,16 @@ function Hero1() {
         muted
         playsInline
       ></video>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/60"></div>
+
+        <div className="relative container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12 py-20 h-full">
+        {/* left + right content ... */}
+        </div>
+
+      {/* ✅ White City Band at bottom */}
+      <div className="absolute bottom-0 w-full">
+        <CityBand />
+      </div>
 
       {/* ✅ Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/60"></div>

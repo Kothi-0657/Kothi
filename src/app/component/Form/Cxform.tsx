@@ -52,7 +52,7 @@ export default function LuxuryCustomerForm({ onSuccess, onClose }: ContactFormPr
 
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbzeiioJCMVet6mR3MK5fz2pe3H1r6hcQCceRDw0k_HRhfgdscTeSVhKv0PpJHxYYtzGFw/exec",
+        "https://script.google.com/macros/s/AKfycbx6U95x3J-L-OGiEToDaxikvNLZR8guDMoSmZ7AOwGSPA-TXTCw3g0dNSFpGIx7yHEWAQ/exec",
         {
           method: "POST",
           body: formData,

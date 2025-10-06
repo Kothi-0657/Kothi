@@ -66,35 +66,41 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 __turbopack_context__.s([
     "default",
-    ()=>ContactForm
+    ()=>LuxuryCustomerForm
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)"); // ✅ Import Close Icon
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
-function ContactForm(param) {
-    let { onSuccess } = param;
+;
+function LuxuryCustomerForm(param) {
+    let { onSuccess, onClose } = param;
     _s();
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [success, setSuccess] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    // ✅ Validation function
+    // ✅ Form Validation
     const validateForm = (formData)=>{
-        var _formData_get, _formData_get1, _formData_get2, _formData_get3, _formData_get4;
+        var _formData_get, _formData_get1, _formData_get2, _formData_get3, _formData_get4, _formData_get5, _formData_get6;
         const name = ((_formData_get = formData.get("name")) === null || _formData_get === void 0 ? void 0 : _formData_get.toString().trim()) || "";
         const phone = ((_formData_get1 = formData.get("phone")) === null || _formData_get1 === void 0 ? void 0 : _formData_get1.toString().trim()) || "";
         const email = ((_formData_get2 = formData.get("email")) === null || _formData_get2 === void 0 ? void 0 : _formData_get2.toString().trim()) || "";
-        const requirements = ((_formData_get3 = formData.get("requirements")) === null || _formData_get3 === void 0 ? void 0 : _formData_get3.toString().trim()) || "";
-        const visitSchedule = ((_formData_get4 = formData.get("visitSchedule")) === null || _formData_get4 === void 0 ? void 0 : _formData_get4.toString().trim()) || "";
+        const service = ((_formData_get3 = formData.get("service")) === null || _formData_get3 === void 0 ? void 0 : _formData_get3.toString().trim()) || "";
+        const requirements = ((_formData_get4 = formData.get("requirements")) === null || _formData_get4 === void 0 ? void 0 : _formData_get4.toString().trim()) || "";
+        const date = ((_formData_get5 = formData.get("visitDate")) === null || _formData_get5 === void 0 ? void 0 : _formData_get5.toString().trim()) || "";
+        const time = ((_formData_get6 = formData.get("visitTime")) === null || _formData_get6 === void 0 ? void 0 : _formData_get6.toString().trim()) || "";
         if (name.length < 3) return "Name must be at least 3 characters long.";
         if (!/^\d{10}$/.test(phone)) return "Phone number must be exactly 10 digits.";
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return "Please enter a valid email address.";
+        if (!service) return "Please select a service request.";
         if (requirements.length < 10) return "Requirements should be at least 10 characters.";
-        if (!visitSchedule) return "Please select a preferred visit schedule.";
-        return null; // ✅ valid
+        if (!date || !time) return "Please select your preferred call-back date and time.";
+        return null;
     };
+    // ✅ Handle Form Submit
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setLoading(true);
@@ -102,7 +108,6 @@ function ContactForm(param) {
         setSuccess(false);
         const form = e.currentTarget;
         const formData = new FormData(form);
-        // ✅ Run validation before sending
         const validationError = validateForm(formData);
         if (validationError) {
             setError(validationError);
@@ -110,174 +115,244 @@ function ContactForm(param) {
             return;
         }
         try {
-            const res = await fetch("https://script.google.com/macros/s/AKfycbx5m2A2DjI5SgDvhHr9P4HFyvjK6bVHqrqY9Jl88ZW3IfEZSDYsElWb6n6qYyye3SdVdg/exec", {
+            const res = await fetch("https://script.google.com/macros/s/AKfycbzeiioJCMVet6mR3MK5fz2pe3H1r6hcQCceRDw0k_HRhfgdscTeSVhKv0PpJHxYYtzGFw/exec", {
                 method: "POST",
                 body: formData
             });
-            const result = await res.json();
+            const text = await res.text();
+            let result;
+            try {
+                result = JSON.parse(text);
+            } catch (e) {
+                throw new Error("Invalid server response");
+            }
             if (result.status === "success") {
                 setSuccess(true);
                 form.reset();
                 setTimeout(()=>{
                     setSuccess(false);
                     if (onSuccess) onSuccess();
-                }, 2000);
+                }, 2500);
             } else {
                 throw new Error(result.message || "Something went wrong");
             }
         } catch (err) {
-            setError(err instanceof Error ? err.message : "Unexpected error");
+            setError(err instanceof Error ? err.message : "Unexpected error occurred");
         } finally{
             setLoading(false);
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-4",
+        className: "relative max-w-lg mx-auto p-6 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl space-y-6",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-2xl font-bold text-center textcolor2dark",
-                children: "Connect With Us"
+            onClose && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: onClose,
+                className: "absolute top-3 right-3 text-gray-500 hover:text-gray-800 transition",
+                "aria-label": "Close",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaTimes"], {
+                    size: 20
+                }, void 0, false, {
+                    fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                    lineNumber: 97,
+                    columnNumber: 11
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                lineNumber: 79,
+                lineNumber: 92,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                className: "text-3xl font-semibold text-center text-gray-800",
+                children: "Client Form"
+            }, void 0, false, {
+                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                lineNumber: 102,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                className: "space-y-3",
+                className: "space-y-4",
                 onSubmit: handleSubmit,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                         type: "text",
                         name: "name",
-                        placeholder: "Your Name",
-                        className: "w-full p-3 border rounded-lg",
-                        minLength: 3,
+                        placeholder: "Full Name",
+                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 83,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                         type: "tel",
                         name: "phone",
-                        placeholder: "Your Phone Number (10 digits)",
-                        className: "w-full p-3 border rounded-lg",
+                        placeholder: "Phone Number (10 digits)",
+                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
                         pattern: "[0-9]{10}",
                         title: "Phone number must be 10 digits",
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 91,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                         type: "email",
                         name: "email",
-                        placeholder: "Your Email",
-                        className: "w-full p-3 border rounded-lg",
+                        placeholder: "Email Address",
+                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 100,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        name: "requirements",
-                        placeholder: "Requirements in brief",
-                        className: "w-full p-3 border rounded-lg",
-                        rows: 3,
-                        required: true
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 107,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-2 gap-4",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                        name: "service",
+                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400 bg-white",
+                        required: true,
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "date",
-                                        name: "visitDate",
-                                        className: "w-full p-2 rounded-xl border border-black/30 bg-white/20 backdrop-blur-md text-black placeholder-gray/70 focus:ring-2 focus:ring-orange-400 mt-6",
-                                        required: true
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                                        lineNumber: 117,
-                                        columnNumber: 5
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "absolute left-3 top-1 text-xs text-orange-300",
-                                        children: "Date"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                                        lineNumber: 123,
-                                        columnNumber: 5
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                value: "",
+                                children: "Select a Service Request"
+                            }, void 0, false, {
                                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                                lineNumber: 116,
-                                columnNumber: 3
+                                lineNumber: 143,
+                                columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "time",
-                                        name: "visitTime",
-                                        className: "w-full p-2 rounded-xl border border-black/30 bg-white/20 backdrop-blur-md text-black placeholder-gray/70 focus:ring-2 focus:ring-orange-400 mt-6",
-                                        required: true
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                                        lineNumber: 126,
-                                        columnNumber: 5
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "absolute left-3 top-1 text-xs text-orange-300",
-                                        children: "Time"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                                        lineNumber: 132,
-                                        columnNumber: 5
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                value: "Home Inspections",
+                                children: "Home Inspections"
+                            }, void 0, false, {
                                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                                lineNumber: 125,
-                                columnNumber: 3
+                                lineNumber: 144,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                value: "Home Renovations",
+                                children: "Home Renovations"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 145,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                value: "Home Interior",
+                                children: "Home Interior"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 146,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                value: "Home Constructions",
+                                children: "Home Constructions"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 147,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                value: "Packers and Movers",
+                                children: "Packers and Movers"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 148,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                value: "Vendor Onboarding",
+                                children: "Vendor Onboarding"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 149,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 115,
-                        columnNumber: 3
+                        lineNumber: 138,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                        name: "requirements",
+                        placeholder: "Describe your requirement or service need in detail",
+                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                        rows: 4,
+                        required: true
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                        lineNumber: 153,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                className: "block text-gray-700 font-medium mb-1",
+                                children: "Preferred Call Back Date & Time"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 163,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid grid-cols-2 gap-4",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "date",
+                                        name: "visitDate",
+                                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                                        required: true
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                        lineNumber: 167,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "time",
+                                        name: "visitTime",
+                                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                                        required: true
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                        lineNumber: 173,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                                lineNumber: 166,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/component/Form/Cxform.tsx",
+                        lineNumber: 162,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "submit",
-                        className: "w-40 py-2 m1-auto block rounded-lg bg-gradient-to-r from-[#ff7b54] to-[#ffb347] text-white font-semibold shadow-md hover:opacity-90 transition",
                         disabled: loading,
-                        children: loading ? "Submitting..." : "Submit"
+                        className: "w-full py-3 bg-gradient-to-r from-orange-500 to-amber-400 text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition",
+                        children: loading ? "Submitting..." : "Submit Request"
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                        lineNumber: 138,
+                        lineNumber: 183,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                lineNumber: 82,
+                lineNumber: 107,
                 columnNumber: 7
             }, this),
             success && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "text-green-600 text-center font-medium",
-                children: "✅ Submitted successfully! Closing..."
+                children: "✅ Thank you! Your request has been received."
             }, void 0, false, {
                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                lineNumber: 148,
+                lineNumber: 194,
                 columnNumber: 9
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -288,20 +363,20 @@ function ContactForm(param) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
-                lineNumber: 152,
-                columnNumber: 17
+                lineNumber: 199,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/component/Form/Cxform.tsx",
-        lineNumber: 78,
+        lineNumber: 89,
         columnNumber: 5
     }, this);
 }
-_s(ContactForm, "yt3NDFcHO8SUy66l4D06FMoutUk=");
-_c = ContactForm;
+_s(LuxuryCustomerForm, "yt3NDFcHO8SUy66l4D06FMoutUk=");
+_c = LuxuryCustomerForm;
 var _c;
-__turbopack_context__.k.register(_c, "ContactForm");
+__turbopack_context__.k.register(_c, "LuxuryCustomerForm");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

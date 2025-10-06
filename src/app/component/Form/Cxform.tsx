@@ -86,31 +86,31 @@ export default function LuxuryCustomerForm({ onSuccess, onClose }: ContactFormPr
   };
 
   return (
-    <div className="relative max-w-lg mx-auto p-6 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl space-y-6">
+    <div className="relative max-w-lg mx-auto p-4 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl space-y-4">
       {/* ✅ Close Button (Top-Right Corner) */}
       {onClose && (
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 transition"
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 transition"
           aria-label="Close"
         >
-          <FaTimes size={20} />
+          <FaTimes size={16} />
         </button>
       )}
 
       {/* Form Heading */}
-      <h2 className="text-3xl font-semibold text-center text-gray-800">
+      <h2 className="text-xl font-semibold text-center text-gray-800 mb-1">
         Client Form
       </h2>
 
       {/* Form */}
-      <form className="space-y-4" onSubmit={handleSubmit}>
+      <form className="space-y-3" onSubmit={handleSubmit}>
         {/* Name */}
         <input
           type="text"
           name="name"
           placeholder="Full Name"
-          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400"
+          className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400"
           required
         />
 
@@ -119,7 +119,7 @@ export default function LuxuryCustomerForm({ onSuccess, onClose }: ContactFormPr
           type="tel"
           name="phone"
           placeholder="Phone Number (10 digits)"
-          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400"
+          className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400"
           pattern="[0-9]{10}"
           title="Phone number must be 10 digits"
           required
@@ -130,14 +130,14 @@ export default function LuxuryCustomerForm({ onSuccess, onClose }: ContactFormPr
           type="email"
           name="email"
           placeholder="Email Address"
-          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400"
+          className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400"
           required
         />
 
         {/* Service Request */}
         <select
           name="service"
-          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400 bg-white"
+          className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400 bg-white"
           required
         >
           <option value="">Select a Service Request</option>
@@ -153,27 +153,27 @@ export default function LuxuryCustomerForm({ onSuccess, onClose }: ContactFormPr
         <textarea
           name="requirements"
           placeholder="Describe your requirement or service need in detail"
-          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400"
+          className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400"
           rows={4}
           required
         />
 
         {/* Preferred Callback Date & Time */}
         <div>
-          <label className="block text-gray-700 font-medium mb-1">
+          <label className="block text-gray-700 font-medium mb-1 text-sm">
             Preferred Call Back Date & Time
           </label>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-2">
             <input
               type="date"
               name="visitDate"
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400"
+              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400"
               required
             />
             <input
               type="time"
               name="visitTime"
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400"
+              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400"
               required
             />
           </div>
@@ -183,7 +183,7 @@ export default function LuxuryCustomerForm({ onSuccess, onClose }: ContactFormPr
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-3 bg-gradient-to-r from-orange-500 to-amber-400 text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition"
+          className="w-full py-2 bg-gradient-to-r from-orange-500 to-amber-400 text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition"
         >
           {loading ? "Submitting..." : "Submit Request"}
         </button>

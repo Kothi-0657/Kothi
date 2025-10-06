@@ -34,7 +34,7 @@ const cities: CityItem[] = [
 /** ✅ Component */
 export default function CityBand(): JSX.Element {
   return (
-    <div className="w-full bg-white shadow-inner overflow-hidden">
+    <div className="w-full bg-white shadow-inner overflow-hidden mb-62 mt-1">
       <div className="flex animate-marquee whitespace-nowrap py-1.5">
         {/* Duplicate cities for seamless loop */}
         {[...cities, ...cities].map((c, idx) => (

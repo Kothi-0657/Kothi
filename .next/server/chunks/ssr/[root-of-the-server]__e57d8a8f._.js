@@ -128,7 +128,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
             return;
         }
         try {
-            const res = await fetch("https://script.google.com/macros/s/AKfycbzeiioJCMVet6mR3MK5fz2pe3H1r6hcQCceRDw0k_HRhfgdscTeSVhKv0PpJHxYYtzGFw/exec", {
+            const res = await fetch("https://script.google.com/macros/s/AKfycbx6U95x3J-L-OGiEToDaxikvNLZR8guDMoSmZ7AOwGSPA-TXTCw3g0dNSFpGIx7yHEWAQ/exec", {
                 method: "POST",
                 body: formData
             });
@@ -156,14 +156,14 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative max-w-lg mx-auto p-6 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl space-y-6",
+        className: "relative max-w-lg mx-auto p-4 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl space-y-4",
         children: [
             onClose && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: onClose,
-                className: "absolute top-3 right-3 text-gray-500 hover:text-gray-800 transition",
+                className: "absolute top-2 right-2 text-gray-500 hover:text-gray-800 transition",
                 "aria-label": "Close",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaTimes"], {
-                    size: 20
+                    size: 16
                 }, void 0, false, {
                     fileName: "[project]/src/app/component/Form/Cxform.tsx",
                     lineNumber: 97,
@@ -175,7 +175,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-3xl font-semibold text-center text-gray-800",
+                className: "text-xl font-semibold text-center text-gray-800 mb-1",
                 children: "Client Form"
             }, void 0, false, {
                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
@@ -183,14 +183,14 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                className: "space-y-4",
+                className: "space-y-3",
                 onSubmit: handleSubmit,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                         type: "text",
                         name: "name",
                         placeholder: "Full Name",
-                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                        className: "w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400",
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
@@ -201,7 +201,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                         type: "tel",
                         name: "phone",
                         placeholder: "Phone Number (10 digits)",
-                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                        className: "w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400",
                         pattern: "[0-9]{10}",
                         title: "Phone number must be 10 digits",
                         required: true
@@ -214,7 +214,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                         type: "email",
                         name: "email",
                         placeholder: "Email Address",
-                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                        className: "w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400",
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
@@ -223,7 +223,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                         name: "service",
-                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400 bg-white",
+                        className: "w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400 bg-white",
                         required: true,
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -291,7 +291,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
                         name: "requirements",
                         placeholder: "Describe your requirement or service need in detail",
-                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                        className: "w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400",
                         rows: 4,
                         required: true
                     }, void 0, false, {
@@ -302,7 +302,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                className: "block text-gray-700 font-medium mb-1",
+                                className: "block text-gray-700 font-medium mb-1 text-sm",
                                 children: "Preferred Call Back Date & Time"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/component/Form/Cxform.tsx",
@@ -310,12 +310,12 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid grid-cols-2 gap-4",
+                                className: "grid grid-cols-2 gap-2",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         type: "date",
                                         name: "visitDate",
-                                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                                        className: "w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400",
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
@@ -325,7 +325,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         type: "time",
                                         name: "visitTime",
-                                        className: "w-full p-3 border rounded-lg focus:ring-2 focus:ring-orange-400",
+                                        className: "w-full p-2 border rounded-lg focus:ring-2 focus:ring-orange-400",
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/component/Form/Cxform.tsx",
@@ -347,7 +347,7 @@ function LuxuryCustomerForm({ onSuccess, onClose }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "submit",
                         disabled: loading,
-                        className: "w-full py-3 bg-gradient-to-r from-orange-500 to-amber-400 text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition",
+                        className: "w-full py-2 bg-gradient-to-r from-orange-500 to-amber-400 text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition",
                         children: loading ? "Submitting..." : "Submit Request"
                     }, void 0, false, {
                         fileName: "[project]/src/app/component/Form/Cxform.tsx",

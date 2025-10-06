@@ -155,7 +155,6 @@
     --color-amber-400: #fcbb00;
     --color-yellow-900: #733e0a;
     --color-green-400: #05df72;
-    --color-green-500: #00c758;
     --color-green-600: #00a544;
     --color-blue-500: #3080ff;
     --color-blue-600: #155dfc;
@@ -183,8 +182,6 @@
     --container-5xl: 64rem;
     --container-6xl: 72rem;
     --container-7xl: 80rem;
-    --text-xs: .75rem;
-    --text-xs--line-height: calc(1 / .75);
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
     --text-base: 1rem;
@@ -242,7 +239,6 @@
       --color-amber-400: color(display-p3 .959186 .738519 .118268);
       --color-yellow-900: color(display-p3 .422485 .252729 .095052);
       --color-green-400: color(display-p3 .399536 .862346 .49324);
-      --color-green-500: color(display-p3 .308734 .774754 .374307);
       --color-green-600: color(display-p3 .243882 .640824 .294808);
       --color-blue-500: color(display-p3 .266422 .491219 .988624);
       --color-blue-600: color(display-p3 .174493 .358974 .950247);
@@ -273,7 +269,6 @@
       --color-amber-400: lab(80.1641% 16.6016 99.2089);
       --color-yellow-900: lab(32.3865% 21.1273 38.5959);
       --color-green-400: lab(78.503% -64.9265 39.7492);
-      --color-green-500: lab(70.5521% -66.5147 45.8073);
       --color-green-600: lab(59.0978% -58.6621 41.2579);
       --color-blue-500: lab(54.1736% 13.3369 -74.6839);
       --color-blue-600: lab(44.0605% 29.0279 -86.0352);
@@ -677,10 +672,6 @@
     top: calc(var(--spacing) * 0);
   }
 
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
-
   .top-1\/2 {
     top: 50%;
   }
@@ -705,12 +696,12 @@
     right: calc(var(--spacing) * 0);
   }
 
-  .right-3 {
-    right: calc(var(--spacing) * 3);
+  .right-2 {
+    right: calc(var(--spacing) * 2);
   }
 
-  .right-4 {
-    right: calc(var(--spacing) * 4);
+  .right-3 {
+    right: calc(var(--spacing) * 3);
   }
 
   .right-6 {
@@ -739,10 +730,6 @@
 
   .left-1\/2 {
     left: 50%;
-  }
-
-  .left-3 {
-    left: calc(var(--spacing) * 3);
   }
 
   .left-6 {
@@ -924,6 +911,10 @@
     margin-bottom: calc(var(--spacing) * 6);
   }
 
+  .mb-7 {
+    margin-bottom: calc(var(--spacing) * 7);
+  }
+
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
@@ -948,8 +939,20 @@
     margin-bottom: calc(var(--spacing) * 22);
   }
 
+  .mb-32 {
+    margin-bottom: calc(var(--spacing) * 32);
+  }
+
   .mb-49 {
     margin-bottom: calc(var(--spacing) * 49);
+  }
+
+  .mb-62 {
+    margin-bottom: calc(var(--spacing) * 62);
+  }
+
+  .mb-72 {
+    margin-bottom: calc(var(--spacing) * 72);
   }
 
   .ml-2 {
@@ -1070,10 +1073,6 @@
 
   .w-20 {
     width: calc(var(--spacing) * 20);
-  }
-
-  .w-40 {
-    width: calc(var(--spacing) * 40);
   }
 
   .w-56 {
@@ -1428,10 +1427,6 @@
     overflow-x: auto;
   }
 
-  .rounded {
-    border-radius: .25rem;
-  }
-
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -1503,16 +1498,6 @@
     border-color: rgba(176, 68, 0, .4);
     border-color: color(display-p3 .640072 .29399 .10974 / .4);
     border-color: lab(43.95% 43.1688 55.013 / .4);
-  }
-
-  .border-black\/30 {
-    border-color: rgba(0, 0, 0, .3);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .border-black\/30 {
-      border-color: color-mix(in oklab, var(--color-black) 30%, transparent);
-    }
   }
 
   .border-gray-200 {
@@ -1669,16 +1654,8 @@
     background-color: var(--color-gray-100);
   }
 
-  .bg-gray-300 {
-    background-color: var(--color-gray-300);
-  }
-
   .bg-gray-950 {
     background-color: var(--color-gray-950);
-  }
-
-  .bg-green-500 {
-    background-color: var(--color-green-500);
   }
 
   .bg-orange-500 {
@@ -1733,16 +1710,6 @@
     }
   }
 
-  .bg-white\/40 {
-    background-color: rgba(255, 255, 255, .4);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-white\/40 {
-      background-color: color-mix(in oklab, var(--color-white) 40%, transparent);
-    }
-  }
-
   .bg-white\/50 {
     background-color: rgba(255, 255, 255, .5);
   }
@@ -1780,6 +1747,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-white\/90 {
       background-color: color-mix(in oklab, var(--color-white) 90%, transparent);
+    }
+  }
+
+  .bg-white\/95 {
+    background-color: rgba(255, 255, 255, .95);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-white\/95 {
+      background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
     }
   }
 
@@ -1823,11 +1800,6 @@
 
   .from-\[\#b04400\] {
     --tw-gradient-from: #b04400;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
-  .from-\[\#ff7b54\] {
-    --tw-gradient-from: #ff7b54;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
@@ -1950,11 +1922,6 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
-  .to-\[\#ffb347\] {
-    --tw-gradient-to: #ffb347;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
   .to-amber-400 {
     --tw-gradient-to: var(--color-amber-400);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1986,11 +1953,6 @@
 
   .to-gray-950 {
     --tw-gradient-to: var(--color-gray-950);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
-  .to-orange-400 {
-    --tw-gradient-to: var(--color-orange-400);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
@@ -2257,11 +2219,6 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
   }
 
   .text-\[8rem\] {

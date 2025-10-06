@@ -10,6 +10,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fa/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$component$2f$Form$2f$Cxform$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/component/Form/Cxform.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
@@ -19,6 +20,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$component$2f$F
 ;
 function RenovationPage() {
     const [showForm, setShowForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [openCategories, setOpenCategories] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({});
+    const toggleCategory = (category)=>{
+        setOpenCategories((prev)=>({
+                ...prev,
+                [category]: !prev[category]
+            }));
+    };
     const features = [
         "Complete home & office remodeling",
         "Modular kitchens & wardrobes",
@@ -26,34 +34,178 @@ function RenovationPage() {
         "False ceiling & lighting solutions",
         "Bathroom & plumbing renovations"
     ];
+    const renovationCategories = [
+        {
+            category: "Foundation & Structural Work",
+            services: [
+                "Foundation strengthening & reinforcement",
+                "Structural beam repair",
+                "Slab restoration",
+                "Column replacement",
+                "Wall re-structuring",
+                "Load-bearing wall modifications",
+                "Earthquake retrofitting",
+                "Concrete crack repairs",
+                "Foundation waterproofing"
+            ]
+        },
+        {
+            category: "Exterior Renovations",
+            services: [
+                "Roof replacement & repair",
+                "Terrace waterproofing",
+                "Exterior wall painting",
+                "Facade restoration",
+                "Brickwork repairs",
+                "Stone cladding installation",
+                "Exterior waterproof coating",
+                "Balcony renovation",
+                "Terrace garden setup",
+                "Boundary wall reconstruction"
+            ]
+        },
+        {
+            category: "Interior Renovations",
+            services: [
+                "Complete home remodeling",
+                "False ceiling renovation",
+                "Drywall & plaster repair",
+                "Floor leveling",
+                "Marble & tile replacement",
+                "Wood flooring installation",
+                "Carpet installation",
+                "Wall texture finishes",
+                "Interior wall painting",
+                "Accent wall creation",
+                "Decorative molding & cornices",
+                "Skirting & dado installation",
+                "Room partitioning",
+                "Custom cabinetry installation"
+            ]
+        },
+        {
+            category: "Kitchen Renovations",
+            services: [
+                "Modular kitchen design",
+                "Kitchen cabinet replacement",
+                "Countertop upgrades",
+                "Backsplash installation",
+                "Kitchen flooring renovation",
+                "Sink & faucet replacement",
+                "Kitchen island installation",
+                "Pantry remodeling",
+                "Lighting redesign",
+                "Appliance integration",
+                "Ventilation system upgrade",
+                "Smart kitchen automation"
+            ]
+        },
+        {
+            category: "Bathroom Renovations",
+            services: [
+                "Complete bathroom remodeling",
+                "Shower enclosure installation",
+                "Bathtub replacement",
+                "Vanity installation",
+                "Wall tile replacement",
+                "Floor tile upgrades",
+                "Plumbing fixture upgrades",
+                "Mirror & lighting upgrades",
+                "Waterproofing for bathrooms",
+                "Smart bathroom fittings",
+                "Exhaust fan installation",
+                "Heated towel rail installation"
+            ]
+        },
+        {
+            category: "Bedroom & Living Room Renovations",
+            services: [
+                "Bedroom layout redesign",
+                "Wardrobe customization",
+                "Flooring upgrades",
+                "Lighting design",
+                "Feature wall creation",
+                "False ceiling design",
+                "Window treatment upgrades",
+                "Soundproofing",
+                "Built-in storage solutions",
+                "Smart bedroom automation",
+                "Living room layout redesign",
+                "False ceiling & lighting design",
+                "Feature wall renovation",
+                "Flooring upgrades",
+                "Custom TV unit installation",
+                "Fireplace installation",
+                "Curtain & blind upgrades",
+                "Smart home integration",
+                "Acoustic wall treatments"
+            ]
+        },
+        {
+            category: "Specialty Renovations",
+            services: [
+                "Laundry room renovation",
+                "Garage remodeling",
+                "Home office renovation",
+                "Basement finishing",
+                "Attic conversion",
+                "Home theater setup",
+                "Smart lighting renovation",
+                "Energy-efficient upgrades",
+                "Solar panel integration",
+                "Rainwater harvesting setup",
+                "Home insulation upgrades",
+                "Security system installation"
+            ]
+        },
+        {
+            category: "Outdoor Renovations",
+            services: [
+                "Outdoor patio remodeling",
+                "Garden landscaping",
+                "Driveway paving",
+                "Deck & pergola construction",
+                "Swimming pool renovation",
+                "Fence & gate replacement",
+                "Outdoor lighting upgrades",
+                "Pergola & gazebo installation",
+                "Outdoor kitchen setup",
+                "Terrace garden creation",
+                "BBQ area construction"
+            ]
+        }
+    ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "relative min-h-screen overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-gradient-to-br from-[#ffecd2] via-[#fcb69f] to-[#ff6f3c]"
+                className: "absolute inset-0 bg-cover bg-center",
+                style: {
+                    backgroundImage: "url('/luxury-bg.jpg')"
+                }
             }, void 0, false, {
                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                lineNumber: 22,
+                lineNumber: 169,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-[url('/patterns/geometry.svg')] opacity-10"
+                className: "absolute inset-0 bg-black/50"
             }, void 0, false, {
                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                lineNumber: 23,
+                lineNumber: 173,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "relative z-10",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-white text-center py-16 px-4 bg-gradient-to-r from-[#b04400] via-[#ff7b3d] to-[#b04400] shadow-lg",
+                        className: "text-orange=500 text-center py-16 px-4 bg-black/40 backdrop-blur-lg shadow-lg mb-10 mt-10",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaTools"], {
                                 className: "mx-auto text-6xl mb-6 drop-shadow-lg animate-bounce"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                                lineNumber: 28,
+                                lineNumber: 178,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -61,7 +213,7 @@ function RenovationPage() {
                                 children: "Home Renovation Services"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                                lineNumber: 29,
+                                lineNumber: 179,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -73,40 +225,41 @@ function RenovationPage() {
                                         children: "renovation"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/renovation/page.tsx",
-                                        lineNumber: 33,
+                                        lineNumber: 183,
                                         columnNumber: 47
                                     }, this),
-                                    " and ",
+                                    " and",
+                                    " ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "font-semibold",
                                         children: "remodeling"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/renovation/page.tsx",
-                                        lineNumber: 33,
-                                        columnNumber: 101
+                                        lineNumber: 184,
+                                        columnNumber: 13
                                     }, this),
                                     "."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                                lineNumber: 32,
+                                lineNumber: 182,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/services/renovation/page.tsx",
-                        lineNumber: 27,
+                        lineNumber: 177,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "max-w-6xl mx-auto px-6 py-16",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-4xl font-bold text-center text-[#b04400] mb-12",
+                                className: "text-4xl font-bold text-center mb-12",
                                 children: "What We Offer"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                                lineNumber: 39,
+                                lineNumber: 190,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -126,7 +279,7 @@ function RenovationPage() {
                                         viewport: {
                                             once: true
                                         },
-                                        className: "bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-6 flex items-start gap-4 hover:scale-105 transition-transform",
+                                        className: "bg-white/20 backdrop-blur-md rounded-2xl shadow-lg p-6 flex items-start gap-4 hover:scale-105 transition-transform",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "bg-[#b04400] text-white p-3 rounded-full shadow-md",
@@ -134,35 +287,106 @@ function RenovationPage() {
                                                     size: 16
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/services/renovation/page.tsx",
-                                                    lineNumber: 54,
+                                                    lineNumber: 205,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                                                lineNumber: 53,
+                                                lineNumber: 204,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-gray-800 font-medium",
+                                                className: "text-white font-medium",
                                                 children: f
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                                                lineNumber: 56,
+                                                lineNumber: 207,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, i, true, {
                                         fileName: "[project]/src/app/services/renovation/page.tsx",
-                                        lineNumber: 45,
+                                        lineNumber: 196,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                                lineNumber: 43,
+                                lineNumber: 194,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-center",
+                                className: "space-y-6",
+                                children: renovationCategories.map((cat)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                                        className: "bg-white/20 backdrop-blur-md rounded-2xl shadow-lg p-6 text-orange-100",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>toggleCategory(cat.category),
+                                                className: "flex items-center justify-between text-orange-300 font-medium w-full text-lg",
+                                                children: [
+                                                    cat.category,
+                                                    openCategories[cat.category] ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaMinus"], {}, void 0, false, {
+                                                        fileName: "[project]/src/app/services/renovation/page.tsx",
+                                                        lineNumber: 224,
+                                                        columnNumber: 51
+                                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaPlus"], {}, void 0, false, {
+                                                        fileName: "[project]/src/app/services/renovation/page.tsx",
+                                                        lineNumber: 224,
+                                                        columnNumber: 65
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/services/renovation/page.tsx",
+                                                lineNumber: 219,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
+                                                children: openCategories[cat.category] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].ul, {
+                                                    initial: {
+                                                        opacity: 0,
+                                                        height: 0
+                                                    },
+                                                    animate: {
+                                                        opacity: 1,
+                                                        height: "auto"
+                                                    },
+                                                    exit: {
+                                                        opacity: 0,
+                                                        height: 0
+                                                    },
+                                                    transition: {
+                                                        duration: 0.3
+                                                    },
+                                                    className: "list-disc pl-5 mt-4 space-y-1 text-white text-sm",
+                                                    children: cat.services.map((srv, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                            children: srv
+                                                        }, idx, false, {
+                                                            fileName: "[project]/src/app/services/renovation/page.tsx",
+                                                            lineNumber: 237,
+                                                            columnNumber: 25
+                                                        }, this))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/services/renovation/page.tsx",
+                                                    lineNumber: 229,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/services/renovation/page.tsx",
+                                                lineNumber: 227,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, cat.category, true, {
+                                        fileName: "[project]/src/app/services/renovation/page.tsx",
+                                        lineNumber: 215,
+                                        columnNumber: 15
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/services/renovation/page.tsx",
+                                lineNumber: 213,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-center mt-12",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
                                     whileHover: {
                                         scale: 1.1
@@ -175,18 +399,18 @@ function RenovationPage() {
                                     children: "Book Now"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/services/renovation/page.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 248,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                                lineNumber: 62,
+                                lineNumber: 247,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/services/renovation/page.tsx",
-                        lineNumber: 38,
+                        lineNumber: 189,
                         columnNumber: 9
                     }, this),
                     showForm && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -212,7 +436,7 @@ function RenovationPage() {
                                     children: "✖"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/services/renovation/page.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 268,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -220,35 +444,35 @@ function RenovationPage() {
                                     children: "Book Renovation Service"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/services/renovation/page.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 274,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$component$2f$Form$2f$Cxform$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/app/services/renovation/page.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 277,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/services/renovation/page.tsx",
-                            lineNumber: 77,
+                            lineNumber: 262,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/services/renovation/page.tsx",
-                        lineNumber: 76,
+                        lineNumber: 261,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/services/renovation/page.tsx",
-                lineNumber: 25,
+                lineNumber: 175,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/services/renovation/page.tsx",
-        lineNumber: 20,
+        lineNumber: 167,
         columnNumber: 5
     }, this);
 }

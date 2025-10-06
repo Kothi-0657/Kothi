@@ -512,12 +512,12 @@ export default function ConstructionPage(): JSX.Element {
 
       <div className="relative z-10">
         {/* Header */}
-        <div className="text-white text-center py-16 px-4 bg-gradient-to-br from-[#0b1e3d] to-[#122d4a] shadow-lg">
+        <div className="text-orange-500 text-center py-16 px-4 bg-gradient-to-br from-[#0b1e3d] to-[#122d4a] shadow-lg">
           <FaHardHat className="mx-auto text-6xl mb-6 drop-shadow-lg animate-bounce" />
           <h1 className="text-5xl font-extrabold tracking-wide drop-shadow-md">
             Home Construction Services
           </h1>
-          <p className="mt-4 text-lg font-light max-w-2xl mx-auto opacity-90">
+          <p className="mt-4 text-white text-lg font-light max-w-2xl mx-auto opacity-90">
             Build your dream home with <span className="font-semibold">quality</span>,{" "}
             <span className="font-semibold">transparency</span>, and{" "}
             <span className="font-semibold">trust</span>.
@@ -549,11 +549,11 @@ export default function ConstructionPage(): JSX.Element {
           </div>
 
           {/* Pricing Packages Section */}
-          <h2 className="text-4xl font-bold text-center text-white/50 mb-12">
+          <h2 className="text-4xl font-bold text-center text-orange-500 mb-12">
             Home Construction Packages
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-orange-500">
             {packages.map((pkg, pkgIndex) => (
               <motion.div
                 key={pkg.name}
@@ -564,9 +564,9 @@ export default function ConstructionPage(): JSX.Element {
                 className="bg-white/5 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 overflow-hidden hover:shadow-3xl hover:scale-105 transition-all"
               >
                 <div className="bg-[#0b1e3d] text-white text-center py-6">
-                  <h3 className="text-lg font-bold uppercase">{pkg.name}</h3>
+                  <h3 className="text-lg font-bold uppercase text-orange-500">{pkg.name}</h3>
                   <p className="text-3xl font-extrabold mt-2">{pkg.price}</p>
-                  <p className="text-sm font-medium">{pkg.per}</p>
+                  <p className="text-sm font-medium ">{pkg.per}</p>
                 </div>
 
                 <div className="divide-y divide-white/20">
@@ -591,7 +591,7 @@ export default function ConstructionPage(): JSX.Element {
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.3 }}
-                              className="px-6 py-3 text-sm text-white/80 bg-white/5"
+                              className="px-6 py-3 text-sm text-orange-500 bg-white/5"
                             >
                               <ul className="list-disc pl-5 space-y-1">
                                 {section.items.map((it, i) => (

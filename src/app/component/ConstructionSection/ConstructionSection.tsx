@@ -2,7 +2,7 @@
 
 // Update the import path below to the correct location of ConstructionPage
 // Update the import path below to the correct location of ConstructionPage
-import ConstructionPage from "../../services/construction/Construction";
+import ConstructionPage from "../../services/construction/page";
 
 export default function ConstructionSection() {
   return (

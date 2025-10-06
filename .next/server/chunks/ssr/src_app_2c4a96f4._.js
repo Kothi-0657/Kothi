@@ -1069,7 +1069,7 @@ function About() {
 }
 const __TURBOPACK__default__export__ = About;
 }),
-"[project]/src/app/services/construction/Construction.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"[project]/src/app/services/construction/page.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -1576,14 +1576,14 @@ function ConstructionPage() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 bg-gradient-to-br from-[#0b1e3d] via-[#0c2a5a] to-[#122d4a]"
             }, void 0, false, {
-                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                fileName: "[project]/src/app/services/construction/page.tsx",
                 lineNumber: 510,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 bg-[url('/patterns/geometry.svg')] opacity-10"
             }, void 0, false, {
-                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                fileName: "[project]/src/app/services/construction/page.tsx",
                 lineNumber: 511,
                 columnNumber: 7
             }, this),
@@ -1596,7 +1596,7 @@ function ConstructionPage() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaHardHat"], {
                                 className: "mx-auto text-6xl mb-6 drop-shadow-lg animate-bounce"
                             }, void 0, false, {
-                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                fileName: "[project]/src/app/services/construction/page.tsx",
                                 lineNumber: 516,
                                 columnNumber: 11
                             }, this),
@@ -1604,7 +1604,7 @@ function ConstructionPage() {
                                 className: "text-5xl font-extrabold tracking-wide drop-shadow-md",
                                 children: "Home Construction Services"
                             }, void 0, false, {
-                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                fileName: "[project]/src/app/services/construction/page.tsx",
                                 lineNumber: 517,
                                 columnNumber: 11
                             }, this),
@@ -1616,7 +1616,7 @@ function ConstructionPage() {
                                         className: "font-semibold",
                                         children: "quality"
                                     }, void 0, false, {
-                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                         lineNumber: 521,
                                         columnNumber: 40
                                     }, this),
@@ -1626,7 +1626,7 @@ function ConstructionPage() {
                                         className: "font-semibold",
                                         children: "transparency"
                                     }, void 0, false, {
-                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                         lineNumber: 522,
                                         columnNumber: 13
                                     }, this),
@@ -1636,20 +1636,20 @@ function ConstructionPage() {
                                         className: "font-semibold",
                                         children: "trust"
                                     }, void 0, false, {
-                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                         lineNumber: 523,
                                         columnNumber: 13
                                     }, this),
                                     "."
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                fileName: "[project]/src/app/services/construction/page.tsx",
                                 lineNumber: 520,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                        fileName: "[project]/src/app/services/construction/page.tsx",
                         lineNumber: 515,
                         columnNumber: 9
                     }, this),
@@ -1660,7 +1660,7 @@ function ConstructionPage() {
                                 className: "text-4xl font-bold text-center text-white/50 mb-12",
                                 children: "Why Choose Our Services?"
                             }, void 0, false, {
-                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                fileName: "[project]/src/app/services/construction/page.tsx",
                                 lineNumber: 529,
                                 columnNumber: 11
                             }, this),
@@ -1688,12 +1688,12 @@ function ConstructionPage() {
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaCheck"], {
                                                     size: 16
                                                 }, void 0, false, {
-                                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                                     lineNumber: 544,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
-                                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                fileName: "[project]/src/app/services/construction/page.tsx",
                                                 lineNumber: 543,
                                                 columnNumber: 17
                                             }, this),
@@ -1701,18 +1701,18 @@ function ConstructionPage() {
                                                 className: "text-white font-medium",
                                                 children: f
                                             }, void 0, false, {
-                                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                fileName: "[project]/src/app/services/construction/page.tsx",
                                                 lineNumber: 546,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, f, true, {
-                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                         lineNumber: 535,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
-                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                fileName: "[project]/src/app/services/construction/page.tsx",
                                 lineNumber: 533,
                                 columnNumber: 11
                             }, this),
@@ -1720,7 +1720,7 @@ function ConstructionPage() {
                                 className: "text-4xl font-bold text-center text-orange-500 mb-12",
                                 children: "Home Construction Packages"
                             }, void 0, false, {
-                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                fileName: "[project]/src/app/services/construction/page.tsx",
                                 lineNumber: 552,
                                 columnNumber: 11
                             }, this),
@@ -1751,7 +1751,7 @@ function ConstructionPage() {
                                                         className: "text-lg font-bold uppercase text-orange-500",
                                                         children: pkg.name
                                                     }, void 0, false, {
-                                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                                         lineNumber: 567,
                                                         columnNumber: 19
                                                     }, this),
@@ -1759,7 +1759,7 @@ function ConstructionPage() {
                                                         className: "text-3xl font-extrabold mt-2",
                                                         children: pkg.price
                                                     }, void 0, false, {
-                                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                                         lineNumber: 568,
                                                         columnNumber: 19
                                                     }, this),
@@ -1767,13 +1767,13 @@ function ConstructionPage() {
                                                         className: "text-sm font-medium ",
                                                         children: pkg.per
                                                     }, void 0, false, {
-                                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                                         lineNumber: 569,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
-                                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                fileName: "[project]/src/app/services/construction/page.tsx",
                                                 lineNumber: 566,
                                                 columnNumber: 17
                                             }, this),
@@ -1793,7 +1793,7 @@ function ConstructionPage() {
                                                                             className: "font-medium",
                                                                             children: section.title
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                                             lineNumber: 582,
                                                                             columnNumber: 27
                                                                         }, this),
@@ -1801,24 +1801,24 @@ function ConstructionPage() {
                                                                             children: open ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaMinus"], {
                                                                                 size: 14
                                                                             }, void 0, false, {
-                                                                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                                fileName: "[project]/src/app/services/construction/page.tsx",
                                                                                 lineNumber: 583,
                                                                                 columnNumber: 41
                                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaPlus"], {
                                                                                 size: 14
                                                                             }, void 0, false, {
-                                                                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                                fileName: "[project]/src/app/services/construction/page.tsx",
                                                                                 lineNumber: 583,
                                                                                 columnNumber: 65
                                                                             }, this)
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                                             lineNumber: 583,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
-                                                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                                                     lineNumber: 577,
                                                                     columnNumber: 25
                                                                 }, this),
@@ -1846,28 +1846,28 @@ function ConstructionPage() {
                                                                             children: section.items.map((it, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                                     children: it
                                                                                 }, i, false, {
-                                                                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                                                                     lineNumber: 598,
                                                                                     columnNumber: 35
                                                                                 }, this))
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                                             lineNumber: 596,
                                                                             columnNumber: 31
                                                                         }, this)
                                                                     }, `${pkgIndex}-${secIndex}-panel`, false, {
-                                                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                                                         lineNumber: 588,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
-                                                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                                                     lineNumber: 586,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, secIndex, true, {
-                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                             lineNumber: 576,
                                                             columnNumber: 23
                                                         }, this);
@@ -1884,7 +1884,7 @@ function ConstructionPage() {
                                                                             className: "font-medium",
                                                                             children: "What’s Not Included"
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                                             lineNumber: 612,
                                                                             columnNumber: 25
                                                                         }, this),
@@ -1893,12 +1893,12 @@ function ConstructionPage() {
                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaPlus"], {
                                                                                 size: 14
                                                                             }, void 0, false, {
-                                                                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                                fileName: "[project]/src/app/services/construction/page.tsx",
                                                                                 lineNumber: 614,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                                             lineNumber: 613,
                                                                             columnNumber: 25
                                                                         }, this),
@@ -1907,18 +1907,18 @@ function ConstructionPage() {
                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaMinus"], {
                                                                                 size: 14
                                                                             }, void 0, false, {
-                                                                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                                fileName: "[project]/src/app/services/construction/page.tsx",
                                                                                 lineNumber: 617,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                                             lineNumber: 616,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
-                                                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                                                     lineNumber: 611,
                                                                     columnNumber: 23
                                                                 }, this),
@@ -1927,40 +1927,40 @@ function ConstructionPage() {
                                                                     children: pkg.exclusions.map((exc, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                             children: exc
                                                                         }, i, false, {
-                                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                                             lineNumber: 622,
                                                                             columnNumber: 27
                                                                         }, this))
                                                                 }, void 0, false, {
-                                                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                                                     lineNumber: 620,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
-                                                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                            fileName: "[project]/src/app/services/construction/page.tsx",
                                                             lineNumber: 610,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
-                                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                                         lineNumber: 609,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
-                                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                                fileName: "[project]/src/app/services/construction/page.tsx",
                                                 lineNumber: 572,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, pkg.name, true, {
-                                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                        fileName: "[project]/src/app/services/construction/page.tsx",
                                         lineNumber: 558,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
-                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                fileName: "[project]/src/app/services/construction/page.tsx",
                                 lineNumber: 556,
                                 columnNumber: 11
                             }, this),
@@ -1977,18 +1977,18 @@ function ConstructionPage() {
                                     className: "px-8 py-4 rounded-full bg-gradient-to-r from-[#0b1e3d] to-[#122d4a] text-white font-semibold shadow-xl hover:shadow-2xl transition",
                                     children: "Book Now"
                                 }, void 0, false, {
-                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                     lineNumber: 634,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
-                                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                fileName: "[project]/src/app/services/construction/page.tsx",
                                 lineNumber: 633,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                        fileName: "[project]/src/app/services/construction/page.tsx",
                         lineNumber: 528,
                         columnNumber: 9
                     }, this),
@@ -2014,7 +2014,7 @@ function ConstructionPage() {
                                     onClick: ()=>setShowForm(false),
                                     children: "✖"
                                 }, void 0, false, {
-                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                     lineNumber: 654,
                                     columnNumber: 15
                                 }, this),
@@ -2022,35 +2022,35 @@ function ConstructionPage() {
                                     className: "text-2xl font-bold mb-6 text-[#0b1e3d] text-center",
                                     children: "Book Construction Service"
                                 }, void 0, false, {
-                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                     lineNumber: 660,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$component$2f$Form$2f$Cxform$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                                    fileName: "[project]/src/app/services/construction/Construction.tsx",
+                                    fileName: "[project]/src/app/services/construction/page.tsx",
                                     lineNumber: 663,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
-                            fileName: "[project]/src/app/services/construction/Construction.tsx",
+                            fileName: "[project]/src/app/services/construction/page.tsx",
                             lineNumber: 648,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
-                        fileName: "[project]/src/app/services/construction/Construction.tsx",
+                        fileName: "[project]/src/app/services/construction/page.tsx",
                         lineNumber: 647,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/src/app/services/construction/Construction.tsx",
+                fileName: "[project]/src/app/services/construction/page.tsx",
                 lineNumber: 513,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/src/app/services/construction/Construction.tsx",
+        fileName: "[project]/src/app/services/construction/page.tsx",
         lineNumber: 508,
         columnNumber: 5
     }, this);
@@ -2066,7 +2066,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 // Update the import path below to the correct location of ConstructionPage
 // Update the import path below to the correct location of ConstructionPage
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$services$2f$construction$2f$Construction$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/services/construction/Construction.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$services$2f$construction$2f$page$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/services/construction/page.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -2074,7 +2074,7 @@ function ConstructionSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "construction",
         className: "py-16 bg-gray-50",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$services$2f$construction$2f$Construction$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$services$2f$construction$2f$page$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
             fileName: "[project]/src/app/component/ConstructionSection/ConstructionSection.tsx",
             lineNumber: 10,
             columnNumber: 7
@@ -2088,4 +2088,4 @@ function ConstructionSection() {
 }),
 ];
 
-//# sourceMappingURL=src_app_c2f5a472._.js.map
+//# sourceMappingURL=src_app_2c4a96f4._.js.map

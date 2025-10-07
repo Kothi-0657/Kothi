@@ -1,0 +1,22 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/Gallerypage/page": "/Gallerypage",
+  "/booking/page": "/booking",
+  "/page": "/",
+  "/refund-policy/page": "/refund-policy",
+  "/privacy-policy/page": "/privacy-policy",
+  "/deals/page": "/deals",
+  "/service/page": "/service",
+  "/servicedetails/page": "/servicedetails",
+  "/services/homeServices/page": "/services/homeServices",
+  "/services/construction/page": "/services/construction",
+  "/services/packersAndMovers/page": "/services/packersAndMovers",
+  "/services/inspection/page": "/services/inspection",
+  "/services/renovation/page": "/services/renovation",
+  "/terms-and-conditions/page": "/terms-and-conditions",
+  "/user/profile/page": "/user/profile",
+  "/user/editprofile/page": "/user/editprofile",
+  "/user/purchasehistory/page": "/user/purchasehistory",
+  "/user/page": "/user",
+  "/user/settings/page": "/user/settings"
+}

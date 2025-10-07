@@ -34,7 +34,7 @@ function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <div className="fixed top-0 left-0 w-full z-40 backgroundcolor">
+      <div className="fixed top-0 left-0 w-full z-40 backgroundcolor shadow-lg">
         <div className="flex items-center justify-between px-6 md:px-11 lg:py-2 py-5 mt-0.5">
           {/* Logo */}
           <Link href="/" className="flex items-end">

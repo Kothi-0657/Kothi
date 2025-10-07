@@ -6,7 +6,7 @@ import ConstructionPage from "../../services/construction/page";
 
 export default function ConstructionSection() {
   return (
-    <section id="construction" className="py-16 bg-gray-50">
+    <section id="construction" className="py-0 bg-gray-50">
       <ConstructionPage />
     </section>
   );

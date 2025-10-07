@@ -26,7 +26,7 @@ function About() {
   ];
 
   return (
-    <section className="relative py-28 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950">
+    <section className="relative py-30 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 m-0 p-0">
       <div className="max-w-6xl mx-auto px-6 space-y-20 text-white">
         {/* Heading */}
         <motion.div
@@ -66,7 +66,7 @@ function About() {
 
               {/* Text */}
               <motion.div
-                className="space-y-4"
+                className="space-y-8"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

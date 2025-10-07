@@ -1,55 +1,29 @@
 "use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
-import React, { JSX } from "react";
-import { FaMapMarkerAlt, FaCity } from "react-icons/fa";
+const cities = ["Bangalore", "Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi", "Kolkata", "Patna"];
 
-/** ✅ City data type */
-interface CityItem {
-  name: string;
-  icon?: JSX.Element; // ✅ Use JSX.Element (not ReactNode)
-}
-
-/** ✅ List of cities */
-const cities: CityItem[] = [
-  { name: "Bangalore", icon: <FaCity /> },
-  { name: "Chennai", icon: <FaMapMarkerAlt /> },
-  { name: "Hyderabad", icon: <FaMapMarkerAlt /> },
-  { name: "Mumbai", icon: <FaMapMarkerAlt /> },
-  { name: "Pune", icon: <FaMapMarkerAlt /> },
-  { name: "Delhi", icon: <FaMapMarkerAlt /> },
-  { name: "Kolkata", icon: <FaMapMarkerAlt /> },
-  { name: "Cuttak", icon: <FaMapMarkerAlt /> },
-  { name: "Patna", icon: <FaMapMarkerAlt /> },
-  { name: "Puri", icon: <FaMapMarkerAlt /> },
-  { name: "Jamshedpur", icon: <FaMapMarkerAlt /> },
-  { name: "Uttar Pradesh", icon: <FaMapMarkerAlt /> },
-  { name: "Nagpur", icon: <FaMapMarkerAlt /> },
-  { name: "Raipur", icon: <FaMapMarkerAlt /> },
-  { name: "Chattishgarh", icon: <FaMapMarkerAlt /> },
-  { name: "Ranchi", icon: <FaMapMarkerAlt /> },
-  { name: "Mujaffarpur", icon: <FaMapMarkerAlt /> },
-  { name: "Nasik", icon: <FaMapMarkerAlt /> },
-];
-
-/** ✅ Component */
-export default function CityBand(): JSX.Element {
+export default function CityBand() {
   return (
-    <div className="w-full bg-white shadow-inner overflow-hidden mb-62 mt-1">
-      <div className="flex animate-marquee whitespace-nowrap py-1.5">
-        {/* Duplicate cities for seamless loop */}
-        {[...cities, ...cities].map((c, idx) => (
-          <div
-            key={idx}
-            className="flex items-center gap-3 mx-8 text-gray-800 font-semibold text-lg"
-            aria-hidden={idx >= cities.length ? "true" : "false"}
+    <div className="w-full py-9 overflow-hidden perspective-[1200px]">
+      <motion.div
+        className="flex whitespace-nowrap"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{ repeat: Infinity, duration: 35, ease: "linear" }}
+      >
+        {[...cities, ...cities].map((city, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ rotateY: 15, scale: 1.05 }}
+            className="mx-6 px-9 py-3 bg-gradient-to-br from-orange-100 to-amber-50 border border-orange-200 rounded-4xl shadow-lg flex items-center gap-5 text-gray-800 font-semibold transition-transform"
           >
-            <span className="text-[#b04400] text-xl">
-              {c.icon || <FaMapMarkerAlt />}
-            </span>
-            <span>{c.name}</span>
-          </div>
+            <FaMapMarkerAlt className="text-orange-500 text-2xl" />
+            {city}
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

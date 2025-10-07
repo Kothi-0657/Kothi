@@ -505,7 +505,7 @@ export default function ConstructionPage(): JSX.Element {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden m-0 p-0">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0b1e3d] via-[#0c2a5a] to-[#122d4a]" />
       <div className="absolute inset-0 bg-[url('/patterns/geometry.svg')] opacity-10" />

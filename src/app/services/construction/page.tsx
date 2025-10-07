@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import type { JSX } from "react";
 import { FaCheck, FaHardHat, FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import ContactForm from "@/app/component/Form/Cxform";
+import ContactForm from "@/app/component/Form/Cxform"; // ✅ Client's existing form
 
 /** Types */
 interface PackageSection {
@@ -18,7 +18,6 @@ interface PackageItem {
   sections: PackageSection[];
   exclusions: string[];
 }
-
 /** Data (Basic plan filled out; copy/adjust for others) */
 const packages: PackageItem[] = [
   {
@@ -485,7 +484,7 @@ items: [
 ];
 
 export default function ConstructionPage(): JSX.Element {
-  const [showForm, setShowForm] = useState<boolean>(false);
+  const [showForm, setShowForm] = useState(false);
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
 
   const toggleSection = (pkgIndex: number, secIndex: number): void => {
@@ -518,7 +517,8 @@ export default function ConstructionPage(): JSX.Element {
             Home Construction Services
           </h1>
           <p className="mt-4 text-white text-lg font-light max-w-2xl mx-auto opacity-90">
-            Build your dream home with <span className="font-semibold">quality</span>,{" "}
+            Build your dream home with{" "}
+            <span className="font-semibold">quality</span>,{" "}
             <span className="font-semibold">transparency</span>, and{" "}
             <span className="font-semibold">trust</span>.
           </p>
@@ -548,7 +548,7 @@ export default function ConstructionPage(): JSX.Element {
             ))}
           </div>
 
-          {/* Pricing Packages Section */}
+          {/* Packages */}
           <h2 className="text-4xl font-bold text-center text-orange-500 mb-12">
             Home Construction Packages
           </h2>
@@ -629,7 +629,7 @@ export default function ConstructionPage(): JSX.Element {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA */}
           <div className="text-center mt-16">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -642,28 +642,38 @@ export default function ConstructionPage(): JSX.Element {
           </div>
         </div>
 
-        {/* Contact Form Popup */}
-        {showForm && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-50">
+        {/* Popup with client form */}
+        <AnimatePresence>
+          {showForm && (
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-lg relative"
+              className="fixed inset-0 flex items-center justify-center bg-black/70 z-50"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             >
-              <button
-                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-                onClick={() => setShowForm(false)}
+              <motion.div
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.9 }}
+                transition={{ duration: 0.25 }}
+                className="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-lg relative"
               >
-                ✖
-              </button>
-              <h2 className="text-2xl font-bold mb-6 text-[#0b1e3d] text-center">
-                Book Construction Service
-              </h2>
-              <ContactForm />
+                <button
+                  className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+                  onClick={() => setShowForm(false)}
+                >
+                  ✖
+                </button>
+                <h2 className="text-2xl font-bold mb-6 text-[#0b1e3d] text-center">
+                  Book Construction Service
+                </h2>
+
+                {/* ✅ Client form directly rendered */}
+                <ContactForm />
+              </motion.div>
             </motion.div>
-          </div>
-        )}
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

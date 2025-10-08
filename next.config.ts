@@ -1,9 +1,10 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export', // ✅ Enables static HTML export (replaces next export)
+  output: 'export',
+  trailingSlash: true, // ← important for refresh to work
   images: {
-    unoptimized: true, // ✅ Needed for GoDaddy or any static hosting
+    unoptimized: true,
   },
 };
 

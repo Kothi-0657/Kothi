@@ -13,9 +13,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Kothi India || Elevate Your Lifestyle",
-  description: "Elevate Your Lifestyle",
+  description: "All Service under one roof",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.gif", // ✅ Animated GIF favicon
+    shortcut: "/favicon.gif",
+    apple: "/favicon.gif",
   },
 };
 
@@ -25,10 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
+    <html lang="en" className={poppins.variable}>
       <body className={`${poppins.className}`}>
         <main className="min-h-screen w-screen pt-[75px]">
           <AppProviders>

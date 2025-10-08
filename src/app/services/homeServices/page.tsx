@@ -3,10 +3,8 @@
 import React, { useState } from "react";
 import { FaHome, FaChevronDown, FaCheck } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import ContactForm from "@/app/component/Form/Cxform";
 
 export default function HomeServicesPage() {
-  const [showForm, setShowForm] = useState(false);
   const [openCategory, setOpenCategory] = useState<string | null>(null);
 
   const serviceCategories = [
@@ -103,7 +101,7 @@ export default function HomeServicesPage() {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden mt-10">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#ffe8cc] via-[#ffb991] to-[#ff6f3c]"></div>
       <div className="absolute inset-0 bg-[url('/patterns/geometry.svg')] opacity-10"></div>
@@ -176,41 +174,6 @@ export default function HomeServicesPage() {
             </div>
           ))}
         </div>
-
-        {/* CTA Button */}
-        <div className="text-center pb-20">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setShowForm(true)}
-            className="px-10 py-4 rounded-full bg-gradient-to-r from-[#b04400] to-[#ff6f3c] text-white font-semibold shadow-xl hover:shadow-2xl transition"
-          >
-            Book a Service
-          </motion.button>
-        </div>
-
-        {/* Contact Form Popup */}
-        {showForm && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-50">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-lg relative"
-            >
-              <button
-                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-                onClick={() => setShowForm(false)}
-              >
-                ✖
-              </button>
-              <h2 className="text-2xl font-bold mb-6 text-[#b04400] text-center">
-                Book Home Service
-              </h2>
-              <ContactForm />
-            </motion.div>
-          </div>
-        )}
       </div>
     </div>
   );

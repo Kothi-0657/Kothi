@@ -316,17 +316,7 @@ export default function InspectionPage(): JSX.Element {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="text-center mt-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setShowForm(true)}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#0b1e3d] to-[#122d4a] text-white font-semibold shadow-xl hover:shadow-2xl transition"
-            >
-              Book an Inspection
-            </motion.button>
-          </div>
+          {/* CTA Button REMOVED */}
         </div>
 
         {/* Contact Form Popup */}

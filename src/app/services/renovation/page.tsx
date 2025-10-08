@@ -243,17 +243,7 @@ export default function RenovationPage() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="text-center mt-12">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setShowForm(true)}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#b04400] to-[#ff6f3c] text-white font-semibold shadow-xl hover:shadow-2xl transition"
-            >
-              Book Now
-            </motion.button>
-          </div>
+          {/* CTA Button REMOVED */}
         </div>
 
         {/* Contact Form Popup */}

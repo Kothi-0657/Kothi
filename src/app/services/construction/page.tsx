@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import type { JSX } from "react";
 import { FaCheck, FaHardHat, FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import ContactForm from "@/app/component/Form/Cxform"; // ✅ Client's existing form
 
 /** Types */
 interface PackageSection {
@@ -484,7 +483,6 @@ items: [
 ];
 
 export default function ConstructionPage(): JSX.Element {
-  const [showForm, setShowForm] = useState(false);
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
 
   const toggleSection = (pkgIndex: number, secIndex: number): void => {
@@ -504,7 +502,7 @@ export default function ConstructionPage(): JSX.Element {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden m-0 p-0">
+    <div className="relative min-h-screen overflow-hidden m-0 p-0 mt-10">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0b1e3d] via-[#0c2a5a] to-[#122d4a]" />
       <div className="absolute inset-0 bg-[url('/patterns/geometry.svg')] opacity-10" />
@@ -564,7 +562,9 @@ export default function ConstructionPage(): JSX.Element {
                 className="bg-white/5 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 overflow-hidden hover:shadow-3xl hover:scale-105 transition-all"
               >
                 <div className="bg-[#0b1e3d] text-white text-center py-6">
-                  <h3 className="text-lg font-bold uppercase text-orange-500">{pkg.name}</h3>
+                  <h3 className="text-lg font-bold uppercase text-orange-500">
+                    {pkg.name}
+                  </h3>
                   <p className="text-3xl font-extrabold mt-2">{pkg.price}</p>
                   <p className="text-sm font-medium ">{pkg.per}</p>
                 </div>
@@ -580,7 +580,9 @@ export default function ConstructionPage(): JSX.Element {
                           className="w-full flex justify-between items-center px-4 py-3 text-left hover:bg-white/10 text-white"
                         >
                           <span className="font-medium">{section.title}</span>
-                          <span>{open ? <FaMinus size={14} /> : <FaPlus size={14} />}</span>
+                          <span>
+                            {open ? <FaMinus size={14} /> : <FaPlus size={14} />}
+                          </span>
                         </button>
 
                         <AnimatePresence initial={false}>
@@ -628,52 +630,7 @@ export default function ConstructionPage(): JSX.Element {
               </motion.div>
             ))}
           </div>
-
-          {/* CTA */}
-          <div className="text-center mt-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setShowForm(true)}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#0b1e3d] to-[#122d4a] text-white font-semibold shadow-xl hover:shadow-2xl transition"
-            >
-              Book Now
-            </motion.button>
-          </div>
         </div>
-
-        {/* Popup with client form */}
-        <AnimatePresence>
-          {showForm && (
-            <motion.div
-              className="fixed inset-0 flex items-center justify-center bg-black/70 z-50"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <motion.div
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.9 }}
-                transition={{ duration: 0.25 }}
-                className="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-lg relative"
-              >
-                <button
-                  className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-                  onClick={() => setShowForm(false)}
-                >
-                  ✖
-                </button>
-                <h2 className="text-2xl font-bold mb-6 text-[#0b1e3d] text-center">
-                  Book Construction Service
-                </h2>
-
-                {/* ✅ Client form directly rendered */}
-                <ContactForm />
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </div>
   );

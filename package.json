@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "export": "next export"
+    "export": "next export",
+    "generate:gallery": "node --experimental-modules scripts/generateGalleryList.js",
+    "build": "npm run generate:gallery && next build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",

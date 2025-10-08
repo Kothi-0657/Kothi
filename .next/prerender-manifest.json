@@ -1,7 +1,8 @@
 {
   "version": 4,
   "routes": {
-    "/deals": {
+    "/_not-found": {
+      "initialStatus": 404,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -14,80 +15,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/deals",
-      "dataRoute": "/deals.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/booking": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/booking",
-      "dataRoute": "/booking.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/Gallerypage": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/Gallerypage",
-      "dataRoute": "/Gallerypage.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/servicedetails": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/servicedetails",
-      "dataRoute": "/servicedetails.rsc",
+      "srcRoute": "/_not-found",
+      "dataRoute": "/_not-found.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -121,7 +50,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/services/homeServices": {
+    "/": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -134,8 +63,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/services/homeServices",
-      "dataRoute": "/services/homeServices.rsc",
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/service": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/service",
+      "dataRoute": "/service.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -169,7 +122,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/services/renovation": {
+    "/services/homeServices": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -182,8 +135,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/services/renovation",
-      "dataRoute": "/services/renovation.rsc",
+      "srcRoute": "/services/homeServices",
+      "dataRoute": "/services/homeServices.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -217,6 +170,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/services/renovation": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/services/renovation",
+      "dataRoute": "/services/renovation.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/services/packersAndMovers": {
       "experimentalBypassFor": [
         {
@@ -232,30 +209,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/packersAndMovers",
       "dataRoute": "/services/packersAndMovers.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/terms-and-conditions": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/terms-and-conditions",
-      "dataRoute": "/terms-and-conditions.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -289,7 +242,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/user": {
+    "/terms-and-conditions": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -302,8 +255,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/user",
-      "dataRoute": "/user.rsc",
+      "srcRoute": "/terms-and-conditions",
+      "dataRoute": "/terms-and-conditions.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -313,8 +266,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/_not-found": {
-      "initialStatus": 404,
+    "/deals": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -327,32 +279,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/_not-found",
-      "dataRoute": "/_not-found.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/user/purchasehistory": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/user/purchasehistory",
-      "dataRoute": "/user/purchasehistory.rsc",
+      "srcRoute": "/deals",
+      "dataRoute": "/deals.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -386,6 +314,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/user/purchasehistory": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/user/purchasehistory",
+      "dataRoute": "/user/purchasehistory.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/user/settings": {
       "experimentalBypassFor": [
         {
@@ -410,7 +362,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/": {
+    "/user": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -423,8 +375,56 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
+      "srcRoute": "/user",
+      "dataRoute": "/user.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/Gallerypage": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/Gallerypage",
+      "dataRoute": "/Gallerypage.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/booking": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/booking",
+      "dataRoute": "/booking.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -458,7 +458,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/service": {
+    "/servicedetails": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -471,8 +471,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/service",
-      "dataRoute": "/service.rsc",
+      "srcRoute": "/servicedetails",
+      "dataRoute": "/servicedetails.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",

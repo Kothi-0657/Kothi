@@ -1,10 +1,22 @@
+// src/app/blog/page.tsx
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const blogPosts = [
+// Type for blog post
+interface BlogPost {
+  id: number;
+  title: string;
+  date: string;
+  description: string;
+  image: string;
+  slug: string;
+}
+
+// Blog posts data
+const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Home Renovation Services",
@@ -167,10 +179,11 @@ export default function BlogPage() {
         ))}
       </div>
 
-      {/* Optional Footer CTA */}
+      {/* Footer CTA */}
       <div className="max-w-5xl mx-auto mt-16 text-center">
         <p className="text-gray-700 mb-4 text-lg md:text-xl">
-          Discover more insights, tips, and expert advice to enhance your home services experience.
+          Discover more insights, tips, and expert advice to enhance your home
+          services experience.
         </p>
         <Link
           href="/"

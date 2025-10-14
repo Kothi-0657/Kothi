@@ -20,7 +20,7 @@ const blogPosts = [
     date: "October 2025",
     description:
       "We handle everything from demolition to a fully built dream home — reliable, transparent, and on time.",
-    image: "/Blogc1.mp4",
+    image: "/Blog2.png",
     slug: "homeconstructionservice",
   },
   {
@@ -38,7 +38,7 @@ const blogPosts = [
     date: "October 2025",
     description:
       "Protect and beautify your home with durable, weather-resistant exterior paints applied by experts.",
-    image: "/Blogep1.mp4",
+    image: "/Blog3.png",
     slug: "homeexteriorpainting",
   },
   {
@@ -65,7 +65,7 @@ const blogPosts = [
     date: "October 2025",
     description:
       "Get expert help with flooring, tiling, masonry, and all civil works handled by experienced professionals.",
-    image: "/Blogcivil.mp4",
+    image: "/Blog2.png",
     slug: "homecivilservices",
   },
   {

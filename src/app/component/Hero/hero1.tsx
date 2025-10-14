@@ -11,9 +11,9 @@ function Hero1() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   const serviceKeywords = [
-    "Maintenance",
-    "Renovation",
-    "Repairs",
+    "Home Maintenance",
+    "Home Renovation",
+    "Civil Repairs",
     "Interiors",
     "Landscaping",
     "Plumbing",
@@ -75,7 +75,7 @@ function Hero1() {
           <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
             From routine maintenance to complete renovations, we help clients
             keep their residential and commercial properties in top condition.
-            Trusted teams, transparent process, and guaranteed quality.
+            Trusted and experienced teams, transparent process, and guaranteed quality.
           </p>
 
           {/* ✅ Only Explore Services Button (keep old design) */}

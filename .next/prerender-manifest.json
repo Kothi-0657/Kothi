@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "c21234f0ccb2c35770990fc66fe8e98f",
-    "previewModeSigningKey": "313a6d0771e12340c5d78add0b5acf937020677e36f58be038dff1721c29839d",
-    "previewModeEncryptionKey": "0de7fc020a4b1c34ad6779048463c05c9217aaa6c94345db975ff2e311a2b4e7"
-  }
-}
+{"version":4,"routes":{"/blog/homerenovationsservice":{},"/blog/homeconstructionservice":{},"/blog/homeinteriorpainting":{},"/blog/homeexteriorpainting":{},"/blog/homeplumbingservices":{},"/blog/homeelectricalservices":{},"/blog/homecivilservices":{},"/blog/homehandymanservices":{},"/blog/homeinteriorservices":{},"/blog/intercitypackersandmovers":{},"/blog/intracitypackersandmovers":{},"/blog/homeinspectionservices":{}},"dynamicRoutes":{"/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/blog/[slug]","routeRegex":"^\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"8095c948fbbaa63e7720cc80f37176c2","previewModeSigningKey":"7a10300ca928f444c8d7e3d88d4fecc47ed3446cd35ec2787fd9d3fed7fb8191","previewModeEncryptionKey":"3e18a269f2b391fe4dd412fb9b5648961248ac3e95d12554d08d88370a7b8e9d"}}

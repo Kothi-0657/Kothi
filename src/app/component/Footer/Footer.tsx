@@ -80,6 +80,11 @@ function Footer() {
                 Terms & Conditions
               </Link>
             </li>
+            <li>
+              <Link href="/blog" className="hover:text-white">
+                Blogs
+              </Link>
+            </li>
           </ul>
         </div>
 

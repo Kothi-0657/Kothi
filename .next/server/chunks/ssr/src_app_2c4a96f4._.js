@@ -219,9 +219,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$component$2f$C
 function Hero1() {
     const [currentWordIndex, setCurrentWordIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const serviceKeywords = [
-        "Maintenance",
-        "Renovation",
-        "Repairs",
+        "Home Maintenance",
+        "Home Renovation",
+        "Civil Repairs",
         "Interiors",
         "Landscaping",
         "Plumbing",
@@ -322,7 +322,7 @@ function Hero1() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-5 text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0",
-                                children: "From routine maintenance to complete renovations, we help clients keep their residential and commercial properties in top condition. Trusted teams, transparent process, and guaranteed quality."
+                                children: "From routine maintenance to complete renovations, we help clients keep their residential and commercial properties in top condition. Trusted and experienced teams, transparent process, and guaranteed quality."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/component/Hero/hero1.tsx",
                                 lineNumber: 75,

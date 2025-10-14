@@ -173,15 +173,6 @@ export default function GalleryPage() {
 
       <Lightbox selected={selected} onClose={() => setSelected(null)} />
 
-      {/* Floating CTA */}
-      <div className="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-50">
-        <a
-          href="/contact"
-          className="bg-gradient-to-r from-yellow-400 to-yellow-200 text-black font-semibold px-5 md:px-7 py-2.5 md:py-3 rounded-full shadow-[0_0_25px_rgba(255,215,0,0.4)] hover:shadow-[0_0_45px_rgba(255,215,0,0.7)] transition text-sm md:text-base"
-        >
-          Let’s Connect →
-        </a>
-      </div>
     </div>
   );
 }

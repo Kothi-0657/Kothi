@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/kishlaysingh/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/blog/%5Bslug%5D/BlogPostClient.tsx"],"sourcesContent":["\"use client\";\n\nimport React from \"react\";\n\ntype BlogPostClientProps = {\n  post: {\n    title: string;\n    content: string;\n  };\n  className?: string; // optional Tailwind overrides\n};\n\nexport default function BlogPostClient({ post, className = \"\" }: BlogPostClientProps) {\n  return (\n    <main className={`min-h-screen bg-gray-50 py-20 px-6 md:px-12 ${className}`}>\n      <header className=\"mb-10\">\n        <h1 className=\"text-4xl font-bold text-[#FE904E]\">{post.title}</h1>\n      </header>\n\n      <article className=\"prose max-w-none text-gray-700\">\n        <div dangerouslySetInnerHTML={{ __html: post.content }} />\n      </article>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;;AAYe,SAAS,eAAe,KAA6C;QAA7C,EAAE,IAAI,EAAE,YAAY,EAAE,EAAuB,GAA7C;IACrC,qBACE,6LAAC;QAAK,WAAW,AAAC,+CAAwD,OAAV;;0BAC9D,6LAAC;gBAAO,WAAU;0BAChB,cAAA,6LAAC;oBAAG,WAAU;8BAAqC,KAAK,KAAK;;;;;;;;;;;0BAG/D,6LAAC;gBAAQ,WAAU;0BACjB,cAAA,6LAAC;oBAAI,yBAAyB;wBAAE,QAAQ,KAAK,OAAO;oBAAC;;;;;;;;;;;;;;;;;AAI7D;KAZwB","debugId":null}}]
+}

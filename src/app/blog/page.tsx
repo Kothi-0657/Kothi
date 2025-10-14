@@ -118,11 +118,16 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fffaf5] via-[#fef3eb] to-[#fff5ee] py-20 px-6 md:px-12">
-      <h1 className="text-5xl font-extrabold text-center text-[#FE904E] mb-16 tracking-wide">
-        Explore Our Expert Insights
-      </h1>
+      {/* Page Header */}
+      <header className="text-center mb-16">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-[#FE904E] tracking-wide mb-4">
+          Explore Our Expert Insights
+        </h1>
+        <div className="w-28 h-1 bg-gradient-to-r from-[#FE904E] to-[#FDBA74] mx-auto rounded-full"></div>
+      </header>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+      {/* Blog Grid */}
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {blogPosts.map((post, index) => (
           <motion.div
             key={post.id}
@@ -132,7 +137,8 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
           >
-            <div className="relative w-full h-56">
+            {/* Image Section */}
+            <div className="relative w-full h-56 md:h-64 lg:h-72">
               <Image
                 src={post.image}
                 alt={post.title}
@@ -142,8 +148,9 @@ export default function BlogPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
 
-            <div className="p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#FE904E] transition-colors">
+            {/* Content Section */}
+            <div className="p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-[#FE904E] transition-colors">
                 {post.title}
               </h2>
               <p className="text-sm text-gray-500 mb-3 italic">{post.date}</p>
@@ -151,13 +158,26 @@ export default function BlogPage() {
 
               <Link
                 href={`/blog/${post.slug}`}
-                className="inline-block text-[#FE904E] font-semibold border border-[#FE904E] px-5 py-2 rounded-full hover:bg-[#FE904E] hover:text-white transition-all duration-300"
+                className="inline-block px-5 py-2 rounded-full border border-[#FE904E] text-[#FE904E] font-semibold hover:bg-[#FE904E] hover:text-white transition-all duration-300"
               >
                 Read More →
               </Link>
             </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* Optional Footer CTA */}
+      <div className="max-w-5xl mx-auto mt-16 text-center">
+        <p className="text-gray-700 mb-4 text-lg md:text-xl">
+          Discover more insights, tips, and expert advice to enhance your home services experience.
+        </p>
+        <Link
+          href="/"
+          className="inline-block px-6 py-3 rounded-full bg-[#FE904E] text-white font-semibold hover:bg-[#FDBA74] transition-colors duration-300"
+        >
+          Back to Home
+        </Link>
       </div>
     </div>
   );

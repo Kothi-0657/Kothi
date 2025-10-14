@@ -74,7 +74,7 @@ const blogPosts = [
     date: "October 2025",
     description:
       "Quick fixes and small repairs done right — book trusted handymen for all your household maintenance needs.",
-    image: "/Bloghandy.mp4",
+    image: "/Kothi4.png",
     slug: "homehandymanservices",
   },
   {

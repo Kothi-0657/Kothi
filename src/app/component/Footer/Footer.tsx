@@ -181,7 +181,7 @@ function Footer() {
           className="text-[#b04400] font-semibold"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          Kothi India
+          KothiIndia Private Limited ™
         </span>
         . All rights reserved.
       </div>

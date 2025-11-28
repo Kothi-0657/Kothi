@@ -26,7 +26,7 @@ function Navbar() {
 
   const handleNavClick = (destination: string) => {
     setIsOpen(false);
-    if (destination === "/Contact") setShowPopup(true);
+    if (destination === "#Contact-popup") setShowPopup(true);
   };
 
   return (

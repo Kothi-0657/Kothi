@@ -76,3 +76,21 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+.shine-reflection {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 45%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.25) 55%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+  animation: shineMove 3.5s infinite;
+}
+
+@keyframes shineMove {
+  0% { transform: translateX(-120%); }
+  50% { transform: translateX(120%); }
+  100% { transform: translateX(-120%); }
+}

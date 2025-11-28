@@ -12,31 +12,31 @@ const services = [
     title: "Construction",
     type: "construction",
     icon: "/icons/iconcons.png",
-    description: "Expert construction solutions tailored for your needs.",
+    description: "Strong foundations, smart design, and transparent execution. From plotting to possession, our construction team delivers safe, durable, and stylish homes that match your vision, budget, and timeline without hidden compromises.",
   },
   {
     title: "Renovation",
     type: "renovation",
     icon: "/icons/iconinterior.png",
-    description: "Transform your space with our renovation services.",
+    description: "Transform old spaces into fresh, functional, and beautiful homes. Thoughtful planning, material guidance, and neat execution ensure your renovation looks premium, feels comfortable, and stays reliable for years, with minimal disruption.",
   },
   {
     title: "Home Inspection",
     type: "inspection",
     icon: "/icons/iconinspections.png",
-    description: "Comprehensive home inspection for peace of mind.",
+    description: "Detailed home inspections that reveal hidden issues before you commit. Structural checks, seepage, electrical, and finishing review help you negotiate better, plan repairs early, and move into safer, problem‑free homes.",
   },
   {
     title: "Packers & Movers",
     type: "packersAndMovers",
     icon: "/icons/iconpnm.png",
-    description: "Reliable packers and movers for hassle-free relocation.",
+    description: "Safe, organized, and stress‑free shifting for your home. Professional packing, careful handling, and on‑time delivery ensure your belongings reach the new place securely, with complete support from planning to unloading.",
   },
   {
     title: "Home Services",
     type: "homeServices",
     icon: "/icons/iconhm.png",
-    description: "Wide range of home services to maintain your property.",
+    description: "Quick, reliable home services under one roof. From repairs to improvements, trusted professionals handle the work while you relax. Clear communication, fair pricing, and guaranteed workmanship keep your home running smoothly",
   },
 ];
 
@@ -76,10 +76,10 @@ export default function ServicePage() {
       {/* 🔹 Foreground Content */}
       <div className="relative z-10">
         <h1 className="text-6xl font-extrabold text-center text-[#b04400] mb-20 mt-20">
-          Our Services
+          Kothi India Services
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-10">
           {services.map((s, index) => (
             <motion.div
               key={s.type}
@@ -87,9 +87,9 @@ export default function ServicePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="rounded-2xl shadow-xl overflow-hidden border-2 border-transparent 
-                         bg-white/60 backdrop-blur-md hover:shadow-2xl transition-all duration-300
-                         hover:border-4 hover:border-[#b04400] p-6 flex flex-col justify-between"
+              className="rounded-4xl shadow-xl overflow-hidden border-2 border-transparent 
+                         bg-white/60 backdrop-blur-md hover:shadow-9xl transition-all duration-300
+                         hover:border-4 hover:border-[#b04400] p-3 flex flex-col justify-between scale-[0.85]"
             >
               {/* 🔸 Top Icon Section */}
               <div className="mb-5 flex items-center justify-center rounded-xl p-4">

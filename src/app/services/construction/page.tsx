@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import type { JSX } from "react";
 import { FaCheck, FaHardHat, FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import LinearGalleryHome from "@/app/component/Linergallery/LinearGalleryHome";
 
 /** Types */
 interface PackageSection {
@@ -502,52 +503,55 @@ export default function ConstructionPage(): JSX.Element {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden m-0 p-0 mt-10">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0b1e3d] via-[#0c2a5a] to-[#122d4a]" />
-      <div className="absolute inset-0 bg-[url('/patterns/geometry.svg')] opacity-10" />
+  <div className="relative min-h-screen overflow-hidden m-0 p-0 mt-10">
+    {/* Background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-[#0b1e3d] via-[#0c2a5a] to-[#122d4a]" />
+    <div className="absolute inset-0 bg-[url('/patterns/geometry.svg')] opacity-10" />
 
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="text-orange-500 text-center py-16 px-4 bg-gradient-to-br from-[#0b1e3d] to-[#122d4a] shadow-lg">
-          <FaHardHat className="mx-auto text-6xl mb-6 drop-shadow-lg animate-bounce" />
-          <h1 className="text-5xl font-extrabold tracking-wide drop-shadow-md">
-            Home Construction Services
-          </h1>
-          <p className="mt-4 text-white text-lg font-light max-w-2xl mx-auto opacity-90">
-            Build your dream home with{" "}
-            <span className="font-semibold">quality</span>,{" "}
-            <span className="font-semibold">transparency</span>, and{" "}
-            <span className="font-semibold">trust</span>.
-          </p>
+    <div className="relative z-10">
+      {/* Header */}
+      <div className="text-orange-500 text-center py-16 px-4 bg-gradient-to-br from-[#0b1e3d] to-[#122d4a] shadow-lg">
+        <FaHardHat className="mx-auto text-6xl mb-2 drop-shadow-lg animate-bounce" />
+        <h1 className="text-5xl font-extrabold tracking-wide drop-shadow-md">
+          Home Construction Services
+        </h1>
+        <p className="mt-4 mb-2 text-white text-lg font-light max-w-2xl mx-auto opacity-90">
+          Build your dream home with{" "}
+          <span className="font-semibold">quality</span>,{" "}
+          <span className="font-semibold">transparency</span>, and{" "}
+          <span className="font-semibold">trust</span>.
+        </p>
+          <LinearGalleryHome />
+
         </div>
+      </div>
 
-        {/* Why Choose Section */}
-        <div className="max-w-6xl mx-auto px-6 py-16">
-          <h2 className="text-4xl font-bold text-center text-white/50 mb-12">
-            Why Choose Our Services?
-          </h2>
+      {/* Why Choose Section */}
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold text-center text-white/50 mb-8">
+          Why Choose Our Services?
+        </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {whyFeatures.map((f, i) => (
-              <motion.div
-                key={f}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.12 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-6 flex items-start gap-4 hover:scale-105 transition-transform border border-white/20"
-              >
-                <span className="bg-[#0b1e3d] text-white p-3 rounded-full shadow-md">
-                  <FaCheck size={16} />
-                </span>
-                <span className="text-white font-medium">{f}</span>
-              </motion.div>
-            ))}
-          </div>
-
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {whyFeatures.map((f, i) => (
+            <motion.div
+              key={f}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.12 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-6 flex items-start gap-4 hover:scale-105 transition-transform border border-white/20"
+            >
+              <span className="bg-[#0b1e3d] text-white p-3 rounded-full shadow-md">
+                <FaCheck size={16} />
+              </span>
+              <span className="text-white font-medium">{f}</span>
+            </motion.div>
+          ))}
+        </div>
+      
           {/* Packages */}
-          <h2 className="text-4xl font-bold text-center text-orange-500 mb-12">
+          <h2 className="text-4xl font-bold text-center text-orange-500 mb-6">
             Home Construction Packages
           </h2>
 
@@ -632,6 +636,6 @@ export default function ConstructionPage(): JSX.Element {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }

@@ -7,6 +7,7 @@ import ContactForm from "@/app/component/Form/Cxform";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import CityBand from "../CityBand/cityband";
 
+
 function Hero1() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
@@ -51,7 +52,7 @@ function Hero1() {
       <div className="absolute bottom-0 w-full">
         <CityBand />
       </div>
-
+      
       {/* ✅ Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/60"></div>
 

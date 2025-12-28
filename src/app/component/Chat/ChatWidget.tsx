@@ -30,17 +30,17 @@ export default function ChatWidget() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const typingTimerRef = useRef<number | null>(null);
   const stopTypingTimerRef = useRef<number | null>(null);
+
   const messageChannelRef = useRef<any>(null);
   const typingChannelRef = useRef<any>(null);
   const presenceChannelRef = useRef<any>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Scroll to bottom when messages change
+  // auto scroll
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, adminTyping]);
 
-  // load messages + subscribe when chat starts
+  // start chat lifecycle
   useEffect(() => {
     if (!started) return;
 
@@ -50,33 +50,21 @@ export default function ChatWidget() {
     if (phone) setCustomerPhone(phone);
     if (name) setCustomerName(name);
 
-    // load history
     loadMessages(phone || customerPhone);
-
-    // initialize audio
-    audioRef.current = new Audio("/sounds/notification.mp3");
-
-    // subscribe channels
     setupSubscriptions(phone || customerPhone);
 
-    // announce presence online
     broadcastPresence(phone || customerPhone, "online");
     setIsOnline(true);
-
-    // send one typing:false to ensure admin typing clears if any
     sendTypingEvent(phone || customerPhone, "user", false);
 
-    // handle beforeunload to mark offline
     const handleUnload = () => {
       broadcastPresence(phone || customerPhone, "offline");
     };
+
     window.addEventListener("beforeunload", handleUnload);
 
-    // cleanup when component unmounts or chat stops
     return () => {
-      // remove channels
       teardownSubscriptions();
-      // broadcast offline
       broadcastPresence(phone || customerPhone, "offline");
       setIsOnline(false);
       window.removeEventListener("beforeunload", handleUnload);
@@ -84,48 +72,42 @@ export default function ChatWidget() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [started]);
 
-  // load messages from supabase for given phone
+  // load history
   const loadMessages = async (phone: string) => {
     if (!phone) return;
+
     const { data } = await supabase
       .from("messages")
       .select("*")
       .eq("phone", phone)
       .order("created_at", { ascending: true });
-    const history = data || [];
 
-    if (history.length === 0) {
-      const welcome: Message = {
-        id: "welcome",
-        phone,
-        name: "Kothi Support",
-        sender: "admin",
-        message: `Welcome ${customerName || ""}! How can we assist you today?`,
-        created_at: new Date().toISOString(),
-      };
-      setMessages([welcome]);
+    if (!data || data.length === 0) {
+      setMessages([
+        {
+          id: "welcome",
+          phone,
+          name: "Kothi Support",
+          sender: "admin",
+          message: `Welcome ${customerName || ""}! How can we assist you today?`,
+          created_at: new Date().toISOString(),
+        },
+      ]);
     } else {
-      setMessages(history);
+      setMessages(data);
     }
   };
 
-  // setup realtime subscriptions (messages, typing, presence)
+  // realtime subscriptions
   const setupSubscriptions = (phone: string) => {
-    // messages channel: listens for new messages inserted into messages
     const msgCh = supabase
       .channel("user-chat-messages")
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public", table: "messages" },
-        (payload: any) => {
-          const m: Message = payload.new;
+        ({ new: m }: any) => {
           if (m.phone === phone) {
             setMessages((prev) => [...prev, m]);
-            // play sound when admin sends message
-            if (m.sender === "admin") {
-              audioRef.current?.play().catch(() => {});
-            }
-            // if admin replied, no need to change typing state
           }
         }
       )
@@ -133,87 +115,69 @@ export default function ChatWidget() {
 
     messageChannelRef.current = msgCh;
 
-    // typing channel: broadcast events for typing
     const tCh = supabase
       .channel("typing")
-      .on(
-        "broadcast",
-        { event: "typing" },
-        ({ payload }: any) => {
-          // payload: { phone, sender: 'user'|'admin', typing: boolean }
-          if (!payload) return;
-          if (payload.phone !== phone) return;
-          if (payload.sender === "admin") {
-            setAdminTyping(!!payload.typing);
-            // clear adminTyping after 2.5s if typing true (safety)
-            if (payload.typing) {
-              if (stopTypingTimerRef.current) {
-                window.clearTimeout(stopTypingTimerRef.current);
-              }
-              stopTypingTimerRef.current = window.setTimeout(() => {
-                setAdminTyping(false);
-              }, 2500);
-            }
+      .on("broadcast", { event: "typing" }, ({ payload }: any) => {
+        if (!payload || payload.phone !== phone) return;
+        if (payload.sender === "admin") {
+          setAdminTyping(!!payload.typing);
+          if (payload.typing) {
+            if (stopTypingTimerRef.current)
+              window.clearTimeout(stopTypingTimerRef.current);
+
+            stopTypingTimerRef.current = window.setTimeout(() => {
+              setAdminTyping(false);
+            }, 2500);
           }
         }
-      )
+      })
       .subscribe();
 
     typingChannelRef.current = tCh;
 
-    // presence channel: online/offline
     const pCh = supabase
       .channel("presence")
-      .on(
-        "broadcast",
-        { event: "presence" },
-        ({ payload }: any) => {
-          if (!payload) return;
-          if (payload.phone !== phone) return;
-          if (payload.status === "online") {
-            setIsOnline(true);
-          } else {
-            setIsOnline(false);
-          }
-        }
-      )
+      .on("broadcast", { event: "presence" }, ({ payload }: any) => {
+        if (!payload || payload.phone !== phone) return;
+        setIsOnline(payload.status === "online");
+      })
       .subscribe();
 
     presenceChannelRef.current = pCh;
   };
 
-  // teardown channels
   const teardownSubscriptions = () => {
-    if (messageChannelRef.current) supabase.removeChannel(messageChannelRef.current);
-    if (typingChannelRef.current) supabase.removeChannel(typingChannelRef.current);
-    if (presenceChannelRef.current) supabase.removeChannel(presenceChannelRef.current);
+    if (messageChannelRef.current)
+      supabase.removeChannel(messageChannelRef.current);
+    if (typingChannelRef.current)
+      supabase.removeChannel(typingChannelRef.current);
+    if (presenceChannelRef.current)
+      supabase.removeChannel(presenceChannelRef.current);
+
     messageChannelRef.current = null;
     typingChannelRef.current = null;
     presenceChannelRef.current = null;
   };
 
-  // send a message (user)
   const sendMessage = async () => {
     if (!input.trim()) return;
 
-    try {
-      await supabase.from("messages").insert({
-        phone: customerPhone,
-        name: customerName,
-        sender: "user",
-        message: input.trim(),
-      });
-      setInput("");
-      // after send, send typing:false
-      sendTypingEvent(customerPhone, "user", false);
-    } catch (err) {
-      console.error("Failed to send message:", err);
-      alert("Failed to send message. Try again.");
-    }
+    await supabase.from("messages").insert({
+      phone: customerPhone,
+      name: customerName,
+      sender: "user",
+      message: input.trim(),
+    });
+
+    setInput("");
+    sendTypingEvent(customerPhone, "user", false);
   };
 
-  // broadcast typing event (user or admin)
-  const sendTypingEvent = (phone: string, sender: "user" | "admin", typing: boolean) => {
+  const sendTypingEvent = (
+    phone: string,
+    sender: "user" | "admin",
+    typing: boolean
+  ) => {
     supabase.channel("typing").send({
       type: "broadcast",
       event: "typing",
@@ -221,33 +185,32 @@ export default function ChatWidget() {
     });
   };
 
-  // broadcast presence
-  const broadcastPresence = (phone: string, status: "online" | "offline") => {
+  const broadcastPresence = (
+    phone: string,
+    status: "online" | "offline"
+  ) => {
     supabase.channel("presence").send({
       type: "broadcast",
       event: "presence",
-      payload: { phone, status, ts: new Date().toISOString() },
+      payload: { phone, status },
     });
   };
 
-  // handle input change (debounced typing)
   const handleInputChange = (val: string) => {
     setInput(val);
-    const phone = customerPhone || localStorage.getItem("phone") || "";
+    const phone = customerPhone;
     if (!phone) return;
 
-    // send typing:true (debounced)
-    if (typingTimerRef.current) window.clearTimeout(typingTimerRef.current);
-    // if we weren't already showing typing, broadcast true
+    if (typingTimerRef.current)
+      window.clearTimeout(typingTimerRef.current);
+
     sendTypingEvent(phone, "user", true);
 
-    // set timer to send typing:false after 1400ms of inactivity
     typingTimerRef.current = window.setTimeout(() => {
       sendTypingEvent(phone, "user", false);
     }, 1400);
   };
 
-  // start chat: save to localStorage + set started + broadcast presence
   const startChat = () => {
     if (!customerName.trim() || !customerPhone.trim()) {
       alert("Enter name & phone");
@@ -256,38 +219,28 @@ export default function ChatWidget() {
 
     localStorage.setItem("phone", customerPhone);
     localStorage.setItem("name", customerName);
-
     setStarted(true);
-    // presence & typing will be handled by useEffect setupSubscriptions
   };
 
-  // close chat: cleanup & broadcast offline
   const closeChat = () => {
-    const phone = localStorage.getItem("phone") || customerPhone;
-    // broadcast offline
+    const phone = customerPhone;
     if (phone) broadcastPresence(phone, "offline");
-    // teardown
+
     teardownSubscriptions();
     setOpen(false);
     setStarted(false);
     setMessages([]);
     setAdminTyping(false);
     setIsOnline(false);
-    // keep name/phone in storage so user needn't re-enter; remove if you prefer
-    // localStorage.removeItem("phone"); localStorage.removeItem("name");
   };
-
-  // optional: allow manual "user is online" toggle (not necessary)
-  // UI already reflects presence from broadcast channel
 
   return (
     <div>
-      {/* Floating Button */}
       <button
-        onClick={() => setOpen((s) => !s)}
-        className="fixed bottom-6 right-6 bg-gradient-to-br from-orange-500 to-orange-700 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2 hover:scale-85 transition"
+        onClick={() => setOpen((o) => !o)}
+        className="fixed bottom-6 right-6 bg-gradient-to-br from-orange-500 to-orange-700 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2 hover:scale-95 transition"
       >
-        <span className="animate-bounce">🗨️</span>
+        <span>🗨️</span>
         <span className="font-semibold">Live Chat</span>
       </button>
 
@@ -298,18 +251,18 @@ export default function ChatWidget() {
           className="fixed bottom-20 right-6 w-[400px] bg-gray-900 text-white rounded-xl shadow-xl border border-gray-700 flex flex-col"
         >
           {!started ? (
-            <div className="p-4 flex flex-col space-y-3">
+            <div className="p-4 space-y-3">
               <h3 className="font-bold text-lg">Start Chat</h3>
 
               <input
-                className="px-3 py-2 rounded-lg bg-gray-800 text-sm"
+                className="px-3 py-2 rounded-lg bg-gray-800 text-sm w-full"
                 placeholder="Your Name"
                 value={customerName}
                 onChange={(e) => setCustomerName(e.target.value)}
               />
 
               <input
-                className="px-3 py-2 rounded-lg bg-gray-800 text-sm"
+                className="px-3 py-2 rounded-lg bg-gray-800 text-sm w-full"
                 placeholder="Phone Number"
                 value={customerPhone}
                 onChange={(e) => setCustomerPhone(e.target.value)}
@@ -317,76 +270,44 @@ export default function ChatWidget() {
 
               <button
                 onClick={startChat}
-                className="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-lg text-sm transition"
+                className="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-lg text-sm transition w-full"
               >
                 Start Chat
               </button>
             </div>
           ) : (
             <>
-              {/* Header */}
-              <div className="p-3 border-b border-gray-700 flex justify-between items-center">
-                <div>
-                  <div className="font-bold text-sm">Kothi Chat Support</div>
-                  <div className="text-xs text-gray-400">
-                    {isOnline ? "Online" : "Offline"}{" "}
-                    {adminTyping ? "• Admin is typing…" : ""}
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={closeChat}
-                    className="text-gray-400 hover:text-white font-bold"
-                    title="Close chat"
-                  >
-                    ✖
-                  </button>
+              <div className="p-3 border-b border-gray-700">
+                <div className="font-bold text-sm">Kothi Chat Support</div>
+                <div className="text-xs text-gray-400">
+                  {isOnline ? "Online" : "Offline"}{" "}
+                  {adminTyping ? "• Admin is typing…" : ""}
                 </div>
               </div>
 
-              {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-3 space-y-2 max-h-[350px] text-sm">
+              <div className="flex-1 overflow-y-auto p-3 space-y-2 text-sm">
                 {messages.map((m) => (
                   <div
                     key={m.id}
                     className={`p-2 rounded-lg max-w-[75%] ${
-                      m.sender === "user" ? "bg-orange-600 ml-auto" : "bg-gray-800"
+                      m.sender === "user"
+                        ? "bg-orange-600 ml-auto"
+                        : "bg-gray-800"
                     }`}
                   >
                     {m.message}
                   </div>
                 ))}
-
-                {/* admin typing bubble inside chat */}
-                {adminTyping && (
-                  <div className="flex">
-                    <div className="bg-gray-700 p-2 rounded-lg max-w-[40%]">
-                      <div className="flex space-x-1 items-center">
-                        <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" />
-                        <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce delay-150" />
-                        <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce delay-300" />
-                      </div>
-                    </div>
-                  </div>
-                )}
-
                 <div ref={messagesEndRef} />
               </div>
 
-              {/* Input */}
               <div className="p-2 border-t border-gray-700 flex gap-2">
                 <input
                   className="flex-1 px-3 py-2 bg-gray-800 rounded-lg text-sm"
                   placeholder="Type a message..."
                   value={input}
                   onChange={(e) => handleInputChange(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      e.preventDefault();
-                      sendMessage();
-                    }
-                  }}
+                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                 />
                 <button
                   onClick={sendMessage}

@@ -2,6 +2,7 @@ import Hero1 from "./component/Hero/hero1";
 import Testimonial from "./Testimonial";
 import WhyChooseUs from "./component/Whychooseus/Whychooseus";
 import About from "./About/About";
+import HomeServices from "./component/HomeServices/HomeServices";
 
 // Update the import path to match the actual file name and casing, e.g.:
 // Update the import path to match the actual file name and casing, e.g.:
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div className="">
       <Hero1 />
+      <HomeServices />
       <Testimonial />
       <About />
       <ConstructionSection />

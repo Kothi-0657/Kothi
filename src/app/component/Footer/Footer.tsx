@@ -40,14 +40,14 @@ function Footer() {
             excellence, elegance, and trust in every project.
           </p>
           <div className="flex space-x-4 mt-6 text-lg">
-            <a href="#" className="hover:text-white transition">
-              <FaLinkedinIn />
+            <a href="https://www.linkedin.com/in/kothi-india-2538b238a/" className="hover:text-white transition">
+              <FaLinkedinIn className="hover:text-white transition" />
             </a>
-            <a href="#" className="hover:text-white transition">
-              <FaFacebookF />
+            <a href="https://www.facebook.com/profile.php?id=61580038401547" className="hover:text-white transition">
+              <FaFacebookF className="hover:text-white transition" />
             </a>
-            <a href="#" className="hover:text-white transition">
-              <FaTwitter />
+            <a href="https://x.com/Kothiindia" className="hover:text-white transition">
+              <FaTwitter className="hover:text-white transition" />
             </a>
             <a
               href="https://www.instagram.com/kothiindia/"

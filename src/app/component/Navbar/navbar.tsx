@@ -57,8 +57,13 @@ function Navbar() {
               </li>
             ))}
             <li>
-              <button className="px-5 py-2 font-semibold text-white border-2 border-[#FE904E] rounded-md hover:shadow-[0_0_20px_rgba(254,144,78,0.7)] hover:bg-white/10 transition-all duration-300">
-              Contact
+              <button
+                onClick={() => setShowPopup(true)}
+                className="px-5 py-2 font-semibold text-white border-2 border-[#FE904E] rounded-md
+                          hover:shadow-[0_0_20px_rgba(254,144,78,0.7)]
+                          hover:bg-white/10 transition-all duration-300"
+              >
+                Contact
               </button>
             </li>
           </ul>

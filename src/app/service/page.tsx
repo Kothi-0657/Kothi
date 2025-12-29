@@ -4,121 +4,175 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import ContactForm from "@/app/component/Form/Cxform"; // ✅ Import your Cxform
+import ContactForm from "@/app/component/Form/Cxform";
 
-/** List of Services */
+/* ===================== SERVICES DATA ===================== */
+
 const services = [
   {
     title: "Construction",
     type: "construction",
-    icon: "/icons/iconcons.png",
-    description: "Strong foundations, smart design, and transparent execution. From plotting to possession, our construction team delivers safe, durable, and stylish homes that match your vision, budget, and timeline without hidden compromises.",
+    image: "/ServiceIcons/conb.png",
+    popular: true,
+    description:
+      "End-to-end home construction with transparent pricing, structured execution, and reliable delivery.",
   },
   {
     title: "Renovation",
     type: "renovation",
-    icon: "/icons/iconinterior.png",
-    description: "Transform old spaces into fresh, functional, and beautiful homes. Thoughtful planning, material guidance, and neat execution ensure your renovation looks premium, feels comfortable, and stays reliable for years, with minimal disruption.",
+    image: "/ServiceIcons/renov.png",
+    popular: true,
+    description:
+      "Thoughtfully planned renovations that enhance comfort, functionality, and long-term value.",
   },
   {
     title: "Home Inspection",
     type: "inspection",
-    icon: "/icons/iconinspections.png",
-    description: "Detailed home inspections that reveal hidden issues before you commit. Structural checks, seepage, electrical, and finishing review help you negotiate better, plan repairs early, and move into safer, problem‑free homes.",
+    image: "/kothi.png",
+    popular: true,
+    description:
+      "Detailed inspection reports covering structure, seepage, electricals, and finishes.",
   },
   {
     title: "Packers & Movers",
     type: "packersAndMovers",
-    icon: "/icons/iconpnm.png",
-    description: "Safe, organized, and stress‑free shifting for your home. Professional packing, careful handling, and on‑time delivery ensure your belongings reach the new place securely, with complete support from planning to unloading.",
+    image: "/Blogpandm.png",
+    description:
+      "Safe, organized, and stress-free home shifting with professional packing and handling.",
   },
   {
     title: "Home Services",
     type: "homeServices",
-    icon: "/icons/iconhm.png",
-    description: "Quick, reliable home services under one roof. From repairs to improvements, trusted professionals handle the work while you relax. Clear communication, fair pricing, and guaranteed workmanship keep your home running smoothly",
+    image: "/main1.png",
+    description:
+      "Reliable everyday home services delivered by verified professionals.",
   },
 ];
+
+/* ===================== PAGE ===================== */
 
 export default function ServicePage() {
   const [showForm, setShowForm] = useState(false);
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
-  /** Handle opening form for selected service */
   const handleOpenForm = (service: string) => {
     setSelectedService(service);
     setShowForm(true);
   };
 
-  /** Handle closing popup */
   const handleCloseForm = () => {
     setShowForm(false);
     setTimeout(() => setSelectedService(null), 300);
   };
 
   return (
-    <div className="relative min-h-screen p-12">
-      {/* 🔹 Background video */}
+    <div className="relative min-h-screen">
+      {/* 🔹 Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        className="fixed inset-0 w-full h-full object-cover -z-20"
       >
         <source src="/Background.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
 
-      {/* 🔹 Overlay to make text readable */}
-      <div className="absolute inset-0 bg-white/60 backdrop-blur-sm -z-10"></div>
+      {/* 🔹 Overlay */}
+      <div className="fixed inset-0 bg-white/70 backdrop-blur-sm -z-10"></div>
 
-      {/* 🔹 Foreground Content */}
-      <div className="relative z-10">
-        <h1 className="text-6xl font-extrabold text-center text-[#b04400] mb-20 mt-20">
-          Kothi India Services
-        </h1>
+      {/* ===================== CONTENT ===================== */}
+      <div className="relative z-10 px-6 py-20 space-y-24 max-w-7xl mx-auto">
+        {/* ===================== HEADER ===================== */}
+        <div className="text-center space-y-4">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-[#b04400]">
+            Kothi India Services
+          </h1>
+          <p className="max-w-2xl mx-auto text-gray-700">
+            Reliable, transparent, and professionally managed services for every
+            stage of your home journey.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-10">
+        {/* ===================== MOST BOOKED ===================== */}
+        <section>
+          <h2 className="text-3xl font-semibold text-center text-[#b04400] mb-10">
+            Most Booked Services
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {services
+              .filter((s) => s.popular)
+              .map((s) => (
+                <div
+                  key={s.type}
+                  className="flex items-center gap-4 p-5 rounded-xl bg-white/80 backdrop-blur-md shadow-md"
+                >
+                  <Image
+                    src={s.image}
+                    alt={s.title}
+                    width={90}
+                    height={90}
+                    className="rounded-lg object-cover"
+                  />
+
+                  <div className="flex-1">
+                    <h3 className="font-semibold">{s.title}</h3>
+                    <p className="text-sm text-gray-600 mb-2">
+                      {s.description}
+                    </p>
+
+                    <button
+                      onClick={() => handleOpenForm(s.title)}
+                      className="text-sm text-[#b04400] font-medium hover:underline"
+                    >
+                      Get Quote →
+                    </button>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </section>
+
+        {/* ===================== ALL SERVICES ===================== */}
+        <section className="space-y-8">
           {services.map((s, index) => (
             <motion.div
               key={s.type}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="rounded-4xl shadow-xl overflow-hidden border-2 border-transparent 
-                         bg-white/60 backdrop-blur-md hover:shadow-9xl transition-all duration-300
-                         hover:border-4 hover:border-[#b04400] p-3 flex flex-col justify-between scale-[0.85]"
+              transition={{ delay: index * 0.08 }}
+              className="flex flex-col md:flex-row items-center gap-8 
+                         p-6 rounded-2xl bg-white/75 backdrop-blur-md shadow-md"
             >
-              {/* 🔸 Top Icon Section */}
-              <div className="mb-5 flex items-center justify-center rounded-xl p-4">
-                <Image
-                  src={s.icon}
-                  alt={s.title}
-                  width={420}
-                  height={500}
-                  className="object-contain"
-                />
-              </div>
+              {/* Image */}
+              <Image
+                src={s.image}
+                alt={s.title}
+                width={180}
+                height={140}
+                className="rounded-xl object-cover"
+              />
 
-              {/* 🔸 Content Section */}
-              <div className="text-center flex-1 flex flex-col">
-                <h2 className="text-2xl font-semibold mb-4">{s.title}</h2>
-                <p className="text-gray-700 mb-6 flex-grow">{s.description}</p>
+              {/* Content */}
+              <div className="flex-1">
+                <h3 className="text-2xl font-semibold mb-2">{s.title}</h3>
+                <p className="text-gray-700 max-w-2xl mb-4">
+                  {s.description}
+                </p>
 
-                {/* 🔸 Buttons */}
-                <div className="flex gap-4 justify-center mt-auto">
+                <div className="flex gap-4">
                   <button
                     onClick={() => handleOpenForm(s.title)}
-                    className="px-5 py-2 rounded-full bg-[#b04400] text-white font-medium hover:bg-[#993300] transition shadow-md"
+                    className="px-5 py-2 rounded-full bg-[#b04400] text-white hover:bg-[#993300] transition"
                   >
                     Get Quote
                   </button>
 
                   <Link
                     href={`/services/${s.type}`}
-                    className="px-5 py-2 rounded-full border border-[#b04400] text-[#b04400] font-medium hover:bg-[#b04400]/10 transition"
+                    className="px-5 py-2 rounded-full border border-[#b04400] text-[#b04400] hover:bg-[#b04400]/10 transition"
                   >
                     Learn More
                   </Link>
@@ -126,10 +180,10 @@ export default function ServicePage() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </section>
       </div>
 
-      {/* 🔹 Popup Form */}
+      {/* ===================== POPUP FORM ===================== */}
       <AnimatePresence>
         {showForm && (
           <motion.div
@@ -143,9 +197,8 @@ export default function ServicePage() {
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
               transition={{ duration: 0.25 }}
-              className="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-lg relative"
+              className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg relative"
             >
-              {/* Close Button */}
               <button
                 className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
                 onClick={handleCloseForm}
@@ -153,14 +206,10 @@ export default function ServicePage() {
                 ✖
               </button>
 
-              {/* Title */}
               <h2 className="text-2xl font-bold mb-6 text-[#b04400] text-center">
-                {selectedService
-                  ? `Get a Quote for ${selectedService}`
-                  : "Get a Quote"}
+                Get a Quote for {selectedService}
               </h2>
 
-              {/* ✅ Integrated Cxform */}
               <ContactForm />
             </motion.div>
           </motion.div>

@@ -4,15 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 import galleryFiles from "@/../galleryData.json";
-import type { JSX } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import ContactForm from "@/app/component/Form/Cxform";
-import LinearHomeGallery from "../component/Linergallery/LinearGalleryHome";
 import LinearGalleryHome from "../component/Linergallery/LinearGalleryHome";
 
 /* ---------------------------------------------
-   PROJECT LISTS
+   PROJECT LIST
 ----------------------------------------------*/
 const projects = galleryFiles.map((f, i) => ({
   id: i + 1,
@@ -28,36 +23,39 @@ function Lightbox({ item, onClose }: { item: any; onClose: () => void }) {
     <AnimatePresence>
       {item && (
         <motion.div
-          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl flex items-center justify-center p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
           <motion.div
-            initial={{ scale: 0.9 }}
+            initial={{ scale: 0.94 }}
             animate={{ scale: 1 }}
-            exit={{ scale: 0.9 }}
-            className="relative max-w-[90vw] max-h-[90vh] rounded-2xl overflow-hidden bg-black shadow-2xl"
+            exit={{ scale: 0.94 }}
+            transition={{ duration: 0.3 }}
+            className="relative max-w-[92vw] max-h-[92vh] rounded-2xl overflow-hidden bg-black shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={item.src}
               alt={item.title}
-              className="w-full h-[70vh] object-contain"
+              className="w-full h-[72vh] object-contain"
             />
 
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 text-white bg-black/70 p-2 rounded-full"
+              className="absolute top-4 right-4 text-white bg-black/60 p-2 rounded-full"
             >
-              <FaTimes size={20} />
+              <FaTimes size={18} />
             </button>
 
             <div className="p-4 text-center text-white bg-gradient-to-t from-black/80 to-transparent">
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="text-gray-300 mt-2">
-                Premium interior & architecture showcase project.
+              <h3 className="text-xl font-medium tracking-wide">
+                {item.title}
+              </h3>
+              <p className="text-gray-300 text-sm mt-1">
+                Curated residential project by Kothi India
               </p>
             </div>
           </motion.div>
@@ -68,24 +66,29 @@ function Lightbox({ item, onClose }: { item: any; onClose: () => void }) {
 }
 
 /* ---------------------------------------------
-   3D CIRCULAR WHEEL GALLERY
+   CIRCULAR ROTATING GALLERY (ORGANIC)
 ----------------------------------------------*/
-function CircularWheel({ items, onOpen }: { items: any[]; onOpen: (i: any) => void }) {
-  const wheelRef = useRef<HTMLDivElement>(null);
+function CircularGallery({
+  items,
+  onOpen,
+}: {
+  items: any[];
+  onOpen: (i: any) => void;
+}) {
   const [angle, setAngle] = useState(0);
-  const radius = 1050; // Bigger wheel
+  const radius = 900;
   const count = items.length;
 
-  // Auto-rotation
   useEffect(() => {
-    const int = setInterval(() => setAngle((a) => a + 0.2), 40);
-    return () => clearInterval(int);
+    const interval = setInterval(() => {
+      setAngle((a) => a + 0.12);
+    }, 40);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-[600px] flex items-center justify-center perspective-[2000px] mt-10 mb-20">
+    <div className="relative h-[620px] flex items-center justify-center perspective-[1800px] my-20">
       <div
-        ref={wheelRef}
         className="absolute inset-0 flex items-center justify-center"
         style={{
           transformStyle: "preserve-3d",
@@ -94,47 +97,59 @@ function CircularWheel({ items, onOpen }: { items: any[]; onOpen: (i: any) => vo
       >
         {items.map((p, i) => {
           const theta = (360 / count) * i;
-          const transform = `
-            rotateY(${theta}deg)
-            translateZ(${radius}px)
-          `;
           return (
             <div
               key={p.id}
-              className="absolute w-[190px] h-[190px] rounded-xl overflow-hidden cursor-pointer
-                         border border-yellow-400/60 shadow-[0_0_80px_rgba(255,200,0,0.25)] bg-gray-900/30 backdrop-blur-lg"
-              style={{ transform }}
+              style={{
+                transform: `rotateY(${theta}deg) translateZ(${radius}px)`,
+              }}
+              className="absolute w-[210px] h-[210px] rounded-2xl overflow-hidden
+                         cursor-pointer bg-white/5 backdrop-blur-md
+                         border border-white/10 shadow-lg"
               onClick={() => onOpen(p)}
             >
-              <img src={p.src} className="w-full h-full object-cover" />
+              <img
+                src={p.src}
+                className="w-full h-full object-cover hover:scale-105 transition duration-700"
+              />
             </div>
           );
         })}
       </div>
 
-      {/* Bottom shadow fade */}
-      <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+      {/* Ground fade */}
+      <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#0e0e0e] to-transparent pointer-events-none"></div>
     </div>
   );
 }
 
-
 /* ---------------------------------------------
-   TILE DESIGN C — Tilt Hover Motion Grid
+   ORGANIC GRID
 ----------------------------------------------*/
-function TiltGrid({ items, onOpen }: { items: any[]; onOpen: (i: any) => void }) {
+function OrganicGrid({
+  items,
+  onOpen,
+}: {
+  items: any[];
+  onOpen: (i: any) => void;
+}) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 mt-16">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6 pb-24">
       {items.map((p) => (
         <motion.div
           key={p.id}
-          whileHover={{ scale: 1.05, rotateZ: 1.5 }}
-          transition={{ type: "spring", stiffness: 300, damping: 15 }}
+          whileHover={{ y: -6 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
           onClick={() => onOpen(p)}
-          className="cursor-pointer rounded-xl overflow-hidden shadow-xl bg-black/40 backdrop-blur-lg border border-white/10"
+          className="rounded-xl overflow-hidden cursor-pointer
+                     bg-white/5 backdrop-blur-md
+                     border border-white/10 shadow-xl"
         >
-          <img src={p.src} className="w-full h-48 md:h-56 object-cover" />
-          <div className="p-3 text-center text-white text-sm bg-black/40">
+          <img
+            src={p.src}
+            className="w-full h-52 md:h-60 object-cover"
+          />
+          <div className="p-3 text-center text-sm text-gray-300">
             {p.title}
           </div>
         </motion.div>
@@ -150,22 +165,32 @@ export default function GalleryPage() {
   const [selected, setSelected] = useState<any>(null);
 
   return (
-    <div className="w-full min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 text-white">
+
       {/* HEADER */}
-      <h1 className="text-center text-4xl md:text-5xl font-serif pt-16 mb-10 text-orange-400">
-        Kothi India Gallery Showcase
-      </h1>
+      <div className="text-center pt-20 pb-6">
+        <h1 className="text-4xl md:text-5xl font-serif tracking-wide text-[#d6a45a]">
+          Spaces We’ve Crafted
+        </h1>
+        <p className="text-gray-400 mt-3 max-w-xl mx-auto">
+          A curated collection of homes shaped by thoughtful design,
+          craftsmanship, and purpose.
+        </p>
+      </div>
 
-      {/* 1️⃣ Circular Wheel */}
-      <CircularWheel items={projects} onOpen={setSelected} />
-<LinearGalleryHome />
+      {/* CIRCULAR */}
+      <CircularGallery items={projects} onOpen={setSelected} />
 
-      {/* 3️⃣ Tilt Hover Grid */}
-      <TiltGrid items={projects} onOpen={setSelected} />
-        
-      {/* Lightbox */}
+      {/* LINEAR FLOW */}
+      <div className="my-24">
+        <LinearGalleryHome />
+      </div>
+
+      {/* GRID */}
+      <OrganicGrid items={projects} onOpen={setSelected} />
+
+      {/* LIGHTBOX */}
       <Lightbox item={selected} onClose={() => setSelected(null)} />
     </div>
   );
 }
-   

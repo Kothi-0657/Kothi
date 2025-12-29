@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/lib/supabaseClient";
 
 interface Message {
   id: string;
   phone: string;
   name: string;
-  sender: string;
+  sender: "user" | "admin";
   message: string;
   created_at: string;
 }
@@ -34,10 +34,40 @@ export default function ChatWidget() {
   const typingChannelRef = useRef<any>(null);
   const presenceChannelRef = useRef<any>(null);
 
+  /* ---------------------------------------------
+     AUTO OPEN CHAT VIA URL
+     /?chat=true&name=Rahul&phone=9xxxx
+  ----------------------------------------------*/
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("chat") === "true") {
+      setOpen(true);
+
+      const name = params.get("name");
+      const phone = params.get("phone");
+
+      if (name) setCustomerName(name);
+      if (phone) setCustomerPhone(phone);
+
+      if (name && phone) {
+        localStorage.setItem("name", name);
+        localStorage.setItem("phone", phone);
+        setStarted(true);
+      }
+    }
+  }, []);
+
+  /* ---------------------------------------------
+     AUTO SCROLL
+  ----------------------------------------------*/
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, adminTyping]);
 
+  /* ---------------------------------------------
+     CHAT INIT
+  ----------------------------------------------*/
   useEffect(() => {
     if (!started) return;
 
@@ -52,7 +82,6 @@ export default function ChatWidget() {
 
     broadcastPresence(phone || customerPhone, "online");
     setIsOnline(true);
-    sendTypingEvent(phone || customerPhone, "user", false);
 
     const handleUnload = () => {
       broadcastPresence(phone || customerPhone, "offline");
@@ -68,6 +97,9 @@ export default function ChatWidget() {
     };
   }, [started]);
 
+  /* ---------------------------------------------
+     LOAD MESSAGES
+  ----------------------------------------------*/
   const loadMessages = async (phone: string) => {
     if (!phone) return;
 
@@ -93,14 +125,19 @@ export default function ChatWidget() {
     }
   };
 
+  /* ---------------------------------------------
+     REALTIME CHANNELS
+  ----------------------------------------------*/
   const setupSubscriptions = (phone: string) => {
     messageChannelRef.current = supabase
-      .channel("user-chat-messages")
+      .channel("chat-messages")
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public", table: "messages" },
         ({ new: m }: any) => {
-          if (m.phone === phone) setMessages((p) => [...p, m]);
+          if (m.phone === phone) {
+            setMessages((p) => [...p, m]);
+          }
         }
       )
       .subscribe();
@@ -109,10 +146,11 @@ export default function ChatWidget() {
       .channel("typing")
       .on("broadcast", { event: "typing" }, ({ payload }: any) => {
         if (payload?.phone === phone && payload.sender === "admin") {
-          setAdminTyping(!!payload.typing);
+          setAdminTyping(payload.typing);
           if (payload.typing) {
             if (stopTypingTimerRef.current)
               window.clearTimeout(stopTypingTimerRef.current);
+
             stopTypingTimerRef.current = window.setTimeout(
               () => setAdminTyping(false),
               2500
@@ -125,8 +163,9 @@ export default function ChatWidget() {
     presenceChannelRef.current = supabase
       .channel("presence")
       .on("broadcast", { event: "presence" }, ({ payload }: any) => {
-        if (payload?.phone === phone)
+        if (payload?.phone === phone) {
           setIsOnline(payload.status === "online");
+        }
       })
       .subscribe();
   };
@@ -140,6 +179,9 @@ export default function ChatWidget() {
       supabase.removeChannel(presenceChannelRef.current);
   };
 
+  /* ---------------------------------------------
+     SEND MESSAGE
+  ----------------------------------------------*/
   const sendMessage = async () => {
     if (!input.trim()) return;
 
@@ -179,6 +221,7 @@ export default function ChatWidget() {
 
   const handleInputChange = (val: string) => {
     setInput(val);
+
     if (!customerPhone) return;
 
     if (typingTimerRef.current)
@@ -197,120 +240,122 @@ export default function ChatWidget() {
       alert("Enter name & phone");
       return;
     }
+
     localStorage.setItem("phone", customerPhone);
     localStorage.setItem("name", customerName);
     setStarted(true);
   };
 
-  const closeChat = () => {
-    if (customerPhone) broadcastPresence(customerPhone, "offline");
-    teardownSubscriptions();
-    setOpen(false);
-    setStarted(false);
-    setMessages([]);
-    setAdminTyping(false);
-    setIsOnline(false);
-  };
-
+  /* ---------------------------------------------
+     RENDER
+  ----------------------------------------------*/
   return (
-    <div>
+    <div className="fixed inset-0 pointer-events-none z-[9999]">
       {/* Floating Button */}
       <button
-          onClick={() => setOpen((o) => !o)}
-          className="fixed bottom-6 right-6 flex items-center gap-2 px-5 py-3 rounded-full
-                    bg-white/10 backdrop-blur-md border border-white/600
-                    text-white font-medium shadow-[0_10px_50px_rgba(0,0,0,0.35)]
-                    hover:bg-orange/200 hover:shadow-[0_15px_40px_rgba(255,165,0,0.35)]
-                    transition-all duration-300 active:scale-65"
-        >
-          <span className="text-lg">💬</span>
-          <span>Live Chat</span>
-        </button>
+        onClick={() => setOpen((o) => !o)}
+        className="pointer-events-auto fixed bottom-6 right-6 z-[10000]
+                   flex items-center gap-2 px-5 py-3 rounded-full
+                   bg-white/10 backdrop-blur-md border border-white/20
+                   text-white shadow-xl hover:bg-orange-500/20 transition"
+      >
+        💬 Live Chat
+      </button>
 
+      {/* Chat Box */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 30 }}
+            className="pointer-events-auto fixed bottom-20 right-6 z-[10000]
+                       w-[400px] rounded-2xl border border-white/10
+                       bg-white/10 backdrop-blur-xl shadow-2xl flex flex-col"
+          >
+            {!started ? (
+              <div className="p-5 space-y-3">
+                <h3 className="text-lg font-semibold text-white">
+                  Start Conversation
+                </h3>
 
-      {open && (
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="fixed bottom-20 right-6 w-[400px] rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl shadow-2xl flex flex-col overflow-hidden"
-        >
-          {!started ? (
-            <div className="p-5 space-y-3">
-              <h3 className="font-semibold text-lg text-white">
-                Start Conversation
-              </h3>
-
-              <input
-                className="px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-sm w-full text-white placeholder-gray-300 focus:outline-none focus:ring-1 focus:ring-orange-500"
-                placeholder="Your Name"
-                value={customerName}
-                onChange={(e) => setCustomerName(e.target.value)}
-              />
-
-              <input
-                className="px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-sm w-full text-white placeholder-gray-300 focus:outline-none focus:ring-1 focus:ring-orange-500"
-                placeholder="Phone Number"
-                value={customerPhone}
-                onChange={(e) => setCustomerPhone(e.target.value)}
-              />
-
-              <button
-                onClick={startChat}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:opacity-90 px-4 py-2 rounded-lg text-sm transition w-full text-white"
-              >
-                Start Chat
-              </button>
-            </div>
-          ) : (
-            <>
-              {/* Header */}
-              <div className="p-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
-                <div className="font-semibold text-sm">
-                  Kothi Chat Support
-                </div>
-                <div className="text-xs opacity-80">
-                  {isOnline ? "Online" : "Offline"}{" "}
-                  {adminTyping ? "• typing…" : ""}
-                </div>
-              </div>
-
-              {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-2 text-sm">
-                {messages.map((m) => (
-                  <div
-                    key={m.id}
-                    className={`px-3 py-2 rounded-xl max-w-[75%] shadow ${
-                      m.sender === "user"
-                        ? "bg-orange-600 text-white ml-auto"
-                        : "bg-white/20 text-white"
-                    }`}
-                  >
-                    {m.message}
-                  </div>
-                ))}
-                <div ref={messagesEndRef} />
-              </div>
-
-              {/* Input */}
-              <div className="p-3 border-t border-white/10 flex gap-2">
                 <input
-                  className="flex-1 px-3 py-2 bg-white/10 border border-white/10 rounded-lg text-sm text-white placeholder-gray-300 focus:outline-none focus:ring-1 focus:ring-orange-500"
-                  placeholder="Type a message..."
-                  value={input}
-                  onChange={(e) => handleInputChange(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+                  className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/10
+                             text-white placeholder-gray-300"
+                  placeholder="Your Name"
+                  value={customerName}
+                  onChange={(e) => setCustomerName(e.target.value)}
                 />
+
+                <input
+                  className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/10
+                             text-white placeholder-gray-300"
+                  placeholder="Phone Number"
+                  value={customerPhone}
+                  onChange={(e) => setCustomerPhone(e.target.value)}
+                />
+
                 <button
-                  onClick={sendMessage}
-                  className="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-lg text-white text-sm"
+                  onClick={startChat}
+                  className="w-full bg-orange-600 hover:bg-orange-700
+                             py-2 rounded-lg text-white"
                 >
-                  Send
+                  Start Chat
                 </button>
               </div>
-            </>
-          )}
-        </motion.div>
-      )}
+            ) : (
+              <>
+                {/* Header */}
+                <div className="p-4 bg-gradient-to-r from-orange-600 to-orange-700 text-black rounded-t-2xl flex flex-col">
+                  <div className="font-semibold text-sm">
+                    Kothi India Chat Support
+                  </div>
+                  <div className="text-xs opacity-80">
+                    {isOnline ? "Online" : "Offline"}{" "}
+                    {adminTyping && "• typing…"}
+                  </div>
+                </div>
+
+                {/* Messages */}
+                <div className="flex-1 overflow-y-auto p-4 space-y-2 text-sm">
+                  {messages.map((m) => (
+                    <div
+                      key={m.id}
+                      className={`px-3 py-2 rounded-xl max-w-[75%]
+                        ${
+                          m.sender === "user"
+                            ? "bg-orange-600 text-white ml-auto"
+                            : "bg-white/20 text-white"
+                        }`}
+                    >
+                      {m.message}
+                    </div>
+                  ))}
+                  <div ref={messagesEndRef} />
+                </div>
+
+                {/* Input */}
+                <div className="p-3 border-t border-white/10 flex gap-2">
+                  <input
+                    className="flex-1 px-3 py-2 rounded-lg bg-white/10 border border-white/10
+                               text-white placeholder-gray-300"
+                    placeholder="Type a message..."
+                    value={input}
+                    onChange={(e) => handleInputChange(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+                  />
+                  <button
+                    onClick={sendMessage}
+                    className="bg-orange-600 hover:bg-orange-700 px-4 rounded-lg text-white"
+                  >
+                    Send
+                  </button>
+                </div>
+              </>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

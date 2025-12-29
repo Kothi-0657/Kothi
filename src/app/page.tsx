@@ -1,5 +1,5 @@
 import Hero1 from "./component/Hero/hero1";
-import Testimonial from "./Testimonial";
+import Testimonial from "./component/testomonial/Testomonial";
 import WhyChooseUs from "./component/Whychooseus/Whychooseus";
 import About from "./About/About";
 import HomeServices from "./component/HomeServices/HomeServices";

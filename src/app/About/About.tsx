@@ -1,104 +1,83 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import { FaSeedling, FaTools, FaRocket } from "react-icons/fa";
 
+const blocks = [
+  {
+    icon: FaSeedling,
+    img: "/main1.png",
+    title: "Where It Began",
+    description:
+      "Kothi India was founded with a clear purpose — to bring trust, transparency, and accountability into home services. We identified a gap where homeowners struggled with fragmented vendors, unclear pricing, and inconsistent execution. Our goal was simple: create a single, reliable platform that homeowners could depend on with confidence.",
+  },
+  {
+    icon: FaTools,
+    img: "/main2.png",
+    title: "Building with Purpose",
+    description:
+      "From the start, our mission has been to deliver quality through process, not promises. By combining skilled professionals, modern tools, and structured planning, we ensure every project is executed with precision and care. Each home we work on reflects our commitment to durability, functionality, and thoughtful design.",
+  },
+  {
+    icon: FaRocket,
+    img: "/main3.png",
+    title: "Looking Ahead",
+    description:
+      "As we grow, our focus remains on scale without compromise. We aim to expand across India while maintaining consistent quality, clear communication, and dependable delivery. Our vision is to simplify home services nationwide — building long-term trust with every family we serve.",
+  },
+];
+
+
 export default function About() {
-  const blocks = [
-    {
-      icon: FaSeedling,
-      img: "/main1.png",
-      title: "Where It Began",
-      description:
-        "Kothi India was founded on a simple belief — homeowners deserve reliable, transparent, and well-executed services under one roof.",
-      offset: "md:ml-0",
-    },
-    {
-      icon: FaTools,
-      img: "/main2.png",
-      title: "Building with Purpose",
-      description:
-        "By combining modern tools, skilled craftsmanship, and thoughtful planning, we began shaping homes that are practical and enduring.",
-      offset: "md:ml-32",
-    },
-    {
-      icon: FaRocket,
-      img: "/main3.png",
-      title: "Looking Ahead",
-      description:
-        "Today, our focus is on scale, trust, and simplicity — delivering dependable home solutions across India, one family at a time.",
-      offset: "md:ml-64",
-    },
-  ];
-
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-900 via-gray-900 to-black">
-      <div className="max-w-5xl mx-auto px-6 text-white">
+    <section className="py-24 bg-black text-white bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 text-white">
+      <div className="max-w-7xl mx-auto px-12 space-y-12 md:space-y-16 
+">
         {/* Header */}
-        <motion.div
-          className="text-center mb-20 space-y-4"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-orange-500">
-            Our Story
-          </h2>
-          <p className="max-w-2xl mx-auto text-gray-400 leading-relaxed">
-            A journey shaped by trust, craftsmanship, and a commitment to
-            simplifying home services.
+        <div className="text-center space-y-4">
+          <h2 className="text-5xl font-bold text-orange-500">Our Story</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            A journey shaped by trust, craftsmanship, and thoughtful execution.
           </p>
-        </motion.div>
-
-        {/* Diagonal Timeline */}
-        <div className="relative space-y-24">
-          {/* Vertical guide line */}
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-white/10 hidden md:block" />
-
-          {blocks.map((block, idx) => {
-            const Icon = block.icon;
-
-            return (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className={`relative flex items-start gap-16 ${block.offset}`}
-              >
-                {/* Icon */}
-                <div className="relative z-10 flex-shrink-0">
-                  <div className="w-14 h-14 rounded-full bg-orange-500/10 flex items-center justify-center ring-1 ring-orange-500/30">
-                    <Icon className="text-orange-500 text-xl" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="flex items-start gap-2 max-w-xl">
-                  {/* Text */}
-                  <div className="space-y-1">
-                    <h3 className="text-2xl font-semibold text-orange-500">
-                      {block.title}
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      {block.description}
-                    </p>
-                  </div>
-
-                  {/* Image (NO BOX) */}
-                  <img
-                    src={block.img}
-                    alt={block.title}
-                    className="w-50 h-50 object-contain opacity-90 hidden sm:block"
-                    loading="lazy"
-                  />
-                </div>
-              </motion.div>
-            );
-          })}
         </div>
+
+        {blocks.map((block, i) => {
+          const Icon = block.icon;
+          const reverse = i % 2 !== 0;
+
+          return (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className={`grid md:grid-cols-2 gap-16 items-center ${
+                reverse ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              {/* Text */}
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center">
+                  <Icon className="text-orange-500" />
+                </div>
+                <h3 className="text-2xl font-semibold text-orange-500">
+                  {block.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {block.description}
+                </p>
+              </div>
+
+              {/* Image */}
+              <img
+                src={block.img}
+                className="w-60 h-60 max-w-md mx-auto opacity-90"
+                alt={block.title}
+              />
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

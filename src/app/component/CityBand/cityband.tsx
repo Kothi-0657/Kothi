@@ -7,19 +7,22 @@ const cities = ["Bangalore", "Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi", 
 
 export default function CityBand() {
   return (
-    <div className="w-full py-9 overflow-hidden perspective-[1200px]">
+    <div className="w-full py-9 overflow-hidden">
       <motion.div
-        className="flex whitespace-nowrap"
+        className="flex whitespace-nowrap gap-9"
         animate={{ x: ["0%", "-100%"] }}
-        transition={{ repeat: Infinity, duration: 35, ease: "linear" }}
+        transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
       >
         {[...cities, ...cities].map((city, i) => (
           <motion.div
             key={i}
-            whileHover={{ rotateY: 15, scale: 1.05 }}
-            className="mx-6 px-9 py-3 bg-gradient-to-br from-orange-100 to-amber-50 border border-orange-200 rounded-4xl shadow-lg flex items-center gap-5 text-gray-800 font-semibold transition-transform"
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center gap-2 px-4 py-2 
+              rounded-full border border-gray-100 
+              bg-white shadow-sm text-sm font-medium text-gray-900 
+              hover:border-[#b04400] hover:text-[#b04400] transition"
           >
-            <FaMapMarkerAlt className="text-orange-500 text-2xl" />
+            <FaMapMarkerAlt className="text-[#b04400] text-xs" />
             {city}
           </motion.div>
         ))}

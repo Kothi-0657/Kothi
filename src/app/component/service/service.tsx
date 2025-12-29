@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { JSX } from "react";
 import { FaHome, FaTools, FaSearch, FaTruck, FaBroom } from "react-icons/fa";
 
 interface ServiceComponentProps {

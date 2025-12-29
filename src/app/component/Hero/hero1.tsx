@@ -6,6 +6,7 @@ import Link from "next/link";
 import ContactForm from "@/app/component/Form/Cxform";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import CityBand from "../CityBand/cityband";
+import WorkflowTimeline from "@/app/component/WorkflowTimeline/WorkflowTimeline";
 
 
 function Hero1() {
@@ -108,8 +109,11 @@ function Hero1() {
               </div>
             </div>
           </motion.div>
+      </div>
 
-
+      {/* ✅ Workflow Timeline */}
+      <div className="absolute bottom-30 w-full">
+        <WorkflowTimeline />
       </div>
     </section>
   );

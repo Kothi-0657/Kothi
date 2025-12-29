@@ -1,0 +1,15 @@
+# Allow all crawlers to access everything
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kothiindia.com/sitemap.xml
+
+# Crawl delay for polite crawling (optional)
+Crawl-delay: 10
+
+# Block sensitive files/folders if needed
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/

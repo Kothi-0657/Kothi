@@ -90,17 +90,26 @@ function Hero1() {
         </motion.div>
 
         {/* ✅ Right Side: Contact Form (No Duplicate Heading) */}
-        <motion.div
-          initial={{ opacity: 1, x: 50 }}
-          animate={{ opacity: 1, x: 20 }}
-          transition={{ duration: 0.6 }}
-          className="mt-15 mb-49 lg:mt-0 w-full max-w-md bg-white/30 backdrop-blur-lg rounded-2xl p-6 text-black shadow-md border border-white/20 hover:bg-white/40 transition"
-          style={{ boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)" }}
-        
+        {/* ✅ Floating Contact Form — Top Right Below Navbar */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="absolute right-2 z-30"
+            style={{ top: "2px" }} // 👈 navbar height + gap
+          >
+            {/* 🔽 Scale wrapper */}
+            <div
+              className="origin-top-right"
+              style={{ transform: "scale(0.75)" }} // adjust 0.6–0.75
+            >
+              <div className="bg-white/30 backdrop-blur-lg rounded-2xl p-6 shadow-md border border-white/20 hover:bg-white/40 transition">
+                <ContactForm />
+              </div>
+            </div>
+          </motion.div>
 
-        >
-          <ContactForm />
-        </motion.div>
+
       </div>
     </section>
   );

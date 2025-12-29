@@ -43,7 +43,7 @@ function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden lg:flex items-center gap-6 font-medium mb-0">
+          <ul className="hidden lg:flex items-center gap-4 font-medium mb-0">
             {navItems.map((navItem, idx) => (
               <li key={idx} className="relative group">
                 <Link

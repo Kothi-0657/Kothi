@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Navbar from "./component/Navbar/navbar";
 import "./globals.css";
 import { Poppins } from "next/font/google";
@@ -31,32 +32,32 @@ export default function RootLayout({
     <html lang="en" className={poppins.variable}>
       <head>
         {/* Google Analytics */}
-        <script
-          async
+        <Script
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-NEL55Y84KJ"
-        ></script>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-NEL55Y84KJ');
-            `,
-          }}
         />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NEL55Y84KJ');
+          `}
+        </Script>
       </head>
 
-      <body className={`${poppins.className}`}>
+      <body className={poppins.className}>
         <AppProviders>
           <Navbar />
+
+          {/* ✅ This padding fixes navbar overlap (you already did this right) */}
           <main className="min-h-screen w-screen pt-[75px]">
             {children}
           </main>
+
           <Footer />
-          
-          {/* ✅ Add Chat Widget here */}
+
+          {/* Chat visible on all public pages */}
           <ChatWidget />
         </AppProviders>
       </body>

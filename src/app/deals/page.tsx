@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Popup from "../component/PopupBox/popup";
 import ContactForm from "@/app/component/Form/Cxform";
 
+/* ------------------ DATA ------------------ */
 const constructionPlans = [
   { name: "Budget Plan", price: "₹1650 / Sq.ft" },
   { name: "Basic Plan", price: "₹1780 / Sq.ft" },
@@ -32,58 +33,53 @@ const inspectionPlans = [
   { name: "Complete Structural Check", price: "₹4999" },
 ];
 
+/* ------------------ PAGE ------------------ */
 export default function DealsPage() {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
     <div className="relative min-h-screen overflow-hidden text-white">
 
-      {/* BACKGROUND VIDEO */}
+      {/* 🎥 Background Video */}
       <video
-        autoPlay loop muted playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10 brightness-75"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-10 brightness-75"
       >
         <source src="/Background.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/90 -z-10"></div>
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90 -z-10" />
 
-      {/* PAGE CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 space-y-20">
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 space-y-24">
 
-        {/* PAGE TITLE */}
-{/* PAGE TITLE WRAPPER */}
-<div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-  
-  {/* TITLE */}
-  <motion.h1
-    initial={{ opacity: 0, y: -30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-orange-400 via-yellow-300 to-orange-600 bg-clip-text text-transparent text-center md:text-left"
-  >
-    Kothi Exclusive Deals & Plans
-  </motion.h1>
+        {/* ================= TITLE ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          className="flex flex-col md:flex-row items-center justify-center gap-8"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-center bg-gradient-to-r from-orange-400 via-yellow-300 to-orange-600 bg-clip-text text-transparent">
+            Exclusive Deals & Pricing
+          </h1>
 
-  {/* IMAGE */}
-  <Image
-    src="/Kothi8.png"
-    alt="Premium Home Design"
-    width={400}
-    height={250}
-    className="w-32 md:w-52 lg:w-72 h-auto object-cover rounded-xl"
-  />
+          <Image
+            src="/Kothi8.png"
+            alt="Premium Homes"
+            width={350}
+            height={220}
+            className="rounded-2xl shadow-2xl opacity-90"
+          />
+        </motion.div>
 
-</div>
+        {/* ================= PLANS GRID ================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
 
-
-
-        {/* WRAPPER FOR ALL PLAN SECTIONS */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-          {/* ================================
-              1. CONSTRUCTION PLANS
-          ================================= */}
           <PlanSection
             title="Construction Plans"
             image="/Kothi1.png"
@@ -91,9 +87,6 @@ export default function DealsPage() {
             itemKey="name"
           />
 
-          {/* ================================
-              2. PAINTING PLANS
-          ================================= */}
           <PlanSection
             title="Painting Plans"
             image="/Kothi9.png"
@@ -101,9 +94,6 @@ export default function DealsPage() {
             itemKey="type"
           />
 
-          {/* ================================
-              3. INTERIOR PLANS
-          ================================= */}
           <PlanSection
             title="Interior Plans"
             image="/Kothi11.png"
@@ -111,20 +101,16 @@ export default function DealsPage() {
             itemKey="name"
           />
 
-          {/* ================================
-              4. INSPECTION OFFERS
-          ================================= */}
           <PlanSection
             title="Inspection Offers"
             image="/Kothi4.png"
             items={inspectionPlans}
             itemKey="name"
           />
-
         </div>
       </div>
 
-      {/* POPUP */}
+      {/* Popup */}
       {showPopup && (
         <Popup isOpen={showPopup} onClose={() => setShowPopup(false)}>
           <ContactForm />
@@ -134,42 +120,55 @@ export default function DealsPage() {
   );
 }
 
-/* -----------------------------------
-   REUSABLE SECTION COMPONENT
------------------------------------- */
+/* ------------------ PLAN SECTION ------------------ */
 function PlanSection({ title, image, items, itemKey }: any) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-white/20"
+      className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-[0_30px_80px_rgba(0,0,0,0.4)]"
     >
-      <div className="flex items-center gap-4 mb-6">
-        <h2 className="text-2xl font-bold text-orange-300">{title}</h2>
+      {/* Header */}
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-2xl font-semibold text-orange-300">
+          {title}
+        </h2>
         {image && (
           <Image
             src={image}
             alt={title}
-            width={120}
-            height={100}
-            className="rounded-xl"
+            width={110}
+            height={90}
+            className="rounded-xl opacity-90"
           />
         )}
       </div>
 
+      {/* Cards */}
       <div className="space-y-4">
         {items.map((item: any, idx: number) => (
           <motion.div
             key={idx}
             whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.2 }}
-            className="bg-black/30 p-4 rounded-xl border border-white/10 shadow-lg"
+            transition={{ duration: 0.25 }}
+            className="group relative bg-black/40 rounded-2xl p-5 border border-white/10 hover:border-orange-400/40 shadow-lg"
           >
-            <h3 className="text-xl font-semibold">{item[itemKey]}</h3>
-            <p className="text-orange-300 text-lg font-bold">{item.price}</p>
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-medium">
+                {item[itemKey]}
+              </h3>
+
+              <span className="text-orange-300 font-bold text-lg">
+                {item.price}
+              </span>
+            </div>
+
             {item.cleaning && (
-              <p className="text-green-300 text-sm">Cleaning: {item.cleaning}</p>
+              <p className="mt-2 text-sm text-green-300">
+                ✨ Cleaning Included
+              </p>
             )}
           </motion.div>
         ))}

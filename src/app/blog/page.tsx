@@ -1,10 +1,11 @@
-// app/blog/page.tsx
-import Link from "next/link";
+"use client";
 
-// Replace image URLs with your own hosted images
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+/* ------------------ DATA (UNCHANGED) ------------------ */
 const services = [
   {
-
     title: "Home Renovation Services",
     description:
       "Complete guide on modern home renovation, remodeling, design trends, and cost estimation in India.",
@@ -90,44 +91,84 @@ const services = [
   },
 ];
 
+/* ------------------ PAGE ------------------ */
 export default function BlogPage() {
   return (
-    <main className="max-w-7xl mx-auto px-6 py-16">
-      {/* Page Heading */}
-      <h1 className="text-5xl font-extrabold text-center mb-12 text-gray-900">
-        Our Blogs
-      </h1>
+    <main className="relative max-w-7xl mx-auto px-6 py-24 bg-gray-200">
 
-      {/* Blog Grid */}
-      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+      {/* ========= PAGE HEADER ========= */}
+      <motion.div
+        initial={{ opacity: 0, y: -25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className="text-center mb-20"
+      >
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-600 bg-clip-text text-transparent">
+          Insights & Expertise
+        </h1>
+        <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          Explore expert guides, service insights, and professional advice
+          to help you make confident decisions for your home.
+        </p>
+      </motion.div>
+
+      {/* ========= BLOG GRID ========= */}
+      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, idx) => (
-          <div
+          <motion.article
             key={idx}
-            className="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-500 bg-white"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="group relative rounded-3xl overflow-hidden bg-white/70 backdrop-blur-xl border border-gray-200 shadow-[0_20px_50px_rgba(0,0,0,0.12)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.18)] transition-all duration-500"
           >
-            {/* Image */}
-            <div className="relative h-64 w-full">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-              />
+            {/* Media */}
+            <div className="relative h-60 w-full overflow-hidden">
+              {service.image.endsWith(".mp4") ? (
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                >
+                  <source src={service.image} type="video/mp4" />
+                </video>
+              ) : (
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              )}
+
+              {/* Soft overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
             </div>
 
             {/* Content */}
-            <div className="p-6 md:p-8">
-              <h2 className="text-2xl font-bold mb-3 text-gray-900">
+            <div className="relative p-6 md:p-7 space-y-4">
+              <h2 className="text-xl font-semibold text-gray-900 leading-snug">
                 {service.title}
               </h2>
-              <p className="text-gray-700 mb-6">{service.description}</p>
+
+              <p className="text-gray-700 text-sm leading-relaxed">
+                {service.description}
+              </p>
+
               <Link
                 href={service.href}
-                className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full shadow-lg hover:from-indigo-600 hover:to-blue-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-700 transition"
               >
-                Learn More
+                Read Article
+                <span className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
               </Link>
             </div>
-          </div>
+          </motion.article>
         ))}
       </div>
     </main>

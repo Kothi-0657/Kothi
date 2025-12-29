@@ -2,85 +2,104 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { FaSeedling, FaTools, FaRocket } from "react-icons/fa";
 
-function About() {
+export default function About() {
   const blocks = [
     {
-      img: "/Kothi4.png",
-      title: "Our Foundation",
+      icon: FaSeedling,
+      img: "/main1.png",
+      title: "Where It Began",
       description:
-        "Established with the vision of redefining renovation in India, Kothi India started with small but impactful projects.",
+        "Kothi India was founded on a simple belief — homeowners deserve reliable, transparent, and well-executed services under one roof.",
+      offset: "md:ml-0",
     },
     {
-      img: "/kothi11.png",
-      title: "Growth & Innovation",
+      icon: FaTools,
+      img: "/main2.png",
+      title: "Building with Purpose",
       description:
-        "Our growing team embraced modern design, modular solutions, and cutting-edge tools to deliver excellence.",
+        "By combining modern tools, skilled craftsmanship, and thoughtful planning, we began shaping homes that are practical and enduring.",
+      offset: "md:ml-32",
     },
     {
-      img: "/kothi.png",
-      title: "The Future",
+      icon: FaRocket,
+      img: "/main3.png",
+      title: "Looking Ahead",
       description:
-        "With a client-first mindset, our goal is to become the most trusted name in Indian home improvement.",
+        "Today, our focus is on scale, trust, and simplicity — delivering dependable home solutions across India, one family at a time.",
+      offset: "md:ml-64",
     },
   ];
 
   return (
-    <section className="relative py-30 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 m-0 p-0">
-      <div className="max-w-6xl mx-auto px-6 space-y-20 text-white">
-        {/* Heading */}
+    <section className="relative py-24 bg-gradient-to-b from-gray-900 via-gray-900 to-black">
+      <div className="max-w-5xl mx-auto px-6 text-white">
+        {/* Header */}
         <motion.div
-          className="text-center space-y-6"
-          initial={{ opacity: 0, y: 50 }}
+          className="text-center mb-20 space-y-4"
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
         >
-          <h2 className="text-5xl font-extrabold text-orange-500">Our Story</h2>
-          <p className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-300">
-            Kothi India has grown from a small team of passionate builders to a
-            trusted brand in home improvement, transforming spaces with design,
-            trust, and innovation.
+          <h2 className="text-4xl md:text-5xl font-bold text-orange-500">
+            Our Story
+          </h2>
+          <p className="max-w-2xl mx-auto text-gray-400 leading-relaxed">
+            A journey shaped by trust, craftsmanship, and a commitment to
+            simplifying home services.
           </p>
         </motion.div>
 
-        {/* Timeline Grid */}
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          {blocks.map((block, idx) => (
-            <React.Fragment key={idx}>
-              {/* Image */}
-              <motion.div
-                className="rounded-2xl shadow-2xl overflow-hidden"
-                initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: idx * 0.2 }}
-                whileHover={{ scale: 1.03 }}
-              >
-                <img
-                  src={block.img}
-                  className="w-full h-full object-cover"
-                  alt={block.title}
-                  loading="lazy"
-                />
-              </motion.div>
+        {/* Diagonal Timeline */}
+        <div className="relative space-y-24">
+          {/* Vertical guide line */}
+          <div className="absolute left-6 top-0 bottom-0 w-px bg-white/10 hidden md:block" />
 
-              {/* Text */}
+          {blocks.map((block, idx) => {
+            const Icon = block.icon;
+
+            return (
               <motion.div
-                className="space-y-8"
-                initial={{ opacity: 0, y: 50 }}
+                key={idx}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: idx * 0.3 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className={`relative flex items-start gap-16 ${block.offset}`}
               >
-                <h3 className="text-2xl font-bold text-orange-500">{block.title}</h3>
-                <p className="text-gray-300">{block.description}</p>
+                {/* Icon */}
+                <div className="relative z-10 flex-shrink-0">
+                  <div className="w-14 h-14 rounded-full bg-orange-500/10 flex items-center justify-center ring-1 ring-orange-500/30">
+                    <Icon className="text-orange-500 text-xl" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex items-start gap-2 max-w-xl">
+                  {/* Text */}
+                  <div className="space-y-1">
+                    <h3 className="text-2xl font-semibold text-orange-500">
+                      {block.title}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {block.description}
+                    </p>
+                  </div>
+
+                  {/* Image (NO BOX) */}
+                  <img
+                    src={block.img}
+                    alt={block.title}
+                    className="w-50 h-50 object-contain opacity-90 hidden sm:block"
+                    loading="lazy"
+                  />
+                </div>
               </motion.div>
-            </React.Fragment>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
-
-export default About;

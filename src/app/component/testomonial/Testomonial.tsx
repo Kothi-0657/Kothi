@@ -10,7 +10,7 @@ const testimonials = [
     rating: 5,
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     feedback:
-      "Kothi handled our home renovation end-to-end with complete transparency. Timelines were met and the quality exceeded expectations.",
+      "KothiIndia handled our home renovation end-to-end with complete transparency. Timelines were met and the quality exceeded expectations.",
   },
   {
     name: "Anita Sharma",
@@ -50,7 +50,7 @@ const testimonials = [
     rating: 5,
     image: "https://randomuser.me/api/portraits/women/12.jpg",
     feedback:
-      "Kothi simplified everything for us. One point of contact and a stress-free experience throughout.",
+      "KothiIndia simplified everything for us. One point of contact and a stress-free experience throughout.",
   },
   {
     name: "Rohit Singh",
@@ -66,7 +66,7 @@ const testimonials = [
     rating: 5,
     image: "https://randomuser.me/api/portraits/women/29.jpg",
     feedback:
-      "Excellent workmanship and great attention to detail. Would definitely recommend Kothi to others.",
+      "Excellent workmanship and great attention to detail. Would definitely recommend KothiIndia to others.",
   },
   {
     name: "Vikram Joshi",
@@ -90,13 +90,13 @@ export default function TestimonialsPage() {
           className="text-center space-y-4 mb-16"
         >
           <p className="text-orange-500 font-semibold tracking-wide">
-            10 / 250+ Satisfied Customers
+            450+ Satisfied Customers
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
             What Our Customers Say
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Real experiences from homeowners who trusted Kothi for their
+            Real experiences from homeowners who trusted KothiIndia for their
             construction and home service needs.
           </p>
         </motion.div>

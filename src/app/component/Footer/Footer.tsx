@@ -12,6 +12,8 @@ import {
   FaTruckMoving,
   FaPaintRoller,
   FaCouch,
+  FaRegIdCard,
+  FaYoutube,
 } from "react-icons/fa";
 import Link from "next/link";
 import "@/app/globals.css";
@@ -22,39 +24,39 @@ function Footer() {
       {/* Background Decorative Overlay */}
       <div className="absolute inset-0 opacity-20 bg-[url('/patterns/luxury-pattern.svg')] bg-cover bg-center"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+      <div className="relative z-10 max-w-7.5xl mx-auto px-9 grid md:grid-cols-4 gap-10">
         {/* Company Info */}
         <div>
           <div className="flex items-center mb-6">
             <img src="/logo.png" alt="Logo" className="w-14 h-14 mr-3" />
             <span
-              className="text-2xl font-bold text-white uppercase tracking-wide"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-xl  text-white uppercase tracking-wide"
+              style={{ fontFamily: "'Playfair Display', serif", color: "#bda79aff" }}
             >
-              Kothi India
+              KothiIndia private Limited
             </span>
           </div>
           <p className="text-gray-400 leading-relaxed">
-            At Kothi India, we redefine luxury living with premium home
+            At KothiIndia Pvt. Ltd., we redefine luxury living with premium home
             improvement and renovation solutions. Our dedicated team ensures
             excellence, elegance, and trust in every project.
           </p>
-          <div className="flex space-x-4 mt-6 text-lg">
+          <div className="flex space-x-9 mt-12 text-lg"> {/* size of icons */}
             <a href="https://www.linkedin.com/in/kothi-india-2538b238a/" className="hover:text-white transition">
-              <FaLinkedinIn className="hover:text-white transition" />
+              <FaLinkedinIn className="text-3xl hover:text-blue-400 transition" />
             </a>
             <a href="https://www.facebook.com/profile.php?id=61580038401547" className="hover:text-white transition">
-              <FaFacebookF className="hover:text-white transition" />
+              <FaFacebookF className="text-3xl hover:text-blue-400 transition" />
             </a>
             <a href="https://x.com/Kothiindia" className="hover:text-white transition">
-              <FaTwitter className="hover:text-white transition" />
+              <FaTwitter className="text-3xl hover:text-gray-500 transition" />
             </a>
             <a
-              href="https://www.instagram.com/kothiindia/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram className="hover:text-white transition" />
+              href="https://www.instagram.com/kothiindia/" className="hover:text-white transition">
+              <FaInstagram className="text-3xl hover:text-orange-400 transition" />
+            </a>
+            <a href="https://www.youtube.com/@Kothiindia" className="hover:text-white transition">
+              <FaYoutube className="text-3xl hover:text-red-800 transition" />
             </a>
           </div>
         </div>
@@ -83,6 +85,11 @@ function Footer() {
             <li>
               <Link href="/blog" className="hover:text-white">
                 Blogs
+              </Link>
+            </li>
+            <li>
+              <Link href="/Gallerypage" className="hover:text-white">
+                Gallery
               </Link>
             </li>
           </ul>
@@ -139,14 +146,29 @@ function Footer() {
             Contact Us
           </h3>
           <ul className="space-y-3 text-gray-400">
+            <li className="flex items-center gap-3 font-semibold">
+              KothiIndia Private Limited
+            </li>
+            <li className="flex items-center gap-3">
+              <FaRegIdCard className="text-[#b04400]" />
+              CIN : U43303JH2026PTC026867
+            </li>
+            <li className="flex items-center gap-3">
+              <FaRegIdCard className="text-[#b04400]" />
+              GST : AA200126025266T  
+            </li>
             <li className="flex items-center gap-3">
               <FaMapMarkerAlt className="text-[#b04400]" />
-              Electronic City, Bangalore
+              Main office - Kalpanapuri ,Jamshedpur, Jharkhand pincode:832109
+            </li>
+            <li className="flex items-center gap-3">
+              <FaMapMarkerAlt className="text-[#b04400]" />
+              Branch office - Sector 1 HSR Layout, Bangalore pincode:560106
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-[#b04400]" />
               <Link href="tel:+919972225551" className="hover:text-white">
-                +91 9972225551
+                +91 997 222 5551
               </Link>
             </li>
             <li className="flex items-center gap-3">

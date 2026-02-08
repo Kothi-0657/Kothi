@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaTimes } from "react-icons/fa";
+import { FaClock, FaShieldAlt, FaTimes } from "react-icons/fa";
 
 type ContactFormProps = {
   onSuccess?: () => void;
@@ -105,6 +105,14 @@ export default function LuxuryCustomerForm({
         <p className="text-center text-xs text-gray-600 mt-1 mb-4">
           Tell us about your requirement
         </p>
+        <div className="flex justify-center gap-4 mt-4 mb-3 text-[11px] text-gray-700">
+          <span className="flex items-center gap-1">
+            <FaShieldAlt className="text-[#b7791f]" /> 100% Private
+          </span>
+          <span className="flex items-center gap-1">
+            <FaClock className="text-[#b7791f]" /> 24-hr Response
+          </span>
+        </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">

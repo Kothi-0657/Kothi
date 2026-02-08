@@ -55,7 +55,7 @@ function Lightbox({ item, onClose }: { item: any; onClose: () => void }) {
                 {item.title}
               </h3>
               <p className="text-gray-300 text-sm mt-1">
-                Curated residential project by Kothi India
+                Curated residential project by KothiIndia Pvt. Ltd.
               </p>
             </div>
           </motion.div>

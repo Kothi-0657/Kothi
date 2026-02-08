@@ -4,7 +4,6 @@ import Image from "next/image";
 import Popup from "../PopupBox/popup";
 import ContactForm from "../Form/Cxform";
 import { useState } from "react";
-
 const services = [
   {
     title: "Home Painting",
@@ -98,7 +97,7 @@ export default function HomeServices() {
                   className="mt-auto text-sm font-semibold text-[#FE904E]
                              hover:text-white transition"
                 >
-                  Live Chat →
+                  Connect Now →
                 </button>
               </div>
             ))}

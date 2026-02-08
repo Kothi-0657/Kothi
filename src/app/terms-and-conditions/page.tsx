@@ -5,9 +5,9 @@ export default function TermsPage() {
       <p className="mb-4">Effective Date: June 2025</p>
 
       <p className="mb-6">
-        Welcome to <strong>Kothi India</strong>. These Terms and Conditions
+        Welcome to <strong>KothiIndia</strong>. These Terms and Conditions
         (“Terms”) govern your use of our services and website. By engaging with
-        Kothi India, you agree to abide by these terms.
+        KothiIndia, you agree to abide by these terms.
       </p>
 
       <h2 className="text-xl font-semibold mt-6 mb-2">1. Services Offered</h2>
@@ -28,7 +28,7 @@ export default function TermsPage() {
         All services must be booked via our website, customer service, or
         authorized representatives. Scheduling is subject to availability.
         Delays due to external factors (e.g., weather, logistics) may occur.
-        Kothi India reserves the right to reschedule or cancel a booking in case
+        KothiIndia reserves the right to reschedule or cancel a booking in case
         of unavoidable circumstances.
       </p>
 
@@ -57,7 +57,7 @@ export default function TermsPage() {
       <p className="mb-6">
         Cancellation requests must be submitted at least 48 hours before the
         scheduled service. Refunds, if applicable, will be processed according
-        to our Refund Policy. Kothi India reserves the right to deduct
+        to our Refund Policy. KothiIndia reserves the right to deduct
         administrative or material costs already incurred before refunding.
       </p>
 
@@ -70,7 +70,7 @@ export default function TermsPage() {
           unavailability may affect timelines.
         </li>
         <li>
-          If materials are supplied by the client, Kothi India is not liable for
+          If materials are supplied by the client, KothiIndia is not liable for
           their quality or compatibility.
         </li>
       </ul>
@@ -86,7 +86,7 @@ export default function TermsPage() {
 
       <h2 className="text-xl font-semibold mt-6 mb-2">7. Limitations of Liability</h2>
       <p className="mb-6">
-        Kothi India shall not be liable for indirect, incidental, or
+        KothiIndia shall not be liable for indirect, incidental, or
         consequential damages arising from delays, missed appointments, or
         material unavailability. We are not responsible for damages caused by
         pre-existing site conditions or issues outside the scope of work.
@@ -95,7 +95,7 @@ export default function TermsPage() {
       <h2 className="text-xl font-semibold mt-6 mb-2">8. Intellectual Property</h2>
       <p className="mb-6">
         All website content, marketing material, designs, and logos are the
-        intellectual property of Kothi India. Unauthorized reproduction,
+        intellectual property of KothiIndia. Unauthorized reproduction,
         distribution, or use is strictly prohibited.
       </p>
 
@@ -114,7 +114,7 @@ export default function TermsPage() {
 
       <h2 className="text-xl font-semibold mt-6 mb-2">11. Changes to Terms</h2>
       <p className="mb-6">
-        Kothi India reserves the right to update these Terms at any time.
+        KothiIndia reserves the right to update these Terms at any time.
         Updated terms will be posted on our website with a revised effective
         date.
       </p>

@@ -22,6 +22,7 @@ function Navbar() {
     { tab: "Deals", destination: "/deals" },
     { tab: "Gallery", destination: "/Gallerypage" },
     { tab: "Blog", destination: "/blog" },
+    { tab: "Inspection Check", destination: "/InspectionCheck" },
   ];
 
   const handleNavClick = (destination: string) => {
@@ -36,9 +37,10 @@ function Navbar() {
         <div className="flex items-center justify-between px-2 md:px-11 py-2">
           {/* Logo + Brand (unchanged) */}
           <Link href="/" className="flex items-end">
-            <Image src="/logo.png" width={90} height={90} alt="brandlogo" />
+            <Image src="/logo.png" width={130} height={130} alt="brandlogo" />
             <span className="ml-3 lg:text-[40px] text-[40px] textcolor uppercase leading-none navbar-logo">
-              Kothi INDIA
+              <span className="lg:text-[60px] text-[40px]">KothiIndia</span>
+              <span className="lg:text-[38px] text-[28px] font-normal">  PVT. LTD.</span>
             </span>
           </Link>
 

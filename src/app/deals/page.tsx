@@ -28,9 +28,9 @@ const interiorPlans = [
 ];
 
 const inspectionPlans = [
-  { name: "Basic Home Inspection", price: "₹1999" },
-  { name: "Premium Inspection", price: "₹3499" },
-  { name: "Complete Structural Check", price: "₹4999" },
+  { name: "Basic health plan", price: "₹9999" },
+  { name: "Combo Health Plan", price: "₹14999" },
+  { name: "Damage protection plan", price: "₹24999" },
 ];
 
 /* ------------------ PAGE ------------------ */

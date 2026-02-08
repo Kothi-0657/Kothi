@@ -86,7 +86,7 @@ export default function ServicePage() {
         {/* ===================== HEADER ===================== */}
         <div className="text-center space-y-4">
           <h1 className="text-5xl md:text-6xl font-extrabold text-[#b04400]">
-            Kothi India Services
+            KothiIndia Services
           </h1>
           <p className="max-w-2xl mx-auto text-gray-700">
             Reliable, transparent, and professionally managed services for every

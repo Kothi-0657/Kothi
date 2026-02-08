@@ -5,7 +5,7 @@ export default function RefundPolicyPage() {
       <p className="mb-4">Effective Date: June 2025</p>
 
       <p className="mb-4">
-        At <strong>Kothi India</strong>, we value transparency and customer
+        At <strong>KothiIndia</strong>, we value transparency and customer
         satisfaction. This Refund Policy outlines the conditions under which
         refunds are provided for our services, including:
       </p>
@@ -47,9 +47,9 @@ export default function RefundPolicyPage() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">3. Service Cancellation by Kothi India</h2>
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Service Cancellation by KothiIndia</h2>
       <p className="mb-4">
-        If <strong>Kothi India</strong> cancels a confirmed booking, a full
+        If <strong>KothiIndia</strong> cancels a confirmed booking, a full
         refund will be issued, unless the client agrees to an alternative date
         or replacement service.
       </p>
@@ -94,7 +94,7 @@ export default function RefundPolicyPage() {
 
       <h2 className="text-xl font-semibold mt-6 mb-2">8. Policy Updates</h2>
       <p className="mb-4">
-        Kothi India may update this Refund Policy at any time. Updates will be
+        KothiIndia may update this Refund Policy at any time. Updates will be
         posted on our website with a revised effective date.
       </p>
 

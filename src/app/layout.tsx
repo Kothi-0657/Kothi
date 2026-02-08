@@ -14,12 +14,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Kothi India || Elevate Your Lifestyle",
-  description: "All Service under one roof",
+  title: "KothiIndia Private Limited",
+  description: "All Service under one roof KothiIndia Private Limited",
   icons: {
-    icon: "/favicon.gif",
-    shortcut: "/favicon.gif",
-    apple: "/favicon.gif",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 

@@ -102,9 +102,9 @@ function Hero1() {
             {/* 🔽 Scale wrapper */}
             <div
               className="origin-top-right"
-              style={{ transform: "scale(0.75)" }} // adjust 0.6–0.75
+              style={{ transform: "scale(0.95)" }} // adjust 0.6–0.75
             >
-              <div className="bg-white/30 backdrop-blur-lg rounded-2xl p-6 shadow-md border border-white/20 hover:bg-white/40 transition">
+              <div className="bg-white/30 backdrop-blur-lg rounded-4xl p-9 shadow-md border border-white/20 hover:bg-white/40 transition duration-300 w-[400px] h-[700px] translate-x-39 -translate-y-39">
                 <ContactForm />
               </div>
             </div>

@@ -5,7 +5,7 @@ export default function Privacy() {
       <p className="mb-4">Effective Date: June 2025</p>
 
       <p className="mb-4">
-        At <strong>Kothi India</strong>, your privacy is important to us. This
+        At <strong>KothiIndia Pvt.Ltd.</strong>, your privacy is important to us. This
         Privacy Policy explains how we collect, use, share, and protect your
         personal information when you interact with our website or use our
         services.
@@ -65,7 +65,7 @@ export default function Privacy() {
         <li>Request deletion (subject to legal/contractual obligations).</li>
       </ul>
       <p className="mb-4">
-        📧 Email: <a href="mailto:privacy@kothiindia.com">privacy@kothiindia.com</a><br />
+        📧 Email: <a href="mailto:service@kothiindia.com">service@kothiindia.com</a><br />
         📞 Phone: +91 9972225551
       </p>
 
@@ -89,9 +89,10 @@ export default function Privacy() {
 
       <h2 className="text-xl font-semibold mt-6 mb-2">10. Contact Us</h2>
       <p>
-        📧 Email: Service@kothiindia.com <br />
+        📧 Email: service@kothiindia.com <br />
         🌐 Website: www.kothiindia.com <br />
-        📍 Address: Electronic City, Bangalore, Karnataka, India
+        📍 Main office : Kalpanapuri Jamshedpur, Jharkhand
+        📍 Branch office : HSR layout Bangalore, Karnataka, India
       </p>
       <p className="mt-4">
         Any disputes will be resolved amicably in accordance with local laws.

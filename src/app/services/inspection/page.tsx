@@ -21,7 +21,7 @@ interface PackageItem {
 /** Packages Data */
 const packages: PackageItem[] = [
   {
-    name: "Crust Inspection",
+    name: "Basic health plan",
     price: "₹ 9,999",
     sections: [
       {
@@ -72,7 +72,7 @@ const packages: PackageItem[] = [
     ],
   },
   {
-    name: "Mantle Inspection",
+    name: "Combo Health Plan",
     price: "₹ 14,999",
     sections: [
       {
@@ -124,8 +124,8 @@ const packages: PackageItem[] = [
     ],
   },
   {
-    name: "Core Inspection",
-    price: "₹ 29,999",
+    name: "Damage protection plan",
+    price: "₹ 24,999",
     sections: [
       {
         title: "Focus",

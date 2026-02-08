@@ -9,7 +9,7 @@ const blocks = [
     img: "/main1.png",
     title: "Where It Began",
     description:
-      "Kothi India was founded with a clear purpose — to bring trust, transparency, and accountability into home services. We identified a gap where homeowners struggled with fragmented vendors, unclear pricing, and inconsistent execution. Our goal was simple: create a single, reliable platform that homeowners could depend on with confidence.",
+      "KothiIndia was founded with a clear purpose — to bring trust, transparency, and accountability into home services. We identified a gap where homeowners struggled with fragmented vendors, unclear pricing, and inconsistent execution. Our goal was simple: create a single, reliable platform that homeowners could depend on with confidence.",
   },
   {
     icon: FaTools,

@@ -1,14 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaUserCircle } from "react-icons/fa";
 
 const testimonials = [
   {
     name: "Rahul Mehta",
     city: "Bangalore",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
     feedback:
       "KothiIndia handled our home renovation end-to-end with complete transparency. Timelines were met and the quality exceeded expectations.",
   },
@@ -16,7 +15,6 @@ const testimonials = [
     name: "Anita Sharma",
     city: "Delhi",
     rating: 4,
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
     feedback:
       "The inspection and quotation process was very professional. Everything was explained clearly before starting the work.",
   },
@@ -24,7 +22,6 @@ const testimonials = [
     name: "Suresh Rao",
     city: "Hyderabad",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/61.jpg",
     feedback:
       "From planning to execution, the experience was smooth. A reliable platform for construction and home services.",
   },
@@ -32,7 +29,6 @@ const testimonials = [
     name: "Neha Verma",
     city: "Pune",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
     feedback:
       "What I loved most was the regular updates and clear communication. No hidden costs, no surprises.",
   },
@@ -40,7 +36,6 @@ const testimonials = [
     name: "Amit Patel",
     city: "Mumbai",
     rating: 4,
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
     feedback:
       "Professional team and well-managed workflow. The project delivery was on time as promised.",
   },
@@ -48,7 +43,6 @@ const testimonials = [
     name: "Kavya Iyer",
     city: "Chennai",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/12.jpg",
     feedback:
       "KothiIndia simplified everything for us. One point of contact and a stress-free experience throughout.",
   },
@@ -56,7 +50,6 @@ const testimonials = [
     name: "Rohit Singh",
     city: "Patna",
     rating: 4,
-    image: "https://randomuser.me/api/portraits/men/19.jpg",
     feedback:
       "Very organized process. The inspection report helped us understand the scope clearly before approving the work.",
   },
@@ -64,7 +57,6 @@ const testimonials = [
     name: "Priya Nair",
     city: "Kochi",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/29.jpg",
     feedback:
       "Excellent workmanship and great attention to detail. Would definitely recommend KothiIndia to others.",
   },
@@ -72,7 +64,6 @@ const testimonials = [
     name: "Vikram Joshi",
     city: "Indore",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/48.jpg",
     feedback:
       "Reliable, transparent, and efficient. The team delivered exactly what was promised.",
   },
@@ -114,11 +105,9 @@ export default function TestimonialsPage() {
             >
               {/* User */}
               <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                  <FaUserCircle className="w-8 h-8 text-gray-400" />
+                </div>
                 <div>
                   <h4 className="font-semibold">{t.name}</h4>
                   <p className="text-sm text-gray-400">{t.city}</p>

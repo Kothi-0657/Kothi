@@ -521,9 +521,7 @@ export default function ConstructionPage(): JSX.Element {
           <span className="font-semibold">transparency</span>, and{" "}
           <span className="font-semibold">trust</span>.
         </p>
-          <LinearGalleryHome />
-
-        </div>
+      </div>
       </div>
 
       {/* Why Choose Section */}

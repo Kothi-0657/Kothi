@@ -178,7 +178,7 @@ export default function InspectionPlansPage() {
               </div>
 
               <Link
-                href="/contact"
+                href="/contact/Bookingform"
                 className="block text-center mt-8 py-3 rounded-full
                 bg-gradient-to-r from-orange-500 to-yellow-400
                 text-black font-semibold hover:scale-105 transition"
@@ -199,7 +199,7 @@ export default function InspectionPlansPage() {
           className="text-center"
         >
           <Link
-            href="/Cxform"
+            href="/contact/Bookingform"
             className="inline-block px-14 py-5 rounded-full
             bg-gradient-to-r from-orange-500 to-yellow-400
             text-black font-semibold text-lg shadow-2xl hover:scale-105 transition"

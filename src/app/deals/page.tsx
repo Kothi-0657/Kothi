@@ -21,14 +21,18 @@ const paintingPlans = [
   { type: "4 BHK", price: "₹23999", cleaning: "Free" },
 ];
 
-const interiorPlans = [
-  { name: "Basic Interior", price: "₹1.25 Lakhs" },
-  { name: "Premium Interior", price: "₹2.40 Lakhs" },
-  { name: "Luxury Interior", price: "₹4.80 Lakhs" },
+const HomeServicePlans = [
+  { name: "Home Cleaning", price: "Starts from ₹999" },
+  { name: "Exterior Cleaning", price: "₹Starts from ₹2999" },
+  { name: "Sump Cleaning", price: "Starts from ₹2999" },
+  { name: "Tanker Cleaning", price: "Starts from ₹1999" },
+  { name: "Commercial Area Cleanning", price: "Starts from ₹12499" },
+  { name: "Common Area Cleaning", price: "Starts from ₹11499" },
+
 ];
 
 const inspectionPlans = [
-  { name: "Basic health plan", price: "₹9999" },
+  { name: "Basic House health Check plan", price: "" },
   { name: "Combo Health Plan", price: "₹14999" },
   { name: "Damage protection plan", price: "₹24999" },
 ];
@@ -95,9 +99,9 @@ export default function DealsPage() {
           />
 
           <PlanSection
-            title="Interior Plans"
+            title="Home Service offers"
             image="/Kothi11.png"
-            items={interiorPlans}
+            items={HomeServicePlans}
             itemKey="name"
           />
 

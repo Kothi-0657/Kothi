@@ -31,6 +31,7 @@ const serviceData: Record<
   ],
 };
 
+
 export default function ServiceComponent({ type }: ServiceComponentProps) {
   const subServices = serviceData[type] || [];
 
@@ -62,6 +63,7 @@ export default function ServiceComponent({ type }: ServiceComponentProps) {
             href={`/servicedetails?type=${encodeURIComponent(type)}&q=${encodeURIComponent(s.title)}`}
             className="flex-1 text-center py-2 rounded-full border border-white/40 text-white font-medium hover:bg-white/10 transition"
           >
+            
             Learn More
           </Link>
         </div>

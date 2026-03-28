@@ -97,20 +97,29 @@ function Hero1() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="absolute right-2 z-30"
-            style={{ top: "2px" }} // 👈 navbar height + gap
+            style={{ top: "92px" }} // 👈 navbar height + gap
           >
             {/* 🔽 Scale wrapper */}
             <div
               className="origin-top-right"
-              style={{ transform: "scale(0.95)" }} // adjust 0.6–0.75
+              style={{ transform: "scale(0.89)" }} // adjust 0.6–0.75
             >
-              <div className="bg-white/30 backdrop-blur-lg rounded-4xl p-9 shadow-md border border-white/20 hover:bg-white/40 transition duration-300 w-[400px] h-[700px] translate-x-39 -translate-y-39">
+              <div className="bg-white/30 backdrop-blur-lg rounded-4xl p-9 shadow-md border border-white/20 hover:bg-white/40 transition duration-300 w-[400px] h-[660px] translate-x-29 -translate-y-39">
                 <ContactForm />
               </div>
             </div>
           </motion.div>
       </div>
-
+<div className="absolute top-1 right-34 z-50 hidden lg:block mt-26">
+  <a
+    href="tel:+918064522200"
+    className="px-4 py-1.5 text-sm font-semibold rounded-full
+    bg-white/10 backdrop-blur-md border border-white/20
+    text-white hover:bg-white/20 transition shadow-md"
+  >
+   Toll-Free Support 📞 +91 8064522200
+  </a>
+</div>
       {/* ✅ Workflow Timeline */}
       <div className="absolute bottom-30 w-full">
         <WorkflowTimeline />

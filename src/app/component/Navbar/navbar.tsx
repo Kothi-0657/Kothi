@@ -7,11 +7,13 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "@/app/globals.css";
 import Popup from "../PopupBox/popup";
 import ContactForm from "@/app/component/Form/Cxform";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const pathname = usePathname();
 
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -30,40 +32,60 @@ function Navbar() {
     if (destination === "#Contact-popup") setShowPopup(true);
   };
 
+  // ✅ Check active route (supports nested routes)
+  const isActive = (path: string) => {
+    if (path === "/") return pathname === "/";
+    return pathname.startsWith(path);
+  };
+
   return (
     <>
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gradient-to-r from-gray-900/95 to-gray-800/90 shadow-lg">
         <div className="flex items-center justify-between px-2 md:px-11 py-2">
-          {/* Logo + Brand (unchanged) */}
+          
+          {/* Logo */}
           <Link href="/" className="flex items-end">
             <Image src="/logo.png" width={130} height={130} alt="brandlogo" />
             <span className="ml-3 lg:text-[40px] text-[40px] textcolor uppercase leading-none navbar-logo">
               <span className="lg:text-[60px] text-[40px]">KothiIndia</span>
-              <span className="lg:text-[38px] text-[28px] font-normal">  PVT. LTD.</span>
+              <span className="lg:text-[38px] text-[28px] font-normal">
+                {" "}PVT. LTD.
+              </span>
             </span>
           </Link>
 
           {/* Desktop Nav */}
           <ul className="hidden lg:flex items-center gap-4 font-medium mb-0">
-            {navItems.map((navItem, idx) => (
-              <li key={idx} className="relative group">
-                <Link
-                  onClick={() => handleNavClick(navItem.destination)}
-                  href={navItem.destination}
-                  className="px-4 py-2 text-white font-semibold relative transition-all duration-300"
-                >
-                  {navItem.tab}
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-gradient-to-r from-[#FE904E] to-[#FDBA74] rounded-full transition-all group-hover:w-full"></span>
-                </Link>
-              </li>
-            ))}
+            {navItems.map((navItem, idx) => {
+              const active = isActive(navItem.destination);
+
+              return (
+                <li key={idx} className="relative group">
+                  <Link
+                    onClick={() => handleNavClick(navItem.destination)}
+                    href={navItem.destination}
+                    className={`px-4 py-2 font-semibold relative transition-all duration-300
+                      ${active ? "text-orange-400" : "text-white"}`}
+                  >
+                    {navItem.tab}
+
+                    {/* Active underline */}
+                    <span
+                      className={`absolute left-0 bottom-0 h-1 bg-gradient-to-r from-[#FE904E] to-[#FDBA74] rounded-full transition-all duration-300
+                        ${active ? "w-full" : "w-0 group-hover:w-full"}`}
+                    ></span>
+                  </Link>
+                </li>
+              );
+            })}
+
             <li>
               <button
                 onClick={() => setShowPopup(true)}
                 className="px-5 py-2 font-semibold text-white border-2 border-[#FE904E] rounded-md
-                          hover:shadow-[0_0_20px_rgba(254,144,78,0.7)]
-                          hover:bg-white/10 transition-all duration-300"
+                hover:shadow-[0_0_20px_rgba(254,144,78,0.7)]
+                hover:bg-white/10 transition-all duration-300"
               >
                 Contact
               </button>
@@ -96,6 +118,7 @@ function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <ul className="lg:hidden flex flex-col gap-4 px-6 pb-4 font-medium text-white">
+            
             {token && (
               <li>
                 <button
@@ -107,17 +130,28 @@ function Navbar() {
                 </button>
               </li>
             )}
-            {navItems.map((navItem, idx) => (
-              <li key={idx}>
-                <Link
-                  onClick={() => handleNavClick(navItem.destination)}
-                  href={navItem.destination}
-                  className="block px-4 py-2 hover:bg-gradient-to-r hover:from-[#FE904E] hover:to-[#FDBA74] transition-all duration-300 rounded-md"
-                >
-                  {navItem.tab}
-                </Link>
-              </li>
-            ))}
+
+            {navItems.map((navItem, idx) => {
+              const active = isActive(navItem.destination);
+
+              return (
+                <li key={idx}>
+                  <Link
+                    onClick={() => handleNavClick(navItem.destination)}
+                    href={navItem.destination}
+                    className={`block px-4 py-2 rounded-md transition-all duration-300
+                      ${
+                        active
+                          ? "bg-gradient-to-r from-[#FE904E] to-[#FDBA74] text-black font-semibold"
+                          : "hover:bg-gradient-to-r hover:from-[#FE904E] hover:to-[#FDBA74]"
+                      }`}
+                  >
+                    {navItem.tab}
+                  </Link>
+                </li>
+              );
+            })}
+
             <li>
               <button
                 onClick={() => {
@@ -132,7 +166,6 @@ function Navbar() {
           </ul>
         )}
       </nav>
-
       {/* Popup */}
       <Popup isOpen={showPopup} onClose={() => setShowPopup(false)}>
         <ContactForm onSuccess={() => setShowPopup(false)} />

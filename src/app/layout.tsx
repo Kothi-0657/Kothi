@@ -5,7 +5,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import Footer from "./component/Footer/Footer";
 import { AppProviders } from "./providers";
-import ChatWidget from "@/app/component/Chat/ChatWidget";
+import WhatsAppButton from "./component/Chat/WhatsAppButton";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -58,7 +58,8 @@ export default function RootLayout({
           <Footer />
 
           {/* Chat visible on all public pages */}
-          <ChatWidget />
+          <WhatsAppButton />
+
         </AppProviders>
       </body>
     </html>

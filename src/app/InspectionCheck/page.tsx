@@ -10,6 +10,7 @@ const plans = [
   {
     name: "Basic Home Health Plan",
     price: "₹9,999 / Year (Incl. GST)",
+    paymentLink:"https://rzp.io/rzp/6LRnlWk",
     validity: "1 Year from date of subscription",
     services: [
       "Quarterly full house inspection (4 times a year)",
@@ -28,6 +29,7 @@ const plans = [
   {
     name: "Combo Home Health Plan",
     price: "₹14,999 / Year (Incl. GST)",
+    paymentLink:"https://rzp.io/rzp/Z7ZLH1c5",
     validity: "1 Year from date of subscription",
     services: [
       "Quarterly full house inspection (4 times a year)",
@@ -46,6 +48,7 @@ const plans = [
   {
     name: "Damage Protection Plan",
     price: "₹24,999 / Year (Incl. GST)",
+    paymentLink:"https://rzp.io/rzp/HqRSKbz",
     validity: "1 Year from date of subscription",
     services: [
       "Quarterly full house inspection (4 times a year)",
@@ -177,14 +180,16 @@ export default function InspectionPlansPage() {
                 </ul>
               </div>
 
-              <Link
-                href="/contact/Bookingform"
-                className="block text-center mt-8 py-3 rounded-full
-                bg-gradient-to-r from-orange-500 to-yellow-400
-                text-black font-semibold hover:scale-105 transition"
-              >
+              <a
+                  href={plan.paymentLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center mt-8 py-3 rounded-full
+                  bg-gradient-to-r from-orange-500 to-yellow-400
+                  text-black font-semibold hover:scale-105 transition"
+                >
                 Subscribe Now
-              </Link>
+              </a>
             </motion.div>
           ))}
           
@@ -198,19 +203,36 @@ export default function InspectionPlansPage() {
           transition={{ duration: 0.9 }}
           className="text-center"
         >
-          <Link
-            href="/contact/Bookingform"
-            className="inline-block px-14 py-5 rounded-full
-            bg-gradient-to-r from-orange-500 to-yellow-400
-            text-black font-semibold text-lg shadow-2xl hover:scale-105 transition"
-          >
-            Book Your Annual Inspection Plan
-          </Link>
 
           <p className="mt-4 text-sm text-white/60">
             Owner-first • Confidential • Verified by KothiIndia
           </p>
         </motion.div>
+        {/* ================= TERMS & POLICY ================= */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="text-center mt-10 text-sm text-white/70"
+>
+  <p>
+    By subscribing, you agree to our{" "}
+    <Link
+      href="/terms-and-conditions"
+      className="text-orange-400 underline hover:text-orange-300"
+    >
+      Terms & Conditions
+    </Link>{" "}
+    and{" "}
+    <Link
+      href="/InspectionTermsPage"
+      className="text-orange-400 underline hover:text-orange-300"
+    >
+      Inspection Terms of Use
+    </Link>.
+  </p>
+</motion.div>    
 
       </div>
     </div>

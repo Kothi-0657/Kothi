@@ -1,127 +1,184 @@
 export default function TermsPage() {
   return (
-    <div className="p-10 max-w-4xl mx-auto text-gray-800">
-      <h1 className="text-3xl font-bold mb-6">Terms &amp; Conditions</h1>
+    <div className="p-10 max-w-4xl mx-auto text-gray-800 mb-20 leading-relaxed text-justify space-y-16 mt-20">
+      <h1 className="text-3xl font-bold mb-6">Terms of Use – KothiIndia</h1>
       <p className="mb-4">Effective Date: June 2025</p>
 
       <p className="mb-6">
-        Welcome to <strong>KothiIndia</strong>. These Terms and Conditions
-        (“Terms”) govern your use of our services and website. By engaging with
-        KothiIndia, you agree to abide by these terms.
+        Welcome to <strong>KothiIndia</strong>. These Terms of Use (“Terms”)
+        govern your access to and use of our website, platform, and services.
+        By accessing or using our platform, you agree to be legally bound by
+        these Terms.
       </p>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">1. Services Offered</h2>
-      <ul className="list-disc pl-6 mb-4">
-        <li>Home construction and renovation</li>
-        <li>Plumbing and electrical work</li>
-        <li>Painting and cleaning services</li>
-        <li>Carpentry and woodwork</li>
-        <li>Interior design and execution</li>
-      </ul>
+      {/* 1 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. General</h2>
       <p className="mb-6">
-        We reserve the right to modify, upgrade, or discontinue any service
-        without prior notice.
+        These Terms govern access to and use of the KothiIndia platform,
+        including website, dashboards, admin panels, and services. KothiIndia
+        provides home renovation, interior design, property inspection,
+        maintenance, and turnkey execution services across India. Continued
+        use of the platform constitutes acceptance of any updates to these
+        Terms.
       </p>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">2. Booking &amp; Scheduling</h2>
-      <p className="mb-6">
-        All services must be booked via our website, customer service, or
-        authorized representatives. Scheduling is subject to availability.
-        Delays due to external factors (e.g., weather, logistics) may occur.
-        KothiIndia reserves the right to reschedule or cancel a booking in case
-        of unavoidable circumstances.
-      </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">3. Pricing &amp; Payment</h2>
-      <ul className="list-disc pl-6 mb-4">
-        <li>Pricing is provided via quote after inspection or discussion.</li>
-        <li>Quotes are valid for 15 days unless otherwise stated.</li>
-        <li>
-          A minimum advance payment (usually 50%–70%) may be required to confirm
-          the booking.
-        </li>
-        <li>
-          Full payment must be completed as per mutually agreed milestones.
-        </li>
-        <li>
-          Payments must be made via authorized modes (bank transfer, UPI, or
-          payment links).
-        </li>
-        <li>
-          Taxes or government levies, if applicable, will be added to the final
-          invoice.
-        </li>
+      {/* 2 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Definitions</h2>
+      <ul className="list-disc pl-6 mb-6">
+        <li><strong>Content:</strong> Text, images, designs, reports, and materials on the platform</li>
+        <li><strong>Platform:</strong> Website, apps, dashboards, and related systems</li>
+        <li><strong>Services:</strong> Renovation, inspection, maintenance, design, and execution services</li>
+        <li><strong>Third Party Providers:</strong> Vendors and contractors engaged by KothiIndia</li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">4. Cancellations &amp; Refunds</h2>
-      <p className="mb-6">
-        Cancellation requests must be submitted at least 48 hours before the
-        scheduled service. Refunds, if applicable, will be processed according
-        to our Refund Policy. KothiIndia reserves the right to deduct
-        administrative or material costs already incurred before refunding.
-      </p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">5. Client Responsibilities</h2>
-      <ul className="list-disc pl-6 mb-4">
-        <li>Provide accurate project information and site access.</li>
-        <li>Ensure a safe working environment.</li>
-        <li>
-          Delays caused by client inaccessibility, pending approvals, or
-          unavailability may affect timelines.
-        </li>
-        <li>
-          If materials are supplied by the client, KothiIndia is not liable for
-          their quality or compatibility.
-        </li>
+      {/* 3 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Eligibility</h2>
+      <ul className="list-disc pl-6 mb-6">
+        <li>You must be at least 18 years old</li>
+        <li>You must be legally capable of entering a contract</li>
+        <li>All information provided must be accurate</li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">6. Workmanship &amp; Warranty</h2>
+      {/* 4 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">4. Account Registration</h2>
+      <ul className="list-disc pl-6 mb-6">
+        <li>Provide accurate information</li>
+        <li>Maintain confidentiality of login credentials</li>
+        <li>You are responsible for all activities under your account</li>
+        <li>Accounts may be suspended for violations or fraud</li>
+      </ul>
+
+      {/* 5 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">5. Scope of Services</h2>
       <p className="mb-6">
-        All services are performed by skilled professionals following industry
-        best practices. Limited warranties may be provided on construction,
-        electrical, and plumbing work, as specified in the service agreement.
-        Warranty becomes void if third-party alterations or damages occur after
-        service completion.
+        Services may be provided directly or via third-party vendors. Pricing,
+        timelines, and scope may vary based on site conditions. Final estimates
+        are confirmed after inspection. Minor variations in materials or
+        timelines may occur.
       </p>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">7. Limitations of Liability</h2>
+      {/* 6 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">6. Payment Policy</h2>
+      <ul className="list-disc pl-6 mb-6">
+        <li>Booking amounts are generally non-refundable</li>
+        <li>Payments must follow agreed milestones</li>
+        <li>Delays may result in service suspension</li>
+        <li>Applicable taxes (GST) will be charged</li>
+      </ul>
+
+      {/* 7 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">7. Cancellation & Refund</h2>
+      <ul className="list-disc pl-6 mb-6">
+        <li>Before site visit: Partial refund may apply</li>
+        <li>After design start: Non-refundable</li>
+        <li>After material procurement: No refund</li>
+        <li>During execution: Deduction-based refund</li>
+        <li>Refund timelines: 7–21 working days</li>
+      </ul>
+
+      {/* 8 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">8. Warranty & Quality</h2>
       <p className="mb-6">
-        KothiIndia shall not be liable for indirect, incidental, or
-        consequential damages arising from delays, missed appointments, or
-        material unavailability. We are not responsible for damages caused by
-        pre-existing site conditions or issues outside the scope of work.
+        Limited warranty may be provided on civil work, woodwork, and
+        installations. Warranty does not cover misuse, structural defects, or
+        third-party modifications. Manufacturer warranties apply to branded
+        products.
       </p>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">8. Intellectual Property</h2>
+      {/* 9 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">9. Customer Obligations</h2>
+      <ul className="list-disc pl-6 mb-6">
+        <li>Provide site access</li>
+        <li>Ensure legal ownership or authority</li>
+        <li>Obtain required approvals</li>
+        <li>Clear dues affecting execution</li>
+        <li>Avoid direct vendor engagement outside platform</li>
+      </ul>
+
+      {/* 10 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">10. Unauthorized Transactions</h2>
       <p className="mb-6">
-        All website content, marketing material, designs, and logos are the
-        intellectual property of KothiIndia. Unauthorized reproduction,
-        distribution, or use is strictly prohibited.
+        Direct dealings with vendors outside KothiIndia are prohibited and will
+        void warranties and liability coverage.
       </p>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">9. Privacy Policy</h2>
+      {/* 11 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">11. Intellectual Property</h2>
       <p className="mb-6">
-        Your personal information is handled as per our Privacy Policy. We do
-        not sell or share your data without consent.
+        All designs, reports, systems, and branding are owned by KothiIndia.
+        Unauthorized use or reproduction is strictly prohibited.
       </p>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">10. Dispute Resolution</h2>
+      {/* 12 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">12. Photography Consent</h2>
       <p className="mb-6">
-        Any disputes must be raised in writing within 7 days of the issue. We
-        aim to resolve disputes amicably. If unresolved, disputes shall be
-        subject to the jurisdiction of Bangalore, Karnataka courts.
+        KothiIndia may capture and use project images for marketing, website,
+        and portfolio purposes without disclosing customer identity.
       </p>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">11. Changes to Terms</h2>
+      {/* 13 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">13. Third Party Vendors</h2>
       <p className="mb-6">
-        KothiIndia reserves the right to update these Terms at any time.
-        Updated terms will be posted on our website with a revised effective
-        date.
+        While due diligence is performed, KothiIndia is not liable for disputes,
+        insolvency, or defects caused by third-party vendors.
+      </p>
+
+      {/* 14 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">14. Limitation of Liability</h2>
+      <p className="mb-6">
+        KothiIndia shall not be liable for indirect damages, loss of profits,
+        delays, or business interruptions. Total liability is limited to the
+        amount paid by the customer.
+      </p>
+
+      {/* 15 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">15. Force Majeure</h2>
+      <p className="mb-6">
+        Delays due to natural disasters, government actions, pandemics, or
+        supply chain issues are beyond control and timelines will be extended.
+      </p>
+
+      {/* 16 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">16. Anti-Bribery Policy</h2>
+      <p className="mb-6">
+        Bribes, unethical payments, or unofficial transactions are strictly
+        prohibited and may lead to termination.
+      </p>
+
+      {/* 17 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">17. Anti-Discrimination</h2>
+      <p className="mb-6">
+        Harassment, discrimination, or abusive behavior toward staff or vendors
+        will not be tolerated and may lead to legal action.
+      </p>
+
+      {/* 18 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">18. Termination</h2>
+      <p className="mb-6">
+        Services may be suspended or terminated for violations, fraud, or
+        non-payment. Outstanding dues remain payable.
+      </p>
+
+      {/* 19 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">19. Governing Law</h2>
+      <p className="mb-6">
+        These Terms are governed by the laws of India. Jurisdiction lies with
+        courts in Ranchi, Jharkhand.
+      </p>
+
+      {/* 20 */}
+      <h2 className="text-xl font-semibold mt-6 mb-2">20. Contact Information</h2>
+      <p className="mb-6">
+        For queries or grievances:
+        <br />
+        📧 ceo@kothiindia.com
+        <br />
+        📧 support@kothiindia.com
       </p>
 
       <p className="mt-6 font-medium">
-        Any disputes shall be subject to the jurisdiction of Bangalore,
-        Karnataka courts.
+        By using our services, you acknowledge that you have read, understood,
+        and agreed to these Terms.
       </p>
     </div>
   );
